@@ -32,3 +32,5 @@ set shiftwidth=2
 set expandtab
 set number
 set scrolloff=4
+
+nmap 0 ^
