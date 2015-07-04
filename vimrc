@@ -41,4 +41,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set nowrap
 set scrolloff=4
+set sidescrolloff=5
