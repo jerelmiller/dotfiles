@@ -20,7 +20,8 @@ syntax on                   " enable syntax highlighting
 
 let mapleader="\<Space>"
 
-map <leader>vi :tabe ~/.vimrc<cr>
+nmap <leader>vi :sp $MYVIMRC<cr>
+nmap <leader>so :source $MYVIMRC<cr>
 
 nmap 0 ^
 
