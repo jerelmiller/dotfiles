@@ -18,6 +18,15 @@ filetype plugin indent on   " required
 colorscheme monokai
 syntax on                   " enable syntax highlighting
 
+let mapleader="\<Space>"
+
+map <leader>vi :tabe ~/.vimrc<cr>
+
+nmap 0 ^
+
+" Custom commands
+command! Q q " Bind Q to q
+
 " Custom config
 set backspace=indent,eol,start
 set autoindent
@@ -32,5 +41,3 @@ set shiftwidth=2
 set expandtab
 set number
 set scrolloff=4
-
-nmap 0 ^
