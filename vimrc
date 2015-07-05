@@ -22,6 +22,7 @@ let mapleader="\<Space>"
 
 nmap <leader>vi :sp $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
+nmap <leader>pi :PluginInstall<cr>
 
 nmap 0 ^
 
