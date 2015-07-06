@@ -44,3 +44,4 @@ set number
 set nowrap
 set scrolloff=4
 set sidescrolloff=5
+set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8
