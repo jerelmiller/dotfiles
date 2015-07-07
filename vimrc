@@ -13,6 +13,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tcomment_vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -28,7 +29,7 @@ nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>pi :PluginInstall<cr>
 nmap <leader>t :CtrlP<cr>
 nmap <leader>nt :NERDTreeToggle<cr>
-
+nmap <leader>c :TComment<cr>
 nmap 0 ^
 
 " Custom commands
@@ -47,6 +48,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set relativenumber
 set nowrap
 set scrolloff=4
 set sidescrolloff=5
