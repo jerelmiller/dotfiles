@@ -51,7 +51,7 @@ set cursorline
 set shiftround
 set wildmenu
 set wildmode=list:longest
-set backupdir=~/.tmp
-set directory=~/.tmp
+set backupdir=~/tmp
+set directory=~/tmp
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
