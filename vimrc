@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " My bundles
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -18,10 +19,11 @@ filetype plugin indent on   " required
 colorscheme monokai
 syntax on                   " enable syntax highlighting
 
-let mapleader="\<Space>"
+let mapleader=","
 
 nmap <leader>vi :sp $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
+nmap <leader>pi :PluginInstall<cr>
 
 nmap 0 ^
 
@@ -45,3 +47,6 @@ set nowrap
 set scrolloff=4
 set sidescrolloff=5
 set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8
+set cursorline
+
+runtime macros/matchit.vim        " use % to jump between start/end of methods
