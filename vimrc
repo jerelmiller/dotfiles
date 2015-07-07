@@ -53,5 +53,6 @@ set wildmenu
 set wildmode=list:longest
 set backupdir=~/.tmp
 set directory=~/.tmp
+set colorcolumn=80
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
