@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 " My bundles
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
