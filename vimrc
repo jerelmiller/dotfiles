@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -25,6 +26,7 @@ let mapleader=","
 nmap <leader>vi :sp $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>pi :PluginInstall<cr>
+nmap <leader>t :CtrlP<cr>
 
 nmap 0 ^
 
