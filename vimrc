@@ -27,6 +27,7 @@ nmap <leader>vi :sp $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 nmap <leader>pi :PluginInstall<cr>
 nmap <leader>t :CtrlP<cr>
+nmap <leader>nt :NERDTreeToggle<cr>
 
 nmap 0 ^
 
