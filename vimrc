@@ -14,6 +14,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -47,7 +48,6 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set number
 set relativenumber
 set nowrap
 set scrolloff=4
