@@ -68,4 +68,4 @@ runtime macros/matchit.vim        " use % to jump between start/end of methods
 
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
-highlight Search term=reverse cterm=reverse gui=reverse
+highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
