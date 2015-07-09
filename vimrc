@@ -32,12 +32,17 @@ nmap <leader>pi :PluginInstall<cr>
 nmap <leader>t :CtrlP<cr>
 nmap <leader>nt :NERDTreeToggle<cr>
 nmap <leader>c :TComment<cr>
+nmap <leader>ch :noh<cr>
 nmap 0 ^
 
 " Custom commands
 command! Q q
 command! W w
 command! Wq wq
+
+" CtrlP customization
+let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 50000
 
 " Custom config
 set backspace=indent,eol,start
@@ -63,6 +68,10 @@ set wildmode=list:longest
 set backupdir=~/.tmp
 set directory=~/.tmp
 set colorcolumn=80
+set clipboard=unnamed
+
+set wildignore+=*/tmp*/,*.swp,*.zip
+set wildignore+=*/generated/*,*/images/*
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 
