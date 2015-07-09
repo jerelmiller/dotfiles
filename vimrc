@@ -42,7 +42,7 @@ command! Wq wq
 " Custom config
 set backspace=indent,eol,start
 set autoindent
-set history=50
+set history=500
 set ruler
 set showcmd
 set incsearch
@@ -65,3 +65,7 @@ set directory=~/.tmp
 set colorcolumn=80
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
+
+" Override colorscheme to show backgrounds on search terms instead of
+" underlines
+highlight Search term=reverse cterm=reverse gui=reverse
