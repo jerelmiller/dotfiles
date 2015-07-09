@@ -15,6 +15,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -36,6 +37,7 @@ nmap 0 ^
 " Custom commands
 command! Q q
 command! W w
+command! Wq wq
 
 " Custom config
 set backspace=indent,eol,start
