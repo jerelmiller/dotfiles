@@ -34,7 +34,8 @@ nmap <leader>c :TComment<cr>
 nmap 0 ^
 
 " Custom commands
-command! Q q " Bind Q to q
+command! Q q
+command! W w
 
 " Custom config
 set backspace=indent,eol,start
