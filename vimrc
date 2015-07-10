@@ -33,6 +33,9 @@ nmap <leader>t :CtrlP<cr>
 nmap <leader>nt :NERDTreeToggle<cr>
 nmap <leader>c :TComment<cr>
 nmap <leader>ch :noh<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
 nmap 0 ^
 
 " Custom commands
@@ -70,10 +73,13 @@ set directory=~/.tmp
 set colorcolumn=80
 set clipboard=unnamed
 
-set wildignore+=*/tmp*/,*.swp,*.zip
-set wildignore+=*/generated/*,*/images/*
+set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
+set wildignore+=*/generated/*,*/images/*,*/node_modules/*
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
+
+" Use haml syntax highlighting for jst.hamlc files
+autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
 
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
