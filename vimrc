@@ -36,6 +36,7 @@ nmap <leader>ch :noh<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
+" nnoremap <leader>rm :call delete(expand('%')) \| bdelete!<cr>
 nmap 0 ^
 
 " Custom commands
