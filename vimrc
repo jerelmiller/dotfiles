@@ -74,6 +74,8 @@ set backupdir=~/.tmp
 set directory=~/.tmp
 set colorcolumn=80
 set clipboard=unnamed
+set splitright
+set splitbelow
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*
