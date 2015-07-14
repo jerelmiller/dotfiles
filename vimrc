@@ -40,6 +40,11 @@ nmap <leader>p viwp<ESC>b
 " nnoremap <leader>rm :call delete(expand('%')) \| bdelete!<cr>
 nmap 0 ^
 
+nnoremap <C-h> <C-W><C-h>
+nnoremap <C-j> <C-W><C-j>
+nnoremap <C-k> <C-W><C-k>
+nnoremap <C-l> <C-W><C-l>
+
 " Custom commands
 command! Q q
 command! W w
