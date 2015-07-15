@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'FelikZ/ctrlp-py-matcher'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -52,7 +53,21 @@ command! Wq wq
 
 " CtrlP customization
 let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 50000
+let g:ctrlp_max_files = 0
+
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+    \ --ignore .git
+    \ --ignore .svn
+    \ --ignore .hg
+    \ --ignore .DS_Store
+    \ --ignore "**/*.pyc"
+    \ -g ""'
+endif
+
+if has('python')
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
 
 " Custom config
 set backspace=indent,eol,start
@@ -67,6 +82,9 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set relativenumber
+if v:version >= 704
+  set number
+endif
 set nowrap
 set scrolloff=4
 set sidescrolloff=5
