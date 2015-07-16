@@ -42,6 +42,7 @@ nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>p viwp<ESC>b
+nnoremap <leader>rs :AV<cr>
 
 " Use 0 to go to first character instead of beginning of line
 nnoremap 0 ^
