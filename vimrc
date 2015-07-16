@@ -17,6 +17,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
