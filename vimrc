@@ -20,6 +20,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -30,19 +31,20 @@ syntax on                   " enable syntax highlighting
 
 let mapleader=","
 
-nmap <leader>vi :sp $MYVIMRC<cr>
-nmap <leader>so :source $MYVIMRC<cr>
-nmap <leader>pi :PluginInstall<cr>
-nmap <leader>t :CtrlP<cr>
-nmap <leader>nt :NERDTreeToggle<cr>
-nmap <leader>c :TComment<cr>
-nmap <leader>ch :noh<cr>
-nmap <leader>gd :Gdiff<cr>
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gc :Gcommit<cr>
-nmap <leader>p viwp<ESC>b
-" nnoremap <leader>rm :call delete(expand('%')) \| bdelete!<cr>
-nmap 0 ^
+nnoremap <leader>vi :sp $MYVIMRC<cr>
+nnoremap <leader>so :source $MYVIMRC<cr>
+nnoremap <leader>pi :PluginInstall<cr>
+nnoremap <leader>t :CtrlP<cr>
+nnoremap <leader>nt :NERDTreeToggle<cr>
+nnoremap <leader>c :TComment<cr>
+nnoremap <leader>ch :noh<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>p viwp<ESC>b
+
+" Use 0 to go to first character instead of beginning of line
+nnoremap 0 ^
 
 nnoremap <C-h> <C-W><C-h>
 nnoremap <C-j> <C-W><C-j>
@@ -59,13 +61,10 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-    \ --ignore .git
-    \ --ignore .svn
-    \ --ignore .hg
-    \ --ignore .DS_Store
-    \ --ignore "**/*.pyc"
-    \ -g ""'
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
+
+  " Use Silver Searcher instead of grep
+  set grepprg=ag
 endif
 
 if has('python')
@@ -80,9 +79,7 @@ set ruler
 set showcmd
 set incsearch
 set hlsearch
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
 set relativenumber
 if v:version >= 704
@@ -103,14 +100,26 @@ set clipboard=unnamed
 set splitright
 set splitbelow
 set timeoutlen=400
+set laststatus=2 " Always show status line
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
-set wildignore+=*/generated/*,*/images/*,*/node_modules/*
+set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 
-" Use haml syntax highlighting for jst.hamlc files
-autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
+augroup filetypeHamlc
+  autocmd!
+
+  " Use haml syntax highlighting for jst.hamlc files
+  autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
+augroup END
+
+augroup help
+  autocmd!
+
+  " Bind 'q' to close the buffer for help files
+  autocmd Filetype help nnoremap <buffer> q :q<CR>
+augroup END
 
 " remove trailing whitespace on save for ruby files
 au BufWritePre *.rb :%s/\s\+$//e

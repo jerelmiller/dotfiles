@@ -1,0 +1,7 @@
+log
+tmp
+doc
+coverage
+node_modules
+/.git/
+.DS_Store
