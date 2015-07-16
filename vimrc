@@ -102,7 +102,7 @@ set splitbelow
 set timeoutlen=400
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
-set wildignore+=*/generated/*,*/images/*,*/node_modules/*
+set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 
