@@ -16,7 +16,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -108,6 +111,9 @@ runtime macros/matchit.vim        " use % to jump between start/end of methods
 
 " Use haml syntax highlighting for jst.hamlc files
 autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
+
+" remove trailing whitespace on save for ruby files
+au BufWritePre *.rb :%s/\s\+$//e
 
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
