@@ -101,6 +101,7 @@ set splitright
 set splitbelow
 set timeoutlen=400
 set laststatus=2 " Always show status line
+set t_ut=
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
