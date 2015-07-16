@@ -107,15 +107,11 @@ set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
 
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 
-augroup filetypeHamlc
+augroup vimrcEx
   autocmd!
 
   " Use haml syntax highlighting for jst.hamlc files
   autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
-augroup END
-
-augroup help
-  autocmd!
 
   " Bind 'q' to close the buffer for help files
   autocmd Filetype help nnoremap <buffer> q :q<CR>
