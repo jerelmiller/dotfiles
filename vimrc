@@ -23,6 +23,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/JSON.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
