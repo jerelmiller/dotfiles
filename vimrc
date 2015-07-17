@@ -26,8 +26,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()           " required
 filetype plugin indent on   " required
 
-colorscheme monokai
 syntax on                   " enable syntax highlighting
+colorscheme monokai
 
 let mapleader=","
 
