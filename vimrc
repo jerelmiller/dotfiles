@@ -9,18 +9,22 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-rails'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/JSON.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -51,6 +55,9 @@ nnoremap <C-h> <C-W><C-h>
 nnoremap <C-j> <C-W><C-j>
 nnoremap <C-k> <C-W><C-k>
 nnoremap <C-l> <C-W><C-l>
+
+" Execute grep for word under cursor and display in quickfix menu
+nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
 
 " Custom commands
 command! Q q
@@ -94,8 +101,6 @@ set cursorline
 set shiftround
 set wildmenu
 set wildmode=list:longest
-set backupdir=~/.tmp
-set directory=~/.tmp
 set colorcolumn=80
 set clipboard=unnamed
 set splitright
@@ -103,6 +108,10 @@ set splitbelow
 set timeoutlen=400
 set laststatus=2 " Always show status line
 set t_ut=
+set hidden
+set visualbell
+set nobackup
+set noswapfile
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*

@@ -4,9 +4,6 @@ desc 'Install dotfiles to home directory'
 task :install do
   add_dotfiles
   add_binstubs
-
-  puts "Making .tmp directory"
-  system %Q(mkdir -p "$HOME/.tmp")
 end
 
 def add_dotfiles
