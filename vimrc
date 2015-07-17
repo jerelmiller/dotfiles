@@ -129,7 +129,7 @@ augroup vimrcEx
 augroup END
 
 " remove trailing whitespace on save for ruby files
-au BufWritePre *.rb :%s/\s\+$//e
+au BufWritePre *.rb,*.coffee :%s/\s\+$//e
 
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
