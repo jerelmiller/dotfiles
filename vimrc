@@ -56,6 +56,9 @@ nnoremap <C-j> <C-W><C-j>
 nnoremap <C-k> <C-W><C-k>
 nnoremap <C-l> <C-W><C-l>
 
+" Execute grep for word under cursor and display in quickfix menu
+nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
+
 " Custom commands
 command! Q q
 command! W w
