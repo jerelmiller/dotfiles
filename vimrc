@@ -9,18 +9,20 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-rails'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
