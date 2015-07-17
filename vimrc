@@ -94,8 +94,6 @@ set cursorline
 set shiftround
 set wildmenu
 set wildmode=list:longest
-set backupdir=~/.tmp
-set directory=~/.tmp
 set colorcolumn=80
 set clipboard=unnamed
 set splitright
@@ -104,6 +102,9 @@ set timeoutlen=400
 set laststatus=2 " Always show status line
 set t_ut=
 set hidden
+set visualbell
+set nobackup
+set noswapfile
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
