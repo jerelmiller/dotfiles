@@ -49,6 +49,12 @@ nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>p viwp<ESC>b
 nnoremap <leader>rs :AV<cr>
 
+let @b="dir]pkk2dd"
+nnoremap <leader>pir @b
+
+let @i='/ifd$O"j>>oend:nohk0'
+nnoremap <leader>if @i
+
 " Use 0 to go to first character instead of beginning of line
 nnoremap 0 ^
 
@@ -113,6 +119,7 @@ set hidden
 set visualbell
 set nobackup
 set noswapfile
+set lazyredraw
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
