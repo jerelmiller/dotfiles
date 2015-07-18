@@ -48,6 +48,7 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>p viwp<ESC>b
 nnoremap <leader>rs :AV<cr>
+nnoremap <leader>f :NERDTreeFind<cr>
 
 let @b="dir]pkk2dd"
 nnoremap <leader>pir @b
