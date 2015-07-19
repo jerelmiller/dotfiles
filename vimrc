@@ -73,7 +73,6 @@ command! W w
 command! Wq wq
 
 " CtrlP customization
-let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 
 if executable('ag')
