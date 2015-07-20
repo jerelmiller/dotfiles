@@ -26,6 +26,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/JSON.vim'
+Plugin 'ervandew/supertab'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -66,6 +67,8 @@ nnoremap <C-l> <C-W><C-l>
 
 " Execute grep for word under cursor and display in quickfix menu
 nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
+
+inoremap jk <esc>
 
 " Custom commands
 command! Q q
