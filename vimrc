@@ -15,6 +15,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
@@ -22,11 +23,13 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/JSON.vim'
 Plugin 'ervandew/supertab'
+Plugin 'rking/ag.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -66,7 +69,9 @@ nnoremap <C-k> <C-W><C-k>
 nnoremap <C-l> <C-W><C-l>
 
 " Execute grep for word under cursor and display in quickfix menu
-nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
+" nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
+nnoremap <leader>g :Ag! --ignore-dir=vendor --ignore-dir=db/old <cword><cr>
+nnoremap <leader>ag :Ag! 
 
 inoremap jk <esc>
 
@@ -145,3 +150,8 @@ au BufWritePre *.rb,*.coffee :%s/\s\+$//e
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
 highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
+
+" Allow for settings specific to machines this runs on
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif

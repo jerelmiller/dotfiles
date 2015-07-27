@@ -5,3 +5,8 @@ coverage
 node_modules
 /.git/
 .DS_Store
+*-bundle.js
+db/old
+nohup.out
+translations.js
+software
