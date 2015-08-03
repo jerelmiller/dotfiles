@@ -12,11 +12,14 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ervandew/supertab'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-bundler'
@@ -28,8 +31,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/JSON.vim'
-Plugin 'ervandew/supertab'
-Plugin 'rking/ag.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -42,7 +43,7 @@ let mapleader=","
 
 nnoremap <leader>vi :sp $MYVIMRC<cr>
 nnoremap <leader>so :source $MYVIMRC<cr>
-nnoremap <leader>pi :PluginInstall<cr>
+nnoremap <leader>pi :PluginInstall<cr>:q<cr>
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>nt :NERDTreeToggle<cr>
 nnoremap <leader>c :TComment<cr>
@@ -79,6 +80,9 @@ inoremap jk <esc>
 command! Q q
 command! W w
 command! Wq wq
+
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " CtrlP customization
 let g:ctrlp_max_files = 0
