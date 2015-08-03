@@ -72,7 +72,7 @@ nnoremap <C-l> <C-W><C-l>
 " Execute grep for word under cursor and display in quickfix menu
 " nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
 nnoremap <leader>g :Ag! --ignore-dir=vendor --ignore-dir=db/old <cword><cr>
-nnoremap <leader>ag :Ag! 
+nnoremap <leader>ag :Ag!
 
 inoremap jk <esc>
 
@@ -146,10 +146,11 @@ augroup vimrcEx
 
   " Bind 'q' to close the buffer for help files
   autocmd Filetype help nnoremap <buffer> q :q<CR>
+
+  " remove trailing whitespace on save
+  autocmd BufWritePre <buffer> StripWhitespace
 augroup END
 
-" remove trailing whitespace on save for ruby files
-au BufWritePre *.rb,*.coffee :%s/\s\+$//e
 
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
