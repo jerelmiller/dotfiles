@@ -73,6 +73,7 @@ nnoremap <C-l> <C-W><C-l>
 " Execute grep for word under cursor and display in quickfix menu
 " nnoremap <leader>g :grep! -R <cword> .<cr>:copen<cr>
 nnoremap <leader>g :Ag! --ignore-dir=vendor --ignore-dir=db/old <cword><cr>
+" nnoremap <leader>G :Ag! --ignore-dir=vendor --ignore-dir=db/old <cword><cr>
 nnoremap <leader>ag :Ag!<Space>
 
 inoremap jk <esc>
@@ -132,6 +133,7 @@ set hidden
 set visualbell
 set nobackup
 set noswapfile
+set autoread
 set lazyredraw
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
