@@ -17,6 +17,7 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'mxw/vim-jsx'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rking/ag.vim'
@@ -89,6 +90,9 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 " CtrlP customization
 let g:ctrlp_max_files = 0
 
+" Better Whitespace customization
+let g:strip_whitespace_on_save = 1
+
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
 
@@ -149,13 +153,6 @@ augroup vimrcEx
 
   " Bind 'q' to close the buffer for help files
   autocmd Filetype help nnoremap <buffer> q :q<CR>
-augroup END
-
-augroup whitespace
-  autocmd!
-
-  " remove trailing whitespace on save
-  autocmd BufWritePre <buffer> StripWhitespace
 augroup END
 
 " Override colorscheme to show backgrounds on search terms instead of
