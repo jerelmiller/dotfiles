@@ -12,14 +12,17 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'mtscout6/vim-cjsx'
 Plugin 'mxw/vim-jsx'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mtscout6/vim-cjsx'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Raimondi/delimitMate'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'skwp/greplace.vim'
@@ -32,7 +35,11 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/JSON.vim'
+Plugin 'helino/vim-json'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -56,6 +63,10 @@ nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>p viwp<ESC>b
 nnoremap <leader>rs :AV<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
+nnoremap <leader>l :SyntasticCheck<cr>
+
+map <D-S-]> gt
+map <D-S-[> gT
 
 let @b="dir]pkk2dd"
 nnoremap <leader>pir @b
@@ -84,14 +95,34 @@ command! Q q
 command! W w
 command! Wq wq
 
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " CtrlP customization
 let g:ctrlp_max_files = 0
 
 " Better Whitespace customization
 let g:strip_whitespace_on_save = 1
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" syntastic customization
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_warning_symbol = '!'
+let g:syntastic_error_symbol = '✗'
+
+" airline customization
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#csv#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'lucius'
+let g:airline_section_x = ''
+let g:airline_section_y = '%{airline#util#wrap(airline#parts#filetype(),0)}'
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
@@ -150,6 +181,7 @@ augroup vimrcEx
 
   " Use haml syntax highlighting for jst.hamlc files
   autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
+  autocmd BufNewFile,BufReadPost .eslintrc set filetype=json
 
   " Bind 'q' to close the buffer for help files
   autocmd Filetype help nnoremap <buffer> q :q<CR>
@@ -158,6 +190,7 @@ augroup END
 " Override colorscheme to show backgrounds on search terms instead of
 " underlines
 highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
+
 
 " Allow for settings specific to machines this runs on
 if filereadable(expand("~/.vimrc.local"))
