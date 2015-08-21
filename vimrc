@@ -34,18 +34,21 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'helino/vim-json'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'chrisbra/csv.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
 filetype plugin indent on   " required
 
 syntax on                   " enable syntax highlighting
+set background=dark
 colorscheme monokai
 
 let mapleader=","
@@ -64,6 +67,7 @@ nnoremap <leader>p viwp<ESC>b
 nnoremap <leader>rs :AV<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 nnoremap <leader>l :SyntasticCheck<cr>
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 map <D-S-]> gt
 map <D-S-[> gT
@@ -123,6 +127,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'lucius'
 let g:airline_section_x = ''
 let g:airline_section_y = '%{airline#util#wrap(airline#parts#filetype(),0)}'
+
+" rails.vim customization
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
@@ -191,6 +197,7 @@ augroup END
 " underlines
 highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
 
+" highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff
 
 " Allow for settings specific to machines this runs on
 if filereadable(expand("~/.vimrc.local"))
