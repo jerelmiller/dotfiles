@@ -154,6 +154,7 @@ set incsearch
 set hlsearch
 set tabstop=2 softtabstop=2 shiftwidth=2
 set expandtab
+set smarttab
 set relativenumber
 if v:version >= 704
   set number
@@ -179,6 +180,7 @@ set nobackup
 set noswapfile
 set autoread
 set lazyredraw
+set suffixesadd+=.js,*.jsx,*.jsx.coffee,*.coffee,*.js.coffee
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
