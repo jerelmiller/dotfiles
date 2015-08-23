@@ -99,6 +99,9 @@ command! Q q
 command! W w
 command! Wq wq
 
+"delimitMate customization
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
 
 " CtrlP customization
 let g:ctrlp_max_files = 0
