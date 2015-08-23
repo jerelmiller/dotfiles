@@ -168,7 +168,7 @@ set shiftround
 set wildmenu
 set wildmode=list:longest
 set colorcolumn=80
-set clipboard=unnamed
+set clipboard+=unnamed
 set splitright
 set splitbelow
 set timeoutlen=400
