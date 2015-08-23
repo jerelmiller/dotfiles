@@ -42,6 +42,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'chrisbra/csv.vim'
+Plugin 'moll/vim-node'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -180,7 +181,7 @@ set nobackup
 set noswapfile
 set autoread
 set lazyredraw
-set suffixesadd+=.js,*.jsx,*.jsx.coffee,*.coffee,*.js.coffee
+set suffixesadd+=.jsx.coffee,.coffee,.js.coffee
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
