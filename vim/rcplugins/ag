@@ -1,0 +1,10 @@
+Plugin 'rking/ag.vim'
+
+if executable('ag')
+  set grepprg=ag
+endif
+
+nnoremap <leader>g :Ag! --ignore-dir=vendor --ignore-dir=db/old <cword><cr>
+nnoremap <leader>ag :Ag!<Space>
+
+" vim:ft=vim

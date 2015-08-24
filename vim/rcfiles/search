@@ -1,0 +1,14 @@
+set incsearch
+set hlsearch
+nohlsearch " Kill Highlighting on vimrc reload
+
+nnoremap <leader>ch :silent noh<cr>
+
+" replace word under cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+
+" Override colorscheme to show backgrounds on search terms instead of
+" underlines
+highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
+
+" vim:ft=vim

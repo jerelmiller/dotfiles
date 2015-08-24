@@ -1,0 +1,3 @@
+Plugin 'tpope/vim-surround'
+
+" vim:ft=vim

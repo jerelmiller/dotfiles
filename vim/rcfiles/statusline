@@ -1,0 +1,4 @@
+set ruler
+set laststatus=2 " Always show status line
+
+" vim:ft=vim

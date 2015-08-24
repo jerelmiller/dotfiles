@@ -1,0 +1,3 @@
+Plugin 'gmarik/Vundle.vim'
+
+" nnoremap <leader>pi :PluginInstall<cr>:q<cr>

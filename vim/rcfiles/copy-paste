@@ -1,0 +1,5 @@
+set clipboard+=unnamed
+
+nnoremap <leader>p viwp<ESC>b
+
+" vim:ft=vim

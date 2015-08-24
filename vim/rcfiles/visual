@@ -1,0 +1,4 @@
+set background=dark
+colorscheme monokai
+
+" vim:ft=vim

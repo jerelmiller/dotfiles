@@ -1,0 +1,3 @@
+Plugin 'kana/vim-textobj-user'
+
+" vim:ft=vim

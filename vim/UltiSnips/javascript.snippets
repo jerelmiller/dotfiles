@@ -1,0 +1,84 @@
+snippet _component "React Component" b
+const { Component, PropTypes } = React;
+
+export default class `!v expand("%:t:r")` extends Component {
+	static propTypes = {
+		${1:prop}: PropTypes.${2:string}
+	}
+
+	render() {
+		const { $1 } = this.props;
+		$0
+		return(
+			${3:<div />}
+		);
+	}
+}
+endsnippet
+
+snippet _container "React Container" b
+import { connect } from 'react-redux';
+
+const { Component, PropTypes } = React;
+
+@connect(mapStateToProps)
+export default class `!v expand("%:t:r")` extends Component {
+	static propTypes = {
+		${2:prop}: PropTypes.${3:string}
+	}
+
+	render() {
+		const { $2 } = this.props;
+		$0
+		return(
+			${4:<div />}
+		);
+	}
+}
+
+function mapStateToProps(state) {
+	return {
+		${5:projects}: state.${6:projects}
+	};
+}
+endsnippet
+
+snippet log
+console.log($1);
+endsnippet
+
+snippet props
+this.props
+endsnippet
+
+snippet state
+this.state
+endsnippet
+
+snippet cdm "component did mount" b
+componentDidMount() {
+	$1
+}
+endsnippet
+
+snippet imp "import" b
+import $1 from './$1';
+endsnippet
+
+snippet pt "propTypes" b
+static propTypes = {
+	$1: PropTypes.$2
+}
+endsnippet
+
+snippet if
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet if!
+if (!$1) {
+	$2
+}
+endsnippet

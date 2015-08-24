@@ -1,0 +1,31 @@
+let mapleader=','
+
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
+endfunction
+
+" Use Vundle to manage bundles
+" ----------------------------
+set nocompatible  " Required by Vundle
+filetype off      " Required by Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+call s:SourceConfigFilesIn('rcplugins')
+
+call vundle#end()
+
+filetype plugin indent on
+syntax on
+
+call s:SourceConfigFilesIn('rcfiles')
+
+" Allow for settings specific to machines this runs on
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
