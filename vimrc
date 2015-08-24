@@ -48,6 +48,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'SirVer/ultisnips'
 Plugin 'danro/rename.vim'
 Plugin 'jerelmiller/ulti-projections'
+Plugin 'majutsushi/tagbar'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -74,6 +75,8 @@ nnoremap <leader>rs :AV<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 nnoremap <leader>l :SyntasticCheck<cr>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+nnoremap <F8> :TagbarToggle<cr>
+nnoremap <leader>. :CtrlPTag<cr>
 
 map <D-S-]> gt
 map <D-S-[> gT
