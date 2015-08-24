@@ -1,3 +1,5 @@
 Plugin 'gmarik/Vundle.vim'
 
-" nnoremap <leader>pi :PluginInstall<cr>:q<cr>
+nnoremap <leader>pi :PluginInstall<cr>:q<cr>
+
+" vim:ft=vim
