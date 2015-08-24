@@ -47,6 +47,7 @@ Plugin 'moll/vim-node'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'SirVer/ultisnips'
 Plugin 'danro/rename.vim'
+Plugin 'jerelmiller/ulti-projections'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
