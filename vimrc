@@ -30,6 +30,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
@@ -43,6 +44,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'chrisbra/csv.vim'
 Plugin 'moll/vim-node'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'SirVer/ultisnips'
+Plugin 'danro/rename.vim'
 
 " Plugins must be added before the following line
 call vundle#end()           " required
@@ -132,7 +136,11 @@ let g:airline_theme = 'lucius'
 let g:airline_section_x = ''
 let g:airline_section_y = '%{airline#util#wrap(airline#parts#filetype(),0)}'
 
-" rails.vim customization
+" UltiSnips customization
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsEditSplit="vertical"
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
