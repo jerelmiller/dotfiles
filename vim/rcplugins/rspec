@@ -1,0 +1,8 @@
+Plugin 'thoughtbot/vim-rspec'
+
+nnoremap <leader>cs :call RunCurrentSpecFile()<CR>
+nnoremap <leader>ns :call RunNearestSpec()<CR>
+nnoremap <leader>ls :call RunLastSpec()<CR>
+nnoremap <leader>as :call RunAllSpecs()<CR>
+
+" vim:ft=vim

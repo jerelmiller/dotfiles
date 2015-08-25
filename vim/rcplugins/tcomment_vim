@@ -1,5 +1,3 @@
 Plugin 'tomtom/tcomment_vim'
 
-nnoremap <leader>c :TComment<cr>
-
 " vim:ft=vim
