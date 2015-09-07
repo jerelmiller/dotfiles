@@ -2,6 +2,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>; :CtrlPBuffer<CR>
 
 let g:ctrlp_max_files = 0
 
