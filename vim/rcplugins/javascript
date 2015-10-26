@@ -1,5 +1,4 @@
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mtscout6/vim-cjsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
