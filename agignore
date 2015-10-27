@@ -10,3 +10,5 @@ db/old
 nohup.out
 translations.js
 software
+tiny_mce.js
+*.min.js

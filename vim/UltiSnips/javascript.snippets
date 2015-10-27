@@ -1,5 +1,5 @@
 snippet _component "React Component" b
-const { Component, PropTypes } = React;
+import React, { Component, PropTypes } from 'react'
 
 export default class `!v expand("%:t:r")` extends Component {
 	static propTypes = {
@@ -7,19 +7,18 @@ export default class `!v expand("%:t:r")` extends Component {
 	}
 
 	render() {
-		const { $1 } = this.props;
+		const { $1 } = this.props
 		$0
 		return(
 			${3:<div />}
-		);
+		)
 	}
 }
 endsnippet
 
 snippet _container "React Container" b
-import { connect } from 'react-redux';
-
-const { Component, PropTypes } = React;
+import { connect } from 'react-redux'
+import React, { Component, PropTypes } from 'react'
 
 @connect(mapStateToProps)
 export default class `!v expand("%:t:r")` extends Component {
@@ -28,23 +27,23 @@ export default class `!v expand("%:t:r")` extends Component {
 	}
 
 	render() {
-		const { $2 } = this.props;
+		const { $2 } = this.props
 		$0
 		return(
 			${4:<div />}
-		);
+		)
 	}
 }
 
 function mapStateToProps(state) {
 	return {
 		${5:projects}: state.${6:projects}
-	};
+	}
 }
 endsnippet
 
 snippet log
-console.log($1);
+console.log($1)
 endsnippet
 
 snippet props
@@ -67,14 +66,21 @@ componentWillMount() {
 }
 endsnippet
 
+snippet cwu "component will unmount" b
+componentWillUnmount() {
+	$0
+}
+endsnippet
+
 snippet imp "import" b
-import $1 from '$2';
+import $1 from '$2'
 endsnippet
 
 snippet pt "propTypes" b
 static propTypes = {
 	$1: PropTypes.$2
 }
+
 endsnippet
 
 snippet if
@@ -90,11 +96,19 @@ if (!$1) {
 endsnippet
 
 snippet bind
-this.$1 = this.$1.bind(this);$0
+this.$1 = this.$1.bind(this)$0
 endsnippet
 
 snippet dp
 static defaultProps = {
+	$0
+}
+endsnippet
+
+snippet con "constructor" b
+constructor(props) {
+	super(props)
+
 	$0
 }
 endsnippet
