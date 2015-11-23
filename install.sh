@@ -16,3 +16,6 @@ mkdir $HOME/.vim/bundle
 
 echo "Installing Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo "Adding bash aliases"
+ln -s $currentdir/bash_aliases $HOME/.bash_aliases
