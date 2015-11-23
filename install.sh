@@ -10,3 +10,9 @@ ln -s $currentdir/vim $HOME/.vim
 
 echo "Linking .tmux.conf"
 ln -s $currentdir/tmux.conf $HOME/.tmux.conf
+
+echo "Adding bundle dir"
+mkdir $HOME/.vim/bundle
+
+echo "Installing Vundle"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
