@@ -21,6 +21,7 @@ call s:SourceConfigFilesIn('rcplugins')
 call vundle#end()
 
 filetype plugin indent on
+set t_Co=256
 syntax on
 set background=dark
 colorscheme monokai
@@ -58,6 +59,7 @@ set hlsearch
 nohlsearch " Kill Highlighting on vimrc reload
 set ruler
 set laststatus=2 " Always show status line
+set completeopt-=preview
 
 set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
 set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
