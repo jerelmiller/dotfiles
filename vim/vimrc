@@ -22,8 +22,97 @@ call vundle#end()
 
 filetype plugin indent on
 syntax on
+set background=dark
+colorscheme monokai
 
-call s:SourceConfigFilesIn('rcfiles')
+set backspace=indent,eol,start
+set autoindent
+set history=500
+set showcmd
+set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab
+set smarttab
+set visualbell
+set splitright
+set splitbelow
+set timeoutlen=400
+set cursorline
+set shiftround
+set colorcolumn=80
+set wildmenu
+set wildmode=list:longest
+set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8
+set scrolloff=4
+set sidescrolloff=5
+set nowrap
+set nobackup
+set t_ut=
+set hidden
+set noswapfile
+set autoread
+set lazyredraw
+set suffixesadd+=.jsx.coffee,.coffee,.js.coffee
+set clipboard+=unnamed
+set incsearch
+set hlsearch
+nohlsearch " Kill Highlighting on vimrc reload
+set ruler
+set laststatus=2 " Always show status line
+
+set wildignore+=*/tmp*/,*.swp,*.zip,*.scssc
+set wildignore+=*/generated/*,*/images/*,*/node_modules/*,tmp/*
+
+set relativenumber
+if v:version >= 704
+  set number
+endif
+
+runtime macros/matchit.vim " use % to jump between start/end of methods
+
+command! Q q
+command! W w
+command! Wq wq
+command! Qa qa
+
+" Use 0 to go to first character instead of beginning of line
+nnoremap 0 ^
+
+nnoremap <C-h> <C-W><C-h>
+nnoremap <C-j> <C-W><C-j>
+nnoremap <C-k> <C-W><C-k>
+nnoremap <C-l> <C-W><C-l>
+
+inoremap jk <esc>
+inoremap Jk <esc>
+
+nnoremap <leader>vi :sp $MYVIMRC<cr>
+nnoremap <leader>so :source $MYVIMRC<cr>
+
+nnoremap <leader>p viwp<ESC>b
+nnoremap <leader>ch :silent noh<cr>
+
+" replace word under cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+
+autocmd BufNewFile,BufReadPost .eslintrc set filetype=json
+autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
+autocmd filetype help call HelpFileMode()
+
+function! HelpFileMode()
+  nnoremap <buffer> <cr> <c-]>
+  nnoremap <buffer> <bs> <c-T>
+  nnoremap <buffer> q :q<cr>
+endfunction
+
+let @b="dir]pkk2dd"
+nnoremap <leader>pir @b
+
+let @i='/if\\d$O"j>>oend:noh\\k0'
+nnoremap <leader>if @i
+
+" Override colorscheme to show backgrounds on search terms instead of
+" underlines
+highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
 
 " Allow for settings specific to machines this runs on
 if filereadable(expand('~/.vimrc.local'))

@@ -1,7 +1,0 @@
-let @b="dir]pkk2dd"
-nnoremap <leader>pir @b
-
-let @i='/if\\d$O"j>>oend:noh\\k0'
-nnoremap <leader>if @i
-
-" vim:ft=vim
