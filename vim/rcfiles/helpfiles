@@ -1,9 +1,0 @@
-autocmd filetype help call HelpFileMode()
-
-function! HelpFileMode()
-  nnoremap <buffer> <cr> <c-]>
-  nnoremap <buffer> <bs> <c-T>
-  nnoremap <buffer> q :q<cr>
-endfunction
-
-" vim:ft=vim

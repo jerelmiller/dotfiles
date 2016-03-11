@@ -1,3 +1,0 @@
-autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
-
-" vim:ft=vim
