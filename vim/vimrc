@@ -17,6 +17,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 call s:SourceConfigFilesIn('rcplugins')
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
 
