@@ -18,6 +18,7 @@ call vundle#begin()
 
 call s:SourceConfigFilesIn('rcplugins')
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 
