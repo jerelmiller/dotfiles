@@ -27,7 +27,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
