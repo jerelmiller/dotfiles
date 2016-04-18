@@ -1,7 +1,9 @@
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'vim-scripts/JavaScript-Indent'
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:javascript_enable_domhtmlcss = 1
 
 " vim:ft=vim
