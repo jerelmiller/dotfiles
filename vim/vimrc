@@ -9,16 +9,9 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
-" Use Vundle to manage bundles
-" ----------------------------
-set nocompatible  " Required by Vundle
-filetype off      " Required by Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
+call plug#begin('~/.vim/plugged')
 call s:SourceConfigFilesIn('rcplugins')
-
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 syntax on
@@ -87,6 +80,7 @@ nnoremap <C-l> <C-W><C-l>
 inoremap jk <esc>
 inoremap Jk <esc>
 
+nnoremap <leader>pi :PlugInstall<cr>
 nnoremap <leader>vi :sp $MYVIMRC<cr>
 nnoremap <leader>so :source $MYVIMRC<cr>
 

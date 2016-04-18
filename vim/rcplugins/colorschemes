@@ -1,4 +1,4 @@
-Plugin 'sickill/vim-monokai'
-Plugin 'mhartington/oceanic-next'
+Plug 'sickill/vim-monokai'
+Plug 'mhartington/oceanic-next'
 
 " vim:ft=vim

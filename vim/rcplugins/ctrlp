@@ -1,4 +1,4 @@
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>. :CtrlPTag<cr>

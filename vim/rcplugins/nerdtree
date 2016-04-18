@@ -1,4 +1,4 @@
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 nnoremap <leader>nt :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>

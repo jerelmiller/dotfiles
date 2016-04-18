@@ -1,3 +1,3 @@
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
 " vim:ft=vim

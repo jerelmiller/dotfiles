@@ -1,4 +1,4 @@
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 let g:strip_whitespace_on_save = 1
 

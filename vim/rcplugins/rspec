@@ -1,4 +1,4 @@
-Plugin 'thoughtbot/vim-rspec'
+Plug 'thoughtbot/vim-rspec'
 
 nnoremap <leader>cs :call RunCurrentSpecFile()<CR>
 nnoremap <leader>ns :call RunNearestSpec()<CR>
