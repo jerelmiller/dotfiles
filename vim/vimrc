@@ -17,8 +17,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 call s:SourceConfigFilesIn('rcplugins')
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 
@@ -98,9 +96,16 @@ nnoremap <leader>ch :silent noh<cr>
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
-autocmd BufNewFile,BufReadPost .eslintrc set filetype=json
-autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
-autocmd filetype help call HelpFileMode()
+augroup filetypes
+  autocmd!
+
+  autocmd BufNewFile,BufReadPost .eslintrc set filetype=json
+  autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
+  autocmd filetype help call HelpFileMode()
+
+  autocmd FileType ruby,eruby,yaml setlocal path+=lib
+  autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
+augroup END
 
 function! HelpFileMode()
   nnoremap <buffer> <cr> <c-]>
