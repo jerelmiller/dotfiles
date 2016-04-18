@@ -1,4 +1,4 @@
-Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/ruby-matchit'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
 
 " vim:ft=vim

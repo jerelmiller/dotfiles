@@ -1,3 +1,3 @@
-Plug 'chrisbra/csv.vim'
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 
 " vim:ft=vim
