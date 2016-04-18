@@ -1,5 +1,3 @@
-Plug 'thoughtbot/vim-rspec', { 'for': 'ruby', 'on': ['RunCurrentSpecFile', 'RunNearestSpec', 'RunLastSpec', 'RunAllSpecs'] }
-
 nnoremap <leader>cs :call RunCurrentSpecFile()<CR>
 nnoremap <leader>ns :call RunNearestSpec()<CR>
 nnoremap <leader>ls :call RunLastSpec()<CR>

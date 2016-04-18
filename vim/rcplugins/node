@@ -1,3 +1,0 @@
-Plug 'moll/vim-node', { 'for': 'javascript' }
-
-" vim:ft=vim

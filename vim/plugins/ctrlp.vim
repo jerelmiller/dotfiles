@@ -1,5 +1,3 @@
-Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' } | Plug 'FelikZ/ctrlp-py-matcher', { 'on': 'CtrlP' }
-
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>; :CtrlPBuffer<CR>

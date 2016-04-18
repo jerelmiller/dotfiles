@@ -1,3 +1,0 @@
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
-
-" vim:ft=vim

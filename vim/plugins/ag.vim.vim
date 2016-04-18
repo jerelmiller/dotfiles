@@ -1,5 +1,3 @@
-Plug 'rking/ag.vim'
-
 if executable('ag')
   set grepprg=ag
 endif

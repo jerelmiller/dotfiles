@@ -1,8 +1,0 @@
-Plug 'jelera/vim-javascript-syntax', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-let g:javascript_enable_domhtmlcss = 1
-
-" vim:ft=vim

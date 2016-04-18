@@ -10,11 +10,58 @@ function! s:SourceConfigFilesIn(directory)
 endfunction
 
 call plug#begin('~/.vim/plugged')
-call s:SourceConfigFilesIn('rcplugins')
+Plug 'rking/ag.vim'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'PeterRincker/vim-argumentative'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-bundler'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'sickill/vim-monokai'
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
+Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'FelikZ/ctrlp-py-matcher', { 'on': 'CtrlP' }
+Plug 'Raimondi/delimitMate'
+Plug 'blueyed/vim-diminactive'
+Plug 'tpope/vim-dispatch'
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
+Plug 'skwp/greplace.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'jelera/vim-javascript-syntax', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
+Plug 'thoughtbot/vim-rspec', { 'for': 'ruby', 'on': ['RunCurrentSpecFile', 'RunNearestSpec', 'RunLastSpec', 'RunAllSpecs'] }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'tomtom/tcomment_vim'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-unimpaired'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'SirVer/ultisnips'
 call plug#end()
 
-filetype plugin indent on
-syntax on
+" Set plugin specific settings
+call s:SourceConfigFilesIn('plugins')
+
+syntax enable
 set t_Co=256
 set background=dark
 colorscheme monokai

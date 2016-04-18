@@ -1,3 +1,0 @@
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
-
-" vim:ft=vim

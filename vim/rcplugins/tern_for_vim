@@ -1,3 +1,0 @@
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
-
-" vim:ft=vim
