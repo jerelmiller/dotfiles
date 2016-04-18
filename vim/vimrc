@@ -28,8 +28,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 " Plug 'airblade/vim-gitgutter'
-" Plug 'skwp/greplace.vim'
-Plug 'Olical/vim-enmasse'
+Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'jelera/vim-javascript-syntax', { 'for': ['javascript', 'javascript.jsx'] }
