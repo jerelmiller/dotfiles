@@ -137,6 +137,10 @@ nnoremap <leader>so :source $MYVIMRC<cr>
 nnoremap <leader>p viwp<ESC>b
 nnoremap <leader>ch :silent noh<cr>
 
+" convert erb to haml using html2haml gem
+nmap <leader>h2h :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
+vmap <leader>h2h :!html2haml --erb 2> /dev/null<CR>
+
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
