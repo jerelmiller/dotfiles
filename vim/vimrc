@@ -18,6 +18,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-bundler'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'sickill/vim-monokai'
+Plug 'w0ng/vim-hybrid'
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'FelikZ/ctrlp-py-matcher', { 'on': 'CtrlP' }
@@ -25,6 +26,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'blueyed/vim-diminactive'
 Plug 'tpope/vim-dispatch'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'avdgaag/vim-phoenix'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -49,7 +51,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
-Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-commentary'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -59,6 +61,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-rvm'
 Plug 'bkad/CamelCaseMotion'
+Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
 call plug#end()
 
 " Set plugin specific settings
@@ -67,7 +70,9 @@ call s:SourceConfigFilesIn('plugins')
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme monokai
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+colorscheme hybrid
 
 set backspace=indent,eol,start
 set autoindent
