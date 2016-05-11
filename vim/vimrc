@@ -25,6 +25,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'blueyed/vim-diminactive'
 Plug 'tpope/vim-dispatch'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'avdgaag/vim-phoenix'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
