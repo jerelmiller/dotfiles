@@ -16,6 +16,16 @@ export default class `!v expand("%:t:r")` extends Component {
 }
 endsnippet
 
+snippet reducer "Reducer" b
+const ${1:reducer} = (state = ${2:[]}, action) => {
+	switch (action.type) {
+		$0
+		default:
+			return state
+	}
+}
+endsnippet
+
 snippet _container "React Container" b
 import { connect } from 'react-redux'
 import React, { Component, PropTypes } from 'react'
