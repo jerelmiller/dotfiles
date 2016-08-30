@@ -81,3 +81,9 @@ gem update --system
 gem_install_or_update "bundler"
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
+
+if ! command -v nvm > /dev/null; then
+  echo "Installing nvm..."
+
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash
+fi
