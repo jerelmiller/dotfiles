@@ -5,7 +5,11 @@ export EDITOR='vim'
 PROMPT_COMMAND="updateps1;history -a"
 
 if [ -f $HOME/.bash_aliases ]; then
-  . ~/.bash_aliases
+  source $HOME/.bash_aliases
+fi
+
+if [ -f $HOME/.profile ]; then
+  source $HOME/.profile
 fi
 
 updateps1() {
