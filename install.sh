@@ -86,6 +86,7 @@ brew install imagemagick
 brew install cmake
 brew install memcached
 brew install redis
+brew install libxml2
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
