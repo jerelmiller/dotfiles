@@ -84,6 +84,8 @@ brew install mysql
 brew install postgres
 brew install imagemagick
 brew install cmake
+brew install memcached
+brew install redis
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
