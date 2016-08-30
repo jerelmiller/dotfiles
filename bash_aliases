@@ -2,6 +2,7 @@
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias resource='source $HOME/.bash_profile'
+alias finder='open -a Finder'
 
 # make destructive commands interactive to prevent disasters
 alias mv='mv -i'
