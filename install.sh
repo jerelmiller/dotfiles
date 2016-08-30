@@ -65,7 +65,6 @@ brew install the_silver_searcher
 brew install tmux
 brew install vim
 
-
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
 
@@ -82,8 +81,12 @@ gem_install_or_update "bundler"
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
+source ~/.bash_profile
+
 if ! command -v nvm > /dev/null; then
   echo "Installing nvm..."
 
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash
+
+  nvm install node
 fi
