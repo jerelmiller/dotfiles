@@ -66,6 +66,7 @@ brew install tmux
 brew install vim
 brew install mysql
 brew install postgres
+brew install imagemagick
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
