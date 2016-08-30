@@ -6,17 +6,6 @@ export EDITOR='vim'
 
 PROMPT_COMMAND="updateps1;history -a"
 
-if [ -f $HOME/.bash_aliases ]; then
-  source $HOME/.bash_aliases
-fi
-
-if [ -f $HOME/.profile ]; then
-  source $HOME/.profile
-fi
-
-if [ -f $HOME/.bashrc ]; then
-  source $HOME/.bashrc
-fi
 
 updateps1() {
   EXITSTATUS="$?"
@@ -31,3 +20,14 @@ updateps1() {
   fi
 }
 
+if [ -f $HOME/.bash_aliases ]; then
+  source $HOME/.bash_aliases
+fi
+
+if [ -f $HOME/.bashrc ]; then
+  source $HOME/.bashrc
+fi
+
+if [ -f $HOME/.profile ]; then
+  source $HOME/.profile
+fi
