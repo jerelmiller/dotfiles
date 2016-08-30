@@ -1,3 +1,5 @@
+#!/bin/sh
+
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=1000000
 export EDITOR='vim'
@@ -10,6 +12,10 @@ fi
 
 if [ -f $HOME/.profile ]; then
   source $HOME/.profile
+fi
+
+if [ -f $HOME/.bashrc ]; then
+  source $HOME/.bashrc
 fi
 
 updateps1() {
