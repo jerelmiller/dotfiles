@@ -2,6 +2,14 @@
 
 currentdir=$(pwd)
 
+gem_install_or_update() {
+  if gem list "$1" --installed > /dev/null; then
+    gem update "$@"
+  else
+    gem install "$@"
+  fi
+}
+
 if [ ! -f $HOME/.vimrc ]; then
   echo "Linking .vimrc"
   ln -s $currentdir/vim/vimrc $HOME/.vimrc
@@ -62,9 +70,14 @@ if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
 
   curl -sSL https://get.rvm.io | bash -s stable
+
+  echo "Installing latest ruby..."
+  rvm install ruby --latest
 fi
 
 echo "Configuring ruby..."
 
 gem update --system
-rvm install ruby --latest
+gem_install_or_update "bundler"
+number_of_cores=$(sysctl -n hw.ncpu)
+bundle config --global jobs $((number_of_cores - 1))
