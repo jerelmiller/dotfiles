@@ -65,6 +65,13 @@ if brew list | grep -Fq brew-cask; then
   brew uninstall --force brew-cask
 fi
 
+xcode-select -p > /dev/null
+
+if [ $? -eq 2 ]; then
+  echo "Installing xcode command line tools..."
+  xcode-select --install
+fi
+
 echo "Updating homebrew formulae..."
 brew update
 
