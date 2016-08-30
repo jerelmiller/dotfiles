@@ -1,6 +1,7 @@
 ##### GENERAL #####
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
+alias resource='source $HOME/.bash_profile'
 
 # make destructive commands interactive to prevent disasters
 alias mv='mv -i'
