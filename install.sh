@@ -67,3 +67,4 @@ fi
 echo "Configuring ruby..."
 
 gem update --system
+rvm install ruby --latest
