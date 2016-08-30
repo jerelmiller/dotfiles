@@ -27,6 +27,11 @@ if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
   curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+if [ ! -f $HOME/.bash_profile ]; then
+  echo "Adding bash profile"
+  ln -s $currentdir/bash_profile $HOME/.bash_profile
+fi
+
 if [ ! -f $HOME/.bash_aliases ]; then
   echo "Adding bash aliases"
   ln -s $currentdir/bash_aliases $HOME/.bash_aliases
