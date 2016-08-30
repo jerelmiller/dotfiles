@@ -36,3 +36,34 @@ if [ ! -f $HOME/.bash_aliases ]; then
   echo "Adding bash aliases"
   ln -s $currentdir/bash_aliases $HOME/.bash_aliases
 fi
+
+if ! command -v brew > /dev/null; then
+  echo "Installing homebrew..."
+
+  curl -fsS 'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+fi
+
+if brew list | grep -Fq brew-cask; then
+  echo "Uninstalling old Homebrew-Cask..."
+  brew uninstall --force brew-cask
+fi
+
+echo "Updating homebrew formulae..."
+brew update
+
+brew install git
+brew install openssl
+brew install the_silver_searcher
+brew install tmux
+brew install vim
+
+
+if ! command -v rvm > /dev/null; then
+  echo "Installing rvm..."
+
+  curl -sSL https://get.rvm.io | bash -s stable
+fi
+
+echo "Configuring ruby..."
+
+gem update --system
