@@ -34,7 +34,7 @@ alias code='cd $HOME/code'
 alias ..='cd ..'
 
 ##### NODE #####
-nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install -d && bower install'
+alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install -d && bower install'
 
 if [ -f ~/.bash_aliases.local ]; then
   . ~/.bash_aliases.local
