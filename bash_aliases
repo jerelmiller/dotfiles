@@ -27,6 +27,10 @@ alias routes='rake routes'
 alias bi='bundle install'
 alias migrate='rake db:migrate'
 
+##### NAVIGATION ######
+alias code='cd $HOME/code'
+alias ..='cd ..'
+
 if [ -f ~/.bash_aliases.local ]; then
   . ~/.bash_aliases.local
 fi
