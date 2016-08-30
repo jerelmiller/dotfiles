@@ -64,6 +64,8 @@ brew install openssl
 brew install the_silver_searcher
 brew install tmux
 brew install vim
+brew install mysql
+brew install postgres
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
