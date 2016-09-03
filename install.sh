@@ -87,6 +87,7 @@ brew install cmake
 brew install memcached
 brew install redis
 brew install libxml2
+brew install elixir
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
