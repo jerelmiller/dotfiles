@@ -63,6 +63,7 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-rvm'
 Plug 'bkad/CamelCaseMotion'
 Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Set plugin specific settings
