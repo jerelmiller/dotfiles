@@ -15,7 +15,6 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-bundler'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'sickill/vim-monokai'
 Plug 'w0ng/vim-hybrid'
@@ -23,7 +22,6 @@ Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'FelikZ/ctrlp-py-matcher', { 'on': 'CtrlP' }
 Plug 'Raimondi/delimitMate'
-Plug 'blueyed/vim-diminactive'
 Plug 'tpope/vim-dispatch'
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'avdgaag/vim-phoenix'
