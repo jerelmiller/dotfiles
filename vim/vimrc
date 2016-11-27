@@ -53,7 +53,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': ['javascript', 'javascript.jsx'] }
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'christoomey/vim-tmux-navigator'
