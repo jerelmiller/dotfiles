@@ -59,7 +59,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-rvm'
-Plug 'bkad/CamelCaseMotion'
 Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'mattn/emmet-vim'
