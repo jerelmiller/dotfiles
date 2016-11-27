@@ -180,3 +180,5 @@ highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yello
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
+
+let $BASH_ENV = '~/.bash_aliases'
