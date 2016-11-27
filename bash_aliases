@@ -4,6 +4,8 @@ alias egrep='egrep --color=auto'
 alias resource='source $HOME/.bash_profile'
 alias finder='open -a Finder'
 
+alias icloud_drive='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+
 # make destructive commands interactive to prevent disasters
 alias mv='mv -i'
 alias cp='cp -i'
