@@ -1,3 +1,5 @@
+shopt -s expand_aliases
+
 ##### GENERAL #####
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
