@@ -52,6 +52,20 @@ function mapStateToProps(state) {
 }
 endsnippet
 
+snippet _rsl "Stateless component" b
+import React, { PropTypes } from 'react'
+
+const ${1:Component} = (${2:{ children }}) => (
+	${3:<div />}
+)
+
+$1.propTypes = {
+	${4:children: PropTypes.node}
+}
+
+export default $1
+endsnippet
+
 snippet log
 console.log($1)
 endsnippet
