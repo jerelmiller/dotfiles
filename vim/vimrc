@@ -27,7 +27,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'avdgaag/vim-phoenix'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'digitaltoad/vim-pug'
@@ -55,12 +55,14 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-unimpaired'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-rvm'
 Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-sleuth'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Set plugin specific settings
