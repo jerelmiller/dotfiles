@@ -16,6 +16,7 @@ alias rm='rm -i'
 ##### GIT #####
 alias ga='git add'
 alias gcm='git commit -m'
+alias gcM='gcm'
 alias gco='git checkout'
 alias stash='git stash'
 alias pop='git stash pop'
