@@ -63,7 +63,7 @@ Plug 'tpope/vim-rvm'
 Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-sleuth'
+" Plug 'tpope/vim-sleuth'
 Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
 call plug#end()
