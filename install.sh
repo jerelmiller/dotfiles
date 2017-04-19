@@ -88,6 +88,8 @@ brew install memcached
 brew install redis
 brew install libxml2
 brew install elixir
+brew install yarn
+brew install thefuck
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
