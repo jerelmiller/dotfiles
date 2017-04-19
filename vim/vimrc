@@ -162,6 +162,9 @@ augroup filetypes
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
 augroup END
 
+" Automatically run prettier for gq
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote
+
 function! HelpFileMode()
   nnoremap <buffer> <cr> <c-]>
   nnoremap <buffer> <bs> <c-T>
