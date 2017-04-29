@@ -1,3 +1,63 @@
+call plug#begin('~/.vim/plugged')
+" Syntax
+Plug 'tpope/vim-git'
+Plug 'vim-ruby/vim-ruby'
+Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript', { 'branch': 'develop' }
+Plug 'othree/html5.vim'
+Plug 'elzr/vim-json'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'kchmck/vim-coffee-script'
+Plug 'chrisbra/csv.vim'
+Plug 'cakebaker/scss-syntax.vim'
+
+" Framework
+Plug 'avdgaag/vim-phoenix'
+Plug 'tpope/vim-rails'
+
+" Happiness
+Plug 'rking/ag.vim'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'FelikZ/ctrlp-py-matcher', { 'on': 'CtrlP' }
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown', 'do': 'npm -g install instant-markdown-d' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'thoughtbot/vim-rspec', { 'for': 'ruby', 'on': ['RunCurrentSpecFile', 'RunNearestSpec', 'RunLastSpec', 'RunAllSpecs'] }
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-unimpaired'
+Plug 'SirVer/ultisnips'
+Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-sleuth'
+Plug 'ervandew/supertab'
+Plug 'w0rp/ale'
+
+" Text
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'PeterRincker/vim-argumentative'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+" Colors
+Plug 'w0ng/vim-hybrid'
+call plug#end()
+
 let mapleader=','
 
 function! s:SourceConfigFilesIn(directory)
@@ -8,65 +68,6 @@ function! s:SourceConfigFilesIn(directory)
     endif
   endfor
 endfunction
-
-call plug#begin('~/.vim/plugged')
-Plug 'rking/ag.vim'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'PeterRincker/vim-argumentative'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-" Plug 'sickill/vim-monokai'
-Plug 'w0ng/vim-hybrid'
-Plug 'chrisbra/csv.vim', { 'for': 'csv' }
-Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
-Plug 'FelikZ/ctrlp-py-matcher', { 'on': 'CtrlP' }
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-dispatch'
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'avdgaag/vim-phoenix'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'digitaltoad/vim-pug'
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown', 'do': 'npm -g install instant-markdown-d' }
-" Plug 'jelera/vim-javascript-syntax', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-repeat'
-Plug 'thoughtbot/vim-rspec', { 'for': 'ruby', 'on': ['RunCurrentSpecFile', 'RunNearestSpec', 'RunLastSpec', 'RunAllSpecs'] }
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-commentary'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': ['javascript', 'javascript.jsx'] }
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-unimpaired'
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-Plug 'SirVer/ultisnips'
-Plug 'tpope/vim-rvm'
-Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'mattn/emmet-vim'
-" Plug 'tpope/vim-sleuth'
-Plug 'ervandew/supertab'
-Plug 'leafgarland/typescript-vim'
-call plug#end()
 
 " Set plugin specific settings
 call s:SourceConfigFilesIn('plugins')
