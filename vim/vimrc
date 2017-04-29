@@ -14,6 +14,16 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'chrisbra/csv.vim'
 Plug 'cakebaker/scss-syntax.vim'
 
+" Text
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'PeterRincker/vim-argumentative'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
 " Framework
 Plug 'avdgaag/vim-phoenix'
 Plug 'tpope/vim-rails'
@@ -44,16 +54,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'AndrewRadev/splitjoin.vim'
-
-" Text
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'PeterRincker/vim-argumentative'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-repeat'
-Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
 
 " Colors
 Plug 'w0ng/vim-hybrid'
