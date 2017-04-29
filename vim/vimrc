@@ -50,7 +50,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'SirVer/ultisnips'
 Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
 Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-sleuth'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'AndrewRadev/splitjoin.vim'
