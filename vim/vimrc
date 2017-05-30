@@ -158,7 +158,7 @@ nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 augroup filetypes
   autocmd!
 
-  autocmd BufNewFile,BufReadPost .eslintrc set filetype=json
+  autocmd BufNewFile,BufReadPost .eslintrc,.babelrc set filetype=json
   autocmd BufNewFile,BufReadPost *.hamlc set filetype=haml
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd filetype help call HelpFileMode()
