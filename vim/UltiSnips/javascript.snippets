@@ -1,5 +1,6 @@
-snippet _component "React Component" b
-import React, { Component, PropTypes } from 'react'
+snippet _comp "React Component" b
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
 export default class `!v expand("%:t:r")` extends Component {
 	static propTypes = {
@@ -53,10 +54,11 @@ function mapStateToProps(state) {
 endsnippet
 
 snippet _rsl "Stateless component" b
-import React, { PropTypes } from 'react'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const ${1:Component} = (${2:{ children }}) => (
-	${3:<div />}
+	${3:<div>{ children }</div>}
 )
 
 $1.propTypes = {
