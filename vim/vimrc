@@ -13,6 +13,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'kchmck/vim-coffee-script'
 Plug 'chrisbra/csv.vim'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'fleischie/vim-styled-components'
 
 " Text
 Plug 'ntpeters/vim-better-whitespace'
