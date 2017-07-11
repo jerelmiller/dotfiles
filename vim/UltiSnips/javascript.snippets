@@ -57,15 +57,15 @@ snippet _rsl "Stateless component" b
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const ${1:Component} = (${2:{ children }}) => (
-	${3:<div>{ children }</div>}
+const `!v expand("%:t:r")` = (${1:{ children }}) => (
+	${2:<div>{ children }</div>}
 )
 
-$1.propTypes = {
-	${4:children: PropTypes.node}
+`!v expand("%:t:r")`.propTypes = {
+	${3:children: PropTypes.node}
 }
 
-export default $1
+export default `!v expand("%:t:r")`
 endsnippet
 
 snippet log
