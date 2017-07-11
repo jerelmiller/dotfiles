@@ -38,6 +38,31 @@ alias migrate='rake db:migrate'
 alias code='cd $HOME/code'
 alias ..='cd ..'
 
+##### DOCKER #####
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+
+docker_remove_all() {
+  docker kill $(docker ps -q)
+  docker_clean_ps
+  docker rmi $(docker images -a -q)
+}
+
+setup_git_hook() {
+  cat << 'EOF' > .git/hooks/prepare-commit-msg
+#!/bin/bash
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+ISSUE_NUM="${BRANCH_NAME##*/}"
+BRANCH_IN_COMMIT=$(grep -c "\[$ISSUE_NUM\]" $1)
+
+if [ -n "$ISSUE_NUM" ] && ! [[ $BRANCH_IN_COMMIT -ge 1 ]]; then
+   sed -i.bak -e "/^\[/! s/^/[$ISSUE_NUM] /" $1
+fi
+EOF
+  chmod +x .git/hooks/prepare-commit-msg
+}
+
 ##### NODE #####
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
 
