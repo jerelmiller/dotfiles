@@ -1,7 +1,7 @@
-nnoremap <leader>cs :call RunCurrentSpecFile()<CR>
-nnoremap <leader>ns :call RunNearestSpec()<CR>
-nnoremap <leader>ls :call RunLastSpec()<CR>
-nnoremap <leader>as :call RunAllSpecs()<CR>
+autocmd FileType ruby nnoremap <leader>cs :call RunCurrentSpecFile()<CR>
+autocmd FileType ruby nnoremap <leader>ns :call RunNearestSpec()<CR>
+autocmd FileType ruby nnoremap <leader>ls :call RunLastSpec()<CR>
+autocmd FileType ruby nnoremap <leader>as :call RunAllSpecs()<CR>
 
 let g:rspec_command = '!rspec {spec}'
 
