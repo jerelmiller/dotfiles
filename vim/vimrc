@@ -54,6 +54,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 " Colors
 Plug 'w0ng/vim-hybrid'
