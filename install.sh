@@ -117,8 +117,6 @@ gem_install_or_update "bundler"
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
-source ~/.bash_profile
-
 if ! command -v nvm > /dev/null; then
   echo "Installing nvm..."
 
@@ -147,3 +145,5 @@ if [ ! -d $HOME/code/fonts ]; then
   ./install.sh
   cd $currentdir
 fi
+
+source $HOME/.bash_profile
