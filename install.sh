@@ -36,12 +36,12 @@ if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
 fi
 
 if [ ! -f $HOME/.bash_profile ]; then
-  echo "Adding bash profile"
+  echo "Linking bash profile"
   ln -s $currentdir/bash_profile $HOME/.bash_profile
 fi
 
 if [ ! -f $HOME/.bash_aliases ]; then
-  echo "Adding bash aliases"
+  echo "Linking bash aliases"
   ln -s $currentdir/bash_aliases $HOME/.bash_aliases
 fi
 
