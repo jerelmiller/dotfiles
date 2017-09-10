@@ -91,6 +91,16 @@ brew install elixir
 brew install yarn
 brew install thefuck
 
+# required by asdf
+brew install coreutils
+brew install automake
+brew install autoconf
+brew install libyaml
+brew install readline
+brew install libxslt
+brew install libtool
+brew install unixodbc
+
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
 
