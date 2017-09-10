@@ -119,8 +119,15 @@ fi
 
 if ! command -v asdf > /dev/null; then
   echo "Installing asdf"
-
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
+
+  source $HOME/.bash_profile
+
+  echo "Installing asdf Elixir plugin"
+  asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+
+  echo "Installing asdf Erlang plugin"
+  asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 fi
 
 if [ ! -d $HOME/code/fonts ]; then
