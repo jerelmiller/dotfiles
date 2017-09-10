@@ -117,6 +117,12 @@ if ! command -v nvm > /dev/null; then
   nvm install node
 fi
 
+if ! command -v asdf > /dev/null; then
+  echo "Installing asdf"
+
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
+fi
+
 if [ ! -d $HOME/code/fonts ]; then
   cd $HOME/code
   git clone git@github.com:powerline/fonts.git
