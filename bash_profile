@@ -32,3 +32,6 @@ fi
 if [ -f $HOME/.profile ]; then
   source $HOME/.profile
 fi
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
