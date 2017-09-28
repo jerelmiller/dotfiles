@@ -6,8 +6,6 @@ export EDITOR='vim'
 
 PROMPT_COMMAND="updateps1;history -a"
 
-eval "$(thefuck --alias)"
-
 updateps1() {
   EXITSTATUS="$?"
   GIT_BRANCH=""
