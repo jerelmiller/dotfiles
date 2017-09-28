@@ -21,6 +21,9 @@ updateps1() {
   fi
 }
 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 if [ -f $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
@@ -32,6 +35,3 @@ fi
 if [ -f $HOME/.profile ]; then
   source $HOME/.profile
 fi
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
