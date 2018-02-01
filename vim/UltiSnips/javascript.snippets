@@ -1,12 +1,11 @@
+snippet emo "Emotion" b
+import styled from 'react-emotion'
+endsnippet
+
 snippet _comp "React Component" b
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 export default class `!v expand("%:t:r")` extends Component {
-	static propTypes = {
-		${1:prop}: PropTypes.${2:string}
-	}
-
 	render() {
 		const { $1 } = this.props
 		$0
@@ -53,17 +52,12 @@ function mapStateToProps(state) {
 }
 endsnippet
 
-snippet _rsl "Stateless component" b
-import PropTypes from 'prop-types'
+snippet _sl "Stateless component" b
 import React from 'react'
 
 const `!v expand("%:t:r")` = (${1:{ children }}) => (
 	${2:<div>{ children }</div>}
 )
-
-`!v expand("%:t:r")`.propTypes = {
-	${3:children: PropTypes.node}
-}
 
 export default `!v expand("%:t:r")`
 endsnippet
@@ -164,9 +158,15 @@ constructor(props) {
 endsnippet
 
 snippet sty "styled component" b
-import styled from 'styled-components'
+import styled from 'react-emotion'
 
-export default styled.div`
+const `!v expand("%:t:r")` = styled.div\`
 	$0
-`
+\`
+
+export default `!v expand("%:t:r")`
+endsnippet
+
+snippet react "react" b
+import React from 'react'
 endsnippet
