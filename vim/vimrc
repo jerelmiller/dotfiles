@@ -56,7 +56,6 @@ Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 Plug 'wakatime/vim-wakatime'
 
 " Colors
@@ -173,9 +172,6 @@ augroup filetypes
   autocmd FileType ruby,eruby,yaml setlocal path+=lib
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
 augroup END
-
-" Automatically run prettier for gq
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote
 
 function! HelpFileMode()
   nnoremap <buffer> <cr> <c-]>
