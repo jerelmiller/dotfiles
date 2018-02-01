@@ -1,21 +1,12 @@
 call plug#begin('~/.vim/plugged')
 " Syntax
 Plug 'tpope/vim-git'
-Plug 'vim-ruby/vim-ruby'
 Plug 'moll/vim-node'
 Plug 'fleischie/vim-styled-components'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/html5.vim'
-Plug 'elzr/vim-json'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'kchmck/vim-coffee-script'
 Plug 'chrisbra/csv.vim'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'sbdchd/neoformat'
 Plug 'jparise/vim-graphql'
+Plug 'sheerun/vim-polyglot'
 
 " Text
 Plug 'ntpeters/vim-better-whitespace'
