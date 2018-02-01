@@ -38,7 +38,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby', 'on': ['RunCurrentSpecFile', 'RunNearestSpec', 'RunLastSpec', 'RunAllSpecs'] }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+" Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-unimpaired'
 Plug 'SirVer/ultisnips'
