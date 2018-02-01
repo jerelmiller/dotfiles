@@ -160,6 +160,8 @@ vmap <leader>h2h :!html2haml --erb 2> /dev/null<CR>
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
+let g:neoformat_try_formatprg = 1
+
 augroup filetypes
   autocmd!
 
