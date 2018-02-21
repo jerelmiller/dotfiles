@@ -89,6 +89,7 @@ brew install redis
 brew install libxml2
 brew install elixir
 brew install yarn
+brew install hub
 
 # required by asdf
 brew install coreutils
