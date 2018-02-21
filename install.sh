@@ -89,7 +89,6 @@ brew install redis
 brew install libxml2
 brew install elixir
 brew install yarn
-brew install thefuck
 
 # required by asdf
 brew install coreutils
