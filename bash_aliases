@@ -1,5 +1,7 @@
 shopt -s expand_aliases
 
+eval "$(hub alias -s)"
+
 ##### GENERAL #####
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
