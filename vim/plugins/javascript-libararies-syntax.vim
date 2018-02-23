@@ -1,3 +1,3 @@
-let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs,angularuirouter,react,flux,chai,handlebars'
+let g:used_javascript_libs = 'react'
 
 " vim:ft=vim
