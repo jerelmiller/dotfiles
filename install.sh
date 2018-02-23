@@ -80,6 +80,7 @@ brew install openssl
 brew install the_silver_searcher
 brew install tmux
 brew install vim
+brew install neovim
 brew install mysql
 brew install postgres
 brew install imagemagick
