@@ -17,6 +17,11 @@ Plug '1995eaton/vim-better-javascript-completion', { 'for': [ 'javascript', 'js'
 " GraphQL
 Plug 'jparise/vim-graphql'
 
+" Typescript
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
+Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
+
 " Text
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'PeterRincker/vim-argumentative'
