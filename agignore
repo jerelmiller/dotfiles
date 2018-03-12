@@ -12,3 +12,12 @@ translations.js
 software
 tiny_mce.js
 *.min.js
+*.log
+.git
+bower_components
+ember-cordova
+yarn.lock
+_build
+build
+deps
+dist
