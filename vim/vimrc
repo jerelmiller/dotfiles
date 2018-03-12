@@ -41,6 +41,7 @@ Plug 'avdgaag/vim-phoenix'
 Plug 'tpope/vim-rails'
 
 " Happiness
+Plug 'tpope/vim-db'
 Plug 'rking/ag.vim'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
