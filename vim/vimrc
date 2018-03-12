@@ -198,6 +198,8 @@ nnoremap <leader>if @i
 " underlines
 highlight Search ctermfg=black ctermbg=yellow cterm=NONE guifg=black guibg=yellow gui=NONE
 
+highlight clear SignColumn
+
 " Allow for settings specific to machines this runs on
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
