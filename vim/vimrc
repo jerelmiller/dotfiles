@@ -180,6 +180,7 @@ augroup filetypes
 
   autocmd FileType ruby,eruby,yaml setlocal path+=lib
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
+  autocmd FileType qf wincmd J
 augroup END
 
 function! HelpFileMode()
