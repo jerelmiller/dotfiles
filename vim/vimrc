@@ -63,8 +63,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'SirVer/ultisnips'
 " Plug 'rizzatti/dash.vim', { 'on': ['Dash', 'DashKeywords'] }
 Plug 'mattn/emmet-vim'
-" Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
+Plug 'ervandew/supertab'
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
 
