@@ -57,6 +57,9 @@ fi
 echo "Setting up neovim..."
 ./scripts/symlink_nvim_dotfiles.sh
 
+echo "Setting up Vim Plug..."
+./scripts/setup_vim_plug.sh
+
 if ! command -v brew > /dev/null; then
   echo "Installing homebrew..."
 
