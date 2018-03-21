@@ -30,9 +30,9 @@ if [ ! -d $HOME/.vim/bundle ]; then
   mkdir $HOME/.vim/bundle
 fi
 
-if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
+if [ ! -f $HOME/.config/nvim/autoload/plug.vim ]; then
   echo "Installing Vim Plug"
-  curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 if [ ! -f $HOME/.bash_profile ]; then
