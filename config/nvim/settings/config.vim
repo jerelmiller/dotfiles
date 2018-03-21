@@ -13,6 +13,7 @@ set clipboard=unnamed
 set colorcolumn=80
 set cursorline
 set expandtab
+set guicursor=
 set hidden
 set hlsearch
 set incsearch
