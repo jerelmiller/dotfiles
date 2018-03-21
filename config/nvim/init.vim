@@ -8,31 +8,6 @@ for config_file in split(glob('~/.config/nvim/settings/*'), '\n')
   endif
 endfor
 
-command! Q q
-command! W w
-command! Wq wq
-command! Qa qa
-
-" Use 0 to go to first character instead of beginning of line
-nnoremap 0 ^
-
-" Use ctrl-h/j/k/l to move between splits
-nnoremap <C-h> <C-W><C-h>
-nnoremap <C-j> <C-W><C-j>
-nnoremap <C-k> <C-W><C-k>
-nnoremap <C-l> <C-W><C-l>
-
-inoremap jk <esc>
-inoremap Jk <esc>
-
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap <leader>vi :sp $MYVIMRC<cr>
-nnoremap <leader>so :source $MYVIMRC<cr>
-nnoremap <leader>ch :silent noh<cr>
-
-" replace word under cursor
-nnoremap <leader>s :%s/\<<C-r><C-w>\>/
-
 let g:neoformat_try_formatprg = 1
 
 augroup filetypes
