@@ -54,6 +54,9 @@ if [ ! -d $HOME/.ssh ] ||  [ ! -f $HOME/.ssh/id_rsa.pub ]; then
   fi
 fi
 
+echo "Setting up neovim..."
+./scripts/symlink_nvim_dotfiles.sh
+
 if ! command -v brew > /dev/null; then
   echo "Installing homebrew..."
 
