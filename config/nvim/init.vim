@@ -33,10 +33,6 @@ nnoremap <leader>ch :silent noh<cr>
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
-" NERDTree
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>f :NERDTreeFind<cr>
-
 let g:neoformat_try_formatprg = 1
 
 augroup filetypes
