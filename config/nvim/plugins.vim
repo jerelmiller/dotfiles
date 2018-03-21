@@ -7,7 +7,7 @@ Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " GraphQL
 Plug 'jparise/vim-graphql'
