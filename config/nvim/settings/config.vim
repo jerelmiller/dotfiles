@@ -35,7 +35,6 @@ set splitright
 set splitbelow
 set softtabstop=2
 set tabstop=2
-set termguicolors
 set visualbell
 set wildmenu
 set wildmode=list:longest
