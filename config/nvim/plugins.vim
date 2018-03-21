@@ -23,6 +23,9 @@ Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
 
+" Tests
+Plug 'janko-m/vim-test'
+
 " Happiness
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
