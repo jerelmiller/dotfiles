@@ -1,4 +1,4 @@
-vim/bundle
-vim/plugged
-vim/autoload
+config/nvim/autoload
+config/nvim/plugged
+.netrwhist
 .git
