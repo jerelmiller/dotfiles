@@ -1,0 +1,122 @@
+snippet emo "Emotion" b
+import styled from 'react-emotion'
+endsnippet
+
+snippet rc "React Component" b
+import React, { Component } from 'react'
+
+class `!v expand("%:t:r")` extends Component {
+	state = {}
+
+	render() {
+		const { $1 } = this.props
+		$0
+		return (
+			${3:<div />}
+		)
+	}
+}
+
+export default `!v expand("%:t:r")`
+endsnippet
+
+snippet rsl "Stateless component" b
+import React from 'react'
+
+const `!v expand("%:t:r")` = (${1:{ children }}) => (
+	${2:<div>{ children }</div>}
+)
+
+export default `!v expand("%:t:r")`
+endsnippet
+
+snippet log
+console.log($1)
+endsnippet
+
+snippet props
+this.props
+endsnippet
+
+snippet state
+this.state
+endsnippet
+
+snippet cdm "component did mount" b
+componentDidMount() {
+	$1
+}
+endsnippet
+
+snippet cwm "component will mount" b
+componentWillMount() {
+	$1
+}
+endsnippet
+
+snippet scu "should component update" b
+shouldComponentUpdate(${1:nextProps,} ${2:nextState}) {
+	$0
+}
+endsnippet
+
+snippet cwu "component will unmount" b
+componentWillUnmount() {
+	$0
+}
+endsnippet
+
+snippet imp "import" b
+import $1 from '$2'
+endsnippet
+
+snippet pt "propTypes" b
+static propTypes = {
+	$1: PropTypes.$2
+}
+
+endsnippet
+
+snippet if
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet if!
+if (!$1) {
+	$2
+}
+endsnippet
+
+snippet dp
+static defaultProps = {
+	$0
+}
+endsnippet
+
+snippet it "spec it block" b
+it('$1', () => {
+	$0
+})
+endsnippet
+
+snippet describe "describe it block" b
+describe('$1', () => {
+	$0
+})
+endsnippet
+
+snippet sty "styled component" b
+import styled from 'react-emotion'
+
+const `!v expand("%:t:r")` = styled.div\`
+	$0
+\`
+
+export default `!v expand("%:t:r")`
+endsnippet
+
+snippet react "react" b
+import React from 'react'
+endsnippet
