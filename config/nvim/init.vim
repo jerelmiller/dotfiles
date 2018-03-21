@@ -7,5 +7,3 @@ for config_file in split(glob('~/.config/nvim/settings/*'), '\n')
     execute 'source' config_file
   endif
 endfor
-
-let g:neoformat_try_formatprg = 1
