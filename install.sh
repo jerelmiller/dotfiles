@@ -88,6 +88,8 @@ brew install libxslt
 brew install libtool
 brew install unixodbc
 
+brew tap caskroom/fonts
+
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
 
