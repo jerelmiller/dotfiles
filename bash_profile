@@ -2,7 +2,7 @@
 
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=1000000
-export EDITOR='vim'
+export EDITOR='nvim'
 
 PROMPT_COMMAND="updateps1;history -a"
 
