@@ -1,8 +1,12 @@
 call plug#begin('~/.config/nvim/plugged')
+" Language pack that includes most languages
+Plug 'sheerun/vim-polyglot'
+
 "JavaScript
 Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
+Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 " GraphQL
@@ -13,6 +17,11 @@ Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+
+" Typescript
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
+Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
 
 " Happiness
 Plug 'airblade/vim-gitgutter'
@@ -32,6 +41,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
+Plug 'ervandew/supertab'
 
 " Syntax colors
 Plug 'kristijanhusak/vim-hybrid-material'
