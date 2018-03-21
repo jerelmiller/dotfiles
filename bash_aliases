@@ -31,6 +31,7 @@ alias pull='git fetch && git pull -v origin $GIT_BRANCH'
 alias gd='git diff'
 alias gs='git status'
 alias gb='git branch'
+alias vim='nvim'
 
 ##### RAILS/RUBY ######
 alias routes='rake routes'
