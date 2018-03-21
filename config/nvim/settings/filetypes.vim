@@ -5,6 +5,9 @@ augroup filetypes
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
   autocmd filetype help call HelpFileMode()
 
+  " Go to variable definition using gb
+  autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+
   " Always open quickfix window on bottom
   autocmd FileType qf wincmd J
 augroup END
