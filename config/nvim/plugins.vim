@@ -1,9 +1,18 @@
 call plug#begin('~/.config/nvim/plugged')
 "JavaScript
 Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 " GraphQL
 Plug 'jparise/vim-graphql'
+
+" Text
+Plug 'PeterRincker/vim-argumentative'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
 
 " Happiness
 Plug 'airblade/vim-gitgutter'
