@@ -2,6 +2,9 @@ call plug#begin('~/.config/nvim/plugged')
 " Language pack that includes most languages
 Plug 'sheerun/vim-polyglot'
 
+" Elixir
+Plug 'avdgaag/vim-phoenix'
+
 "JavaScript
 Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
@@ -11,6 +14,9 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " GraphQL
 Plug 'jparise/vim-graphql'
+
+" Ruby
+Plug 'tpope/vim-rails'
 
 " Text
 Plug 'PeterRincker/vim-argumentative'
