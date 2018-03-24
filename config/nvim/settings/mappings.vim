@@ -20,6 +20,8 @@ nnoremap <leader>vi :sp $MYVIMRC<cr>
 nnoremap <leader>so :source $MYVIMRC<cr>
 nnoremap <leader>ch :silent noh<cr>
 
+nnoremap <leader>p viwp<ESC>b
+
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
