@@ -23,6 +23,12 @@ Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-datetime'
+Plug 'kana/vim-textobj-function'
+Plug 'lucapette/vim-textobj-underscore'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'jsx' ]}
 
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
