@@ -33,6 +33,7 @@ set smarttab
 set splitright
 set splitbelow
 set softtabstop=2
+set termguicolors
 set tabstop=2
 set visualbell
 set wildmenu
