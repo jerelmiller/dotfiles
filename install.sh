@@ -93,6 +93,7 @@ brew install libtool
 brew install unixodbc
 
 brew tap caskroom/fonts
+brew cask install font-hack-nerd-font
 
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
