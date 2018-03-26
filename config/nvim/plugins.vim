@@ -64,4 +64,5 @@ Plug 'w0rp/ale'
 
 " Syntax colors
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'mhartington/oceanic-next'
 call plug#end()

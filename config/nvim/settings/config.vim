@@ -1,9 +1,8 @@
 let mapleader=','
 
-set background=dark
-let g:hybrid_custom_term_colors=1
-let g:hybrid_reduced_contrast=1
-colorscheme hybrid_material
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
 
 set autoindent
 set autoread
