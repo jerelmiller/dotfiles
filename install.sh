@@ -40,6 +40,9 @@ echo "Setting up neovim..."
 echo "Setting up Vim Plug..."
 ./scripts/setup_vim_plug.sh
 
+echo "Installing Tmux plugin manager..."
+./scripts/install_tmux_plugin_manager.sh
+
 if ! command -v brew > /dev/null; then
   echo "Installing homebrew..."
 
