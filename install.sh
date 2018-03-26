@@ -80,6 +80,7 @@ brew install libxml2
 brew install elixir
 brew install yarn
 brew install hub
+brew install reattach-to-user-namespace
 
 # required by asdf
 brew install coreutils
