@@ -35,6 +35,7 @@ Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'j
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
+Plug 'mhartington/nvim-typescript', { 'for': ['typescript'] }
 
 " Tests
 Plug 'janko-m/vim-test'
