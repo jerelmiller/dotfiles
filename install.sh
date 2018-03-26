@@ -140,4 +140,7 @@ if [ ! -d $HOME/code/fonts ]; then
   cd $currentdir
 fi
 
+tic tmux-256color.terminfo
+tic tmux-256color-italic.terminfo
+
 source $HOME/.bash_profile
