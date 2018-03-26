@@ -1,6 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 " Elixir
-Plug 'avdgaag/vim-phoenix'
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+Plug 'avdgaag/vim-phoenix', { 'for': 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 "JavaScript
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'js', 'jsx'] }
