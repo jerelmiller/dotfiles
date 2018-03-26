@@ -6,7 +6,7 @@ Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 "JavaScript
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'js', 'jsx'] }
-Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
