@@ -30,6 +30,7 @@ Plug 'kana/vim-textobj-function'
 Plug 'lucapette/vim-textobj-underscore'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'jsx' ]}
+Plug 'vim-scripts/matchit.zip'
 
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
