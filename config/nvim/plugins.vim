@@ -10,38 +10,38 @@ if dein#load_state('~/.config/nvim/dein/')
   call dein#add('sheerun/vim-polyglot')
 
   " Elixir
-  call dein#add('avdgaag/vim-phoenix')
-  call dein#add('slashmili/alchemist.vim')
+  call dein#add('avdgaag/vim-phoenix', { 'on_ft': 'elixir' })
+  call dein#add('slashmili/alchemist.vim', { 'on_ft': 'elixir' })
 
   " Javascript
-  call dein#add('moll/vim-node')
-  call dein#add('othree/javascript-libraries-syntax.vim')
-  call dein#add('neoclide/vim-jsx-improve')
-  call dein#add('1995eaton/vim-better-javascript-completion')
-  call dein#add('carlitux/deoplete-ternjs')
+  call dein#add('moll/vim-node', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('othree/javascript-libraries-syntax.vim', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('neoclide/vim-jsx-improve', { 'on_ft': 'javascript.jsx' })
+  call dein#add('1995eaton/vim-better-javascript-completion', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('carlitux/deoplete-ternjs', { 'build': 'npm install -g tern' })
 
   " GraphQL
   call dein#add('jparise/vim-graphql')
 
   " Ruby
-  call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-rails', { 'on_ft': 'ruby' })
 
   " Text
   call dein#add('PeterRincker/vim-argumentative')
   call dein#add('Raimondi/delimitMate')
   call dein#add('tpope/vim-repeat')
-  call dein#add('vim-scripts/ruby-matchit')
+  call dein#add('vim-scripts/ruby-matchit', { 'on_ft': 'ruby' })
   call dein#add('kana/vim-textobj-user')
   call dein#add('kana/vim-textobj-datetime')
   call dein#add('kana/vim-textobj-function')
   call dein#add('lucapette/vim-textobj-underscore')
   call dein#add('nelstrom/vim-textobj-rubyblock')
-  call dein#add('thinca/vim-textobj-function-javascript')
+  call dein#add('thinca/vim-textobj-function-javascript', { 'on_ft': ['javascript', 'javascript.jsx'] })
   call dein#add('vim-scripts/matchit.zip')
 
   " Typescript
-  call dein#add('HerringtonDarkholme/yats.vim')
-  call dein#add('mhartington/nvim-typescript')
+  call dein#add('HerringtonDarkholme/yats.vim', { 'on_ft': 'typescript' })
+  call dein#add('mhartington/nvim-typescript', { 'on_ft': 'typescript' })
 
   " Tests
   call dein#add('janko-m/vim-test')
@@ -52,10 +52,10 @@ if dein#load_state('~/.config/nvim/dein/')
   call dein#add('junegunn/fzf')
   call dein#add('junegunn/fzf.vim')
   call dein#add('ntpeters/vim-better-whitespace')
-  call dein#add('Olical/vim-enmasse')
+  call dein#add('Olical/vim-enmasse', { 'on_cmd': 'EnMasse' })
   call dein#add('rking/ag.vim')
   call dein#add('sbdchd/neoformat')
-  call dein#add('scrooloose/nerdtree')
+  call dein#add('scrooloose/nerdtree', { 'on_cmd': ['NERDTreeToggle', 'NERDTreeFind'] })
   call dein#add('SirVer/ultisnips')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('tmux-plugins/vim-tmux')
