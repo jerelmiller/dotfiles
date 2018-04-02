@@ -15,8 +15,8 @@ nnoremap <C-l> <C-W><C-l>
 inoremap jk <esc>
 inoremap Jk <esc>
 
-nnoremap <leader>pi :call dein#install()<cr>
-nnoremap <leader>pc :call CleanPackages()<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
 nnoremap <leader>vi :sp $MYVIMRC<cr>
 nnoremap <leader>so :source $MYVIMRC<cr>
 nnoremap <leader>ch :silent noh<cr>

@@ -1,81 +1,72 @@
-set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+call plug#begin('~/.config/nvim/plugged')
+" Language pack that includes most languages
+Plug 'sheerun/vim-polyglot'
 
-if dein#load_state('~/.config/nvim/dein/')
-  call dein#begin('~/.config/nvim/dein/')
+" Elixir
+Plug 'avdgaag/vim-phoenix', { 'for': 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
-  " Let dein manage dein
-  call dein#add('~/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
+" JavaScript
+Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
+Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'js', 'jsx'] }
 
-  " Language pack
-  call dein#add('sheerun/vim-polyglot')
+" GraphQL
+Plug 'jparise/vim-graphql'
 
-  " Elixir
-  call dein#add('avdgaag/vim-phoenix', { 'on_ft': 'elixir' })
-  call dein#add('slashmili/alchemist.vim', { 'on_ft': 'elixir' })
+" Ruby
+Plug 'tpope/vim-rails'
 
-  " Javascript
-  call dein#add('moll/vim-node', { 'on_ft': ['javascript', 'javascript.jsx'] })
-  call dein#add('othree/javascript-libraries-syntax.vim', { 'on_ft': ['javascript', 'javascript.jsx'] })
-  call dein#add('neoclide/vim-jsx-improve', { 'on_ft': 'javascript.jsx' })
-  call dein#add('1995eaton/vim-better-javascript-completion', { 'on_ft': ['javascript', 'javascript.jsx'] })
-  call dein#add('carlitux/deoplete-ternjs', { 'build': 'npm install -g tern' })
+" Text
+Plug 'PeterRincker/vim-argumentative'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-datetime'
+Plug 'kana/vim-textobj-function'
+Plug 'lucapette/vim-textobj-underscore'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'jsx' ]}
+Plug 'vim-scripts/matchit.zip'
 
-  " GraphQL
-  call dein#add('jparise/vim-graphql')
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
+Plug 'mhartington/nvim-typescript', { 'for': ['typescript'] }
 
-  " Ruby
-  call dein#add('tpope/vim-rails', { 'on_ft': 'ruby' })
+" Tests
+Plug 'janko-m/vim-test'
 
-  " Text
-  call dein#add('PeterRincker/vim-argumentative')
-  call dein#add('Raimondi/delimitMate')
-  call dein#add('tpope/vim-repeat')
-  call dein#add('vim-scripts/ruby-matchit', { 'on_ft': 'ruby' })
-  call dein#add('kana/vim-textobj-user')
-  call dein#add('kana/vim-textobj-datetime')
-  call dein#add('kana/vim-textobj-function')
-  call dein#add('lucapette/vim-textobj-underscore')
-  call dein#add('nelstrom/vim-textobj-rubyblock')
-  call dein#add('thinca/vim-textobj-function-javascript', { 'on_ft': ['javascript', 'javascript.jsx'] })
-  call dein#add('vim-scripts/matchit.zip')
+" Happiness
+Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
+Plug 'rking/ag.vim'
+Plug 'sbdchd/neoformat'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'SirVer/ultisnips'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'wakatime/vim-wakatime'
+Plug 'w0rp/ale'
 
-  " Typescript
-  call dein#add('HerringtonDarkholme/yats.vim', { 'on_ft': 'typescript' })
-  call dein#add('mhartington/nvim-typescript', { 'on_ft': 'typescript' })
+" Syntax colors
+Plug 'kristijanhusak/vim-hybrid-material'
 
-  " Tests
-  call dein#add('janko-m/vim-test')
-
-  " Happiness
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('christoomey/vim-tmux-navigator')
-  call dein#add('junegunn/fzf', { 'rtp': '/usr/local/opt/fzf', 'build': './install --all', 'merged': 0 })
-  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
-  call dein#add('mattn/emmet-vim')
-  call dein#add('ntpeters/vim-better-whitespace')
-  call dein#add('Olical/vim-enmasse', { 'on_cmd': 'EnMasse' })
-  call dein#add('rking/ag.vim')
-  call dein#add('sbdchd/neoformat')
-  call dein#add('scrooloose/nerdtree', { 'on_cmd': ['NERDTreeToggle', 'NERDTreeFind'] })
-  call dein#add('SirVer/ultisnips')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('tmux-plugins/vim-tmux')
-  call dein#add('tpope/vim-commentary')
-  call dein#add('tpope/vim-endwise')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('tpope/vim-git')
-  call dein#add('tpope/vim-obsession')
-  call dein#add('tpope/vim-surround')
-  call dein#add('tpope/vim-unimpaired')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('wakatime/vim-wakatime')
-  call dein#add('w0rp/ale')
-
-  " Syntax Highlighting color schemes
-  call dein#add('kristijanhusak/vim-hybrid-material')
-  call dein#add('ryanoasis/vim-devicons')
-
-  call dein#end()
-  call dein#save_state()
-endif
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
