@@ -40,6 +40,9 @@ echo "Setting up neovim..."
 echo "Setting up Vim Plug..."
 ./scripts/setup_vim_plug.sh
 
+echo "Setting up dein..."
+./scripts/setup_dein.sh
+
 echo "Installing Tmux plugin manager..."
 ./scripts/install_tmux_plugin_manager.sh
 
