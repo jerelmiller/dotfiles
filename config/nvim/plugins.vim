@@ -77,8 +77,4 @@ if dein#load_state('~/.config/nvim/dein/')
 
   call dein#end()
   call dein#save_state()
-
-  if dein#check_install()
-    call dein#install()
-  endif
 endif
