@@ -36,6 +36,7 @@ Plug 'vim-scripts/matchit.zip'
 " Typescript
 Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
 Plug 'mhartington/nvim-typescript', { 'for': ['typescript'] }
+Plug 'peitalin/vim-jsx-typescript', { 'for': 'typescript' }
 
 " Tests
 Plug 'janko-m/vim-test'
