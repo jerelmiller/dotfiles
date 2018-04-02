@@ -34,7 +34,6 @@ Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'j
 Plug 'vim-scripts/matchit.zip'
 
 " Typescript
-Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript'] }
 Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
 Plug 'mhartington/nvim-typescript', { 'for': ['typescript'] }
