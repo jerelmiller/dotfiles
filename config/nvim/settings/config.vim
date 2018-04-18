@@ -42,3 +42,4 @@ set tabstop=2
 set visualbell
 set wildmenu
 set wildmode=list:longest
+set updatetime=100
