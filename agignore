@@ -21,3 +21,4 @@ _build
 build
 deps
 dist
+__generated__
