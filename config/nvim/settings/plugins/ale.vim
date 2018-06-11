@@ -1,10 +1,12 @@
 let g:ale_linters = {
+\  'graphql': [],
 \  'javascript': ['eslint', 'flow'],
 \  'typescript': ['tsserver', 'typescript-eslint-parser']
 \}
 
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
+\  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
 \  'elixir': ['mix_format']
 \}
