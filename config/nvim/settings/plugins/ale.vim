@@ -18,3 +18,15 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_sign_error = "⨉"
 let g:ale_sign_warning = "⚠"
 let g:ale_lint_on_text_changed = 'never'
+
+nnoremap <leader>fix :call FixOnSaveToggle()<cr>
+
+function! FixOnSaveToggle()
+  if g:ale_fix_on_save
+    let g:ale_fix_on_save = 0
+    echo "Fix on save: off"
+  else
+    let g:ale_fix_on_save = 1
+    echo "Fix on save: on"
+  endif
+endfunction
