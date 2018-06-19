@@ -26,6 +26,8 @@ nnoremap <leader>p viwp<ESC>b
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
+nnoremap <leader>lt :LivedownToggle<cr>
+
 " Use tab for autocompletion
 inoremap <silent><expr> <TAB>
 		\ pumvisible() ? "\<C-n>" :
