@@ -20,6 +20,7 @@ Plug 'jparise/vim-graphql'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
+Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
 
 " Ruby
 Plug 'tpope/vim-rails'
