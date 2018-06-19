@@ -19,7 +19,7 @@ Plug 'jparise/vim-graphql'
 
 " Markdown
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
 
 " Ruby
 Plug 'tpope/vim-rails'
