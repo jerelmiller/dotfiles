@@ -17,6 +17,10 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " GraphQL
 Plug 'jparise/vim-graphql'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " Ruby
 Plug 'tpope/vim-rails'
 
