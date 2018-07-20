@@ -37,11 +37,6 @@ echo "Setting up dein..."
 echo "Installing Tmux plugin manager..."
 ./scripts/install_tmux_plugin_manager.sh
 
-if brew list | grep -Fq brew-cask; then
-  echo "Uninstalling old Homebrew-Cask..."
-  brew uninstall --force brew-cask
-fi
-
 echo "Updating homebrew formulae..."
 brew update
 
