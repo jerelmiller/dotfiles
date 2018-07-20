@@ -29,6 +29,12 @@ install_brew_cask() {
   print_result $? "Homebrew (cask)"
 }
 
+install_brew_fonts() {
+  brew tap caskroom/fonts
+
+  print_result $? "Homebrew (fonts)"
+}
+
 opt_out_of_analytics() {
   local path=""
 
