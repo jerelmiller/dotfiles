@@ -50,7 +50,7 @@ main() {
     install_xcode_clt
   fi
 
-  # Put all code in home folder
+  # Put all code in code folder
   mkdir $HOME/code
 
   git clone git@github.com:jerelmiller/dotfiles.git $HOME/code/dotfiles
