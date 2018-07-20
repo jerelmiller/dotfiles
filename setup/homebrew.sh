@@ -45,7 +45,7 @@ opt_out_of_analytics() {
 }
 
 main() {
-  print_info "Setting up homebrew"
+  print_info "Setting up homebrew\n\n"
 
   install_homebrew
   opt_out_of_analytics
