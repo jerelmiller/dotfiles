@@ -72,3 +72,19 @@ print_result() {
 
   return "$1"
 }
+
+print_success() {
+  print_in_green "   [✔] $1\n"
+}
+
+print_warning() {
+  print_in_yellow "   [!] $1\n"
+}
+
+print_error() {
+  print_in_red "   [✖] $1 $2\n"
+}
+
+print_info() {
+  print_in_purple " $1\n"
+}
