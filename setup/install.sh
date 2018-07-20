@@ -6,3 +6,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ask_for_sudo
 
 ./xcode.sh
+./homebrew.sh
