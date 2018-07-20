@@ -8,6 +8,8 @@ brew install reattach-to-user-namespace
 
 brew install yarn --without-node
 
+brew install heroku-toolbelt
+
 # required by asdf
 brew install coreutils
 brew install automake
