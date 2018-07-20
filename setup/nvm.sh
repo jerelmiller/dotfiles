@@ -28,7 +28,7 @@ install_nvm() {
 update_nvm() {
   cd $NVM_DIRECTORY && \
     git fetch --quiet origin && \
-    git checkout --quiet \$(git describe --abbrev=0 --tags) && \
+    git checkout --quiet $(git describe --abbrev=0 --tags) && \
     . $NVM_DIRECTORY/nvm.sh
 
   print_result $? "nvm (upgrade)"
