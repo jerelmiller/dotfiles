@@ -37,12 +37,6 @@ echo "Setting up dein..."
 echo "Installing Tmux plugin manager..."
 ./scripts/install_tmux_plugin_manager.sh
 
-if ! command -v brew > /dev/null; then
-  echo "Installing homebrew..."
-
-  curl -fsS 'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
-fi
-
 if brew list | grep -Fq brew-cask; then
   echo "Uninstalling old Homebrew-Cask..."
   brew uninstall --force brew-cask
