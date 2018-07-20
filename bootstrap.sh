@@ -51,9 +51,13 @@ main() {
   fi
 
   # Put all code in code folder
-  mkdir $HOME/code
+  mkdir $HOME/code &> /dev/null
 
-  git clone git@github.com:jerelmiller/dotfiles.git $HOME/code/dotfiles
+  if [ ! -d $HOME/code/dotfiles ]; then
+    git clone git@github.com:jerelmiller/dotfiles.git $HOME/code/dotfiles
+  fi
+
+  fancy_echo "Success. When ready, run \"setup.sh\" inside of the dotfiles directory"
 }
 
 main
