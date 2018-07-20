@@ -86,5 +86,5 @@ print_error() {
 }
 
 print_info() {
-  print_in_purple " $1\n"
+  print_in_purple "\n $1\n"
 }

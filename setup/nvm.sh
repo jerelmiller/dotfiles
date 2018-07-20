@@ -44,7 +44,7 @@ install_latest_stable_node() {
 }
 
 main() {
-  print_info "Setting up nvm\n\n"
+  print_info "nvm"
 
   if [ ! -d "$NVM_DIRECTORY" ]; then
     install_nvm
