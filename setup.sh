@@ -40,8 +40,6 @@ echo "Installing Tmux plugin manager..."
 
 brew install elixir
 
-brew cask install font-hack-nerd-font
-
 if ! command -v rvm > /dev/null; then
   echo "Installing rvm..."
 
