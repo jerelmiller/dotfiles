@@ -56,6 +56,7 @@ main() {
   install_homebrew
   opt_out_of_analytics
   install_brew_cask
+  install_brew_fonts
 
   brew update
   brew upgrade
