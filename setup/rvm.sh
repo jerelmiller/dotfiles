@@ -3,7 +3,7 @@
 cd "$(dirname "${BASH_SOURCE[0]}")" &&
   . ./utils.sh
 
-declare -r $RVM_DIRECTORY="$HOME/.rvm"
+declare -r RVM_DIRECTORY="$HOME/.rvm"
 
 install_rvm() {
   curl -sSL https://get.rvm.io | bash -s stable
