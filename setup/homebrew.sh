@@ -23,6 +23,12 @@ install_homebrew() {
   print_result $? "Homebrew"
 }
 
+install_brew_cask() {
+  brew tap homebrew/cask
+
+  print_result $? "Homebrew (cask)"
+}
+
 opt_out_of_analytics() {
   local path=""
 
@@ -43,6 +49,7 @@ main() {
 
   install_homebrew
   opt_out_of_analytics
+  install_brew_cask
 
   brew update
   brew upgrade
