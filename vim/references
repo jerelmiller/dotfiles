@@ -1,4 +1,5 @@
-" Organization and configuration heavily inspired by Chris Toomey's vimrc
-" https://github.com/christoomey/dotfiles/tree/master/vim
+" Special thanks to reference for these dotfiles
+" https://github.com/christoomey/dotfiles
+" https://github.com/peterpme/dotfiles
 
 " vim:ft=vim
