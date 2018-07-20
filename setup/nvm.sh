@@ -14,7 +14,8 @@ export NVM_DIR=\"\$HOME/.nvm\"
 [ -s \"\$NVM_DIR/bash_completion\" ] && \. \"\$NVM_DIR/bash_completion\"
 "
 
-  printf "%s" "$CONFIGS" >> $LOCAL_SHELL_CONFIG_FILE && . $LOCAL_SHELL_CONFIG_FILE
+  printf "%s" "$CONFIGS" >> $LOCAL_SHELL_CONFIG_FILE && \
+    . $LOCAL_SHELL_CONFIG_FILE
 
   print_result $? "nvm (update $LOCAL_SHELL_CONFIG_FILE)"
 }
