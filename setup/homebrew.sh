@@ -29,6 +29,12 @@ install_brew_cask() {
   print_result $? "Homebrew (cask)"
 }
 
+install_brew_cask_versions() {
+  brew tap homebrew/cask-versions
+
+  print_result $? "Homebrew (cask-versions)"
+}
+
 install_brew_fonts() {
   brew tap caskroom/fonts
 
@@ -56,6 +62,7 @@ main() {
   install_homebrew
   opt_out_of_analytics
   install_brew_cask
+  install_brew_cask_versions
   install_brew_fonts
 
   brew update
