@@ -8,11 +8,11 @@ declare -r NVM_DIRECTORY="$HOME/.nvm"
 declare -r NVM_GIT_REPO_URL="https://github.com/creationix/nvm.git"
 
 add_nvm_configs() {
-  declare -r CONFIGS=""
-
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  declare -r CONFIGS="
+export NVM_DIR=\"$HOME/.nvm\"
+[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"
+[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\"
+"
 
   printf "%s" "$CONFIGS" >> $LOCAL_SHELL_CONFIG_FILE && . $LOCAL_SHELL_CONFIG_FILE
 
