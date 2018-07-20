@@ -37,38 +37,9 @@ echo "Setting up dein..."
 echo "Installing Tmux plugin manager..."
 ./scripts/install_tmux_plugin_manager.sh
 
-echo "Updating homebrew formulae..."
-brew update
 
-brew install git
-brew install openssl
-brew install the_silver_searcher
-brew install tmux
-brew install vim
-brew install neovim
-brew install mysql
-brew install postgres
-brew install imagemagick
-brew install cmake
-brew install memcached
-brew install redis
-brew install libxml2
 brew install elixir
-brew install yarn
-brew install hub
-brew install reattach-to-user-namespace
 
-# required by asdf
-brew install coreutils
-brew install automake
-brew install autoconf
-brew install libyaml
-brew install readline
-brew install libxslt
-brew install libtool
-brew install unixodbc
-
-brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 
 if ! command -v rvm > /dev/null; then
