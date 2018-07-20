@@ -11,5 +11,3 @@ ask_for_sudo
 
 ./brew_install.sh
 ./brew_cask_install.sh
-
-./rvm.sh
