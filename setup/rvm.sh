@@ -34,7 +34,7 @@ install_rvm() {
 }
 
 install_latest_ruby() {
-  rvm install ruby --latest
+  rvm use ruby --install --latest
 
   print_result $? "rvm (install latest Ruby)"
 }
@@ -49,7 +49,6 @@ main() {
   fi
 
   install_latest_ruby
-  rvm use --default
 
   cleanup
 }
