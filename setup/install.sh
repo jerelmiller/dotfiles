@@ -23,7 +23,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 
 ./git_config.sh
 
-# macOS settings
 ./mac_os.sh
 
 ./restart.sh
