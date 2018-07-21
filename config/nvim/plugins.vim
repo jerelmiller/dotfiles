@@ -73,6 +73,7 @@ Plug 'w0rp/ale'
 
 " Syntax colors
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'tyrannicaltoucan/vim-quantum'
 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
