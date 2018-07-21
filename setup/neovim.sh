@@ -20,3 +20,5 @@ main() {
 
   install_vim_plug
 }
+
+main
