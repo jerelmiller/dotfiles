@@ -18,8 +18,8 @@ ask_for_sudo
 
 ./ruby.sh
 
-./term
-./neovim
-./tmux
+./term.sh
+./neovim.sh
+./tmux.sh
 
 source $HOME/.bash_profile
