@@ -1,5 +1,10 @@
 #!/bin/sh
 
+cd "$(dirname "${BASH_SOURCE[0]}")" &&
+  . ./utils.sh
+
+print_info "Git config"
+
 git config --global color.ui true
 
 git config --global user.name "Jerel Miller"
