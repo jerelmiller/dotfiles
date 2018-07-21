@@ -24,6 +24,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./git_config.sh
 ./powerline_fonts.sh
 
+./dock.sh
 ./mac_os.sh
 
 ./restart.sh
