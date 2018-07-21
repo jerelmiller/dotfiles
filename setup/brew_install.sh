@@ -3,40 +3,53 @@
 cd "$(dirname "${BASH_SOURCE[0]}")" &&
   . ./utils.sh
 
+brew_install() {
+  local formula="$1"
+  local options="$2"
+
+  if brew list $formula &> /dev/null; then
+    print_success "$formula"
+  else
+    brew_install $formula $options
+
+    print_result $? "$formula"
+  fi
+}
+
 print_info "Install homebrew packages"
 
-brew install git
-brew install hub
+brew_install git
+brew_install hub
 
-brew install tmux
-brew install reattach-to-user-namespace
+brew_install tmux
+brew_install reattach-to-user-namespace
 
-brew install yarn --without-node
+brew_install yarn --without-node
 
-brew install heroku-toolbelt
+brew_install heroku-toolbelt
 
 # required by asdf
-brew install coreutils
-brew install automake
-brew install autoconf
-brew install libyaml
-brew install readline
-brew install libxslt
-brew install libtool
-brew install unixodbc
+brew_install coreutils
+brew_install automake
+brew_install autoconf
+brew_install libyaml
+brew_install readline
+brew_install libxslt
+brew_install libtool
+brew_install unixodbc
 
 # Storage/caching
-brew install postgres
-brew install redis
+brew_install postgres
+brew_install redis
 
 # Misc
-brew install openssl
-brew install neovim
-brew install the_silver_searcher
-brew install imagemagick
-brew install cmake
-brew install gpg2
-brew install libxml2
-brew install ffmpeg
-brew install youtube-dl
-brew install watchman
+brew_install openssl
+brew_install neovim
+brew_install the_silver_searcher
+brew_install imagemagick
+brew_install cmake
+brew_install gpg2
+brew_install libxml2
+brew_install ffmpeg
+brew_install youtube-dl
+brew_install watchman
