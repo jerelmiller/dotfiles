@@ -15,4 +15,3 @@ alias pop='git status pop'
 # MISC
 alias vim='nvim'
 alias code='cd $HOME/code'
-alias resource="source $HOME/.zshrc"

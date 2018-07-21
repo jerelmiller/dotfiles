@@ -72,6 +72,7 @@ plugins=(
   tmux
   web-search
   yarn
+  zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh
