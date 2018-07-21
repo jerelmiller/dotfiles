@@ -5,13 +5,10 @@ cd "$(dirname "${BASH_SOURCE[0]}")" && . ./utils.sh
 declare -r NVM_GIT_REPO_URL="https://github.com/creationix/nvm.git"
 
 add_nvm_configs() {
-  declare -r CONFIGS="
-export NVM_DIR=\"\$HOME/.nvm\"
-[ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\"
-"
+  append_to_shell_config "export NVM_DIR=\"\$HOME/.nvm\"" 1
+  append_to_shell_config "[ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\""
 
-  printf "%s" "$CONFIGS" >> $LOCAL_SHELL_CONFIG_FILE && \
-    . $LOCAL_SHELL_CONFIG_FILE
+  . $LOCAL_SHELL_CONFIG_FILE
 
   print_result $? "nvm (update $LOCAL_SHELL_CONFIG_FILE)"
 }
