@@ -22,6 +22,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./tmux.sh
 
 ./git_config.sh
+./powerline_fonts.sh
 
 ./mac_os.sh
 
