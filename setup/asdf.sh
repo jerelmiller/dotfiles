@@ -55,6 +55,15 @@ install_language() {
   fi
 }
 
+add_asdf_configs() {
+  append_to_shell_config ". \$HOME/.asdf/asdf.sh"
+  append_to_shell_config ". \$HOME/.asdf/completions/asdf.bash" 1
+
+  . $LOCAL_SHELL_CONFIG_FILE
+
+  print_success "asdf (update $LOCAL_SHELL_CONFIG_FILE)"
+}
+
 main() {
   print_info "asdf"
 
@@ -62,7 +71,7 @@ main() {
 
   if ! cmd_exists "asdf"; then
     install_asdf
-    . $ASDF_SOURCE &> /dev/null
+    add_asdf_configs
   else
     upgrade_asdf
   fi
