@@ -3,7 +3,6 @@
 cd "$(dirname "${BASH_SOURCE[0]}")" &&
   . ./utils.sh
 
-ask_for_sudo
 
 ./xcode.sh
 ./homebrew.sh
@@ -23,5 +22,8 @@ ask_for_sudo
 ./tmux.sh
 
 ./git_config.sh
+
+# macOS settings
+./mac_os.sh
 
 source $HOME/.bash_profile
