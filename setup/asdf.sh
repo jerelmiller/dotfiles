@@ -60,11 +60,11 @@ install_language() {
 main() {
   print_info "asdf"
 
-  . $ASDF_DIRECTORY/asdf.sh &> /dev/null
+  . $ASDF_SOURCE &> /dev/null
 
   if ! cmd_exists "asdf"; then
     install_asdf
-    . $ASDF_DIRECTORY/asdf.sh
+    . $ASDF_SOURCE &> /dev/null
   else
     upgrade_asdf
   fi
