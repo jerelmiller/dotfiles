@@ -31,7 +31,11 @@ update_nvm() {
 install_latest_stable_node() {
   # Install the latest stable version of Node
   # (this will also set it as the default).
-  . $LOCAL_SHELL_CONFIG_FILE && nvm install node
+  . $LOCAL_SHELL_CONFIG_FILE
+
+  nvm install node && \
+    nvm alias default node && \
+    nvm use default
 
   print_result $? "nvm (install latest Node)"
 }
