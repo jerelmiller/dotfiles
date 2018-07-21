@@ -14,9 +14,7 @@ install_asdf() {
 }
 
 upgrade_asdf() {
-  cd $ASDF_DIRECTORY && \
-    git fetch --quiet origin && \
-    git checkout --quiet $(git describe --abbrev=0 --tags)
+  asdf update
 
   print_result $? "asdf (upgrade)"
 }
@@ -58,13 +56,13 @@ install_language() {
 main() {
   print_info "asdf"
 
-  if [ ! -d "$ASDF_DIRECTORY" ]; then
+  if ! cmd_exists "asdf"; then
     install_asdf
+    . $ASDF_DIRECTORY/asdf.sh
   else
+    . $ASDF_DIRECTORY/asdf.sh
     upgrade_asdf
   fi
-
-  . $ASDF_DIRECTORY/asdf.sh
 
   add_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
   install_language "ruby"
