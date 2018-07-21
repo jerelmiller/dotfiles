@@ -14,6 +14,11 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 print_success "Tap to click"
 
+# Save screenshots in iCloud Drive
+defaults write com.apple.screencapture location $ICLOUD_DRIVE/Screenshots
+
+print_success "Updated screenshot location"
+
 for app in "Finder"; do
   killall "${app}" &> /dev/null
 done
