@@ -45,7 +45,7 @@ install_language() {
   local language="$1"
   local latest_version="$(asdf list-all "$language" | grep -v "[a-z]" | tail -1)"
 
-  if ! language_installed $language $latest_version; then
+  if ! language_installed $language $latest_version &> /dev/null; then
     ask_for_confirmation "Do you want to install $language ($latest_version) now?"
 
     if answer_is_yes; then
