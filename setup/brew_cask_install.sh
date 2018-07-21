@@ -1,5 +1,10 @@
 #!/bin/sh
 
+cd "$(dirname "${BASH_SOURCE[0]}")" &&
+  . ./utils.sh
+
+print_info "Install brew-cask packages"
+
 # Browsers
 brew cask install google-chrome
 brew cask install firefox

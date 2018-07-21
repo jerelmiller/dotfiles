@@ -1,5 +1,10 @@
 #!/bin/sh
 
+cd "$(dirname "${BASH_SOURCE[0]}")" &&
+  . ./utils.sh
+
+print_info "Install homebrew packages"
+
 brew install git
 brew install hub
 
