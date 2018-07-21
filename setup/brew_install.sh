@@ -54,3 +54,4 @@ brew_install ffmpeg
 brew_install youtube-dl
 brew_install watchman
 brew install dockutil
+brew install python3
