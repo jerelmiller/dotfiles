@@ -36,6 +36,8 @@ install_npm_package() {
 main() {
   print_info "neovim"
 
+  . $LOCAL_SHELL_CONFIG_FILE
+
   install_neovim
   install_vim_plug
   install_ruby_gem
