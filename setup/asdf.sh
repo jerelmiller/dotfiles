@@ -25,6 +25,13 @@ plugin_added() {
   asdf plugin-list | grep -Fq "$1"
 }
 
+language_installed() {
+  local language="$1"
+  local version="$2"
+
+  asdf list "$language" | grep -Fq "$version"
+}
+
 add_plugin() {
   local name="$1"
   local url="$2"
@@ -34,6 +41,18 @@ add_plugin() {
   fi
 
   print_result $? "asdf (add $name)"
+}
+
+install_language() {
+  local language="$1"
+  local latest_version="asdf list-all $language | grep -v \"[a-z]\" | tail -1"
+
+  if ! language_installed $language $latest_version; then
+    asdf install "$language" "$latest_version" && \
+      asdf global "$language" "$latest_version"
+  fi
+
+  print_result $? "asdf (install $language $version)"
 }
 
 main() {
@@ -48,8 +67,13 @@ main() {
   . $ASDF_DIRECTORY/asdf.sh
 
   add_plugin "ruby"
-  add_plugin "elixir"
+  install_language "ruby"
+
   add_plugin "erlang"
+  install_language "erlang"
+
+  add_plugin "elixir"
+  install_language "elixir"
 }
 
 main
