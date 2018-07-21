@@ -66,13 +66,13 @@ main() {
 
   . $ASDF_DIRECTORY/asdf.sh
 
-  add_plugin "ruby"
+  add_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
   install_language "ruby"
 
   add_plugin "erlang"
-  install_language "erlang"
+  install_language "erlang" "https://github.com/asdf-vm/asdf-erlang.git"
 
-  add_plugin "elixir"
+  add_plugin "elixir" "https://github.com/asdf-vm/asdf-elixir.git"
   install_language "elixir"
 }
 
