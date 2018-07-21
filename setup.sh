@@ -2,14 +2,6 @@
 
 currentdir=$(pwd)
 
-gem_install_or_update() {
-  if gem list "$1" --installed > /dev/null; then
-    gem update "$@"
-  else
-    gem install "$@"
-  fi
-}
-
 if [ ! -f $HOME/.tmux.conf ]; then
   echo "Linking .tmux.conf"
   ln -s $currentdir/tmux.conf $HOME/.tmux.conf
@@ -37,8 +29,6 @@ echo "Setting up dein..."
 echo "Installing Tmux plugin manager..."
 ./scripts/install_tmux_plugin_manager.sh
 
-
-brew install elixir
 
 if [ ! -d $HOME/code/fonts ]; then
   cd $HOME/code
