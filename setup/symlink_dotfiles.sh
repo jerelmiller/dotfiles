@@ -3,14 +3,14 @@
 cd "$(dirname "${BASH_SOURCE[0]}")" &&
   . ./utils.sh
 
-declare -a FILES_TO_SYMLINK=(
+declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/agignore"
   "shell/bash_profile"
   "shell/bash_aliases"
   "shell/tmux.conf"
 )
 
-declare -a SPECIAL_FILES=(
+declare -a FOLDERS_TO_SYMLINK=(
   "config/nvim"
 )
 
@@ -46,11 +46,22 @@ symlink_shell_file() {
   maybe_symlink_file $source_file $target_file
 }
 
+symlink_folder() {
+  local source_folder="$(cd .. && pwd)/$1"
+  local target_folder="$HOME/.$1"
+
+  maybe_symlink_file $source_folder $target_folder
+}
+
 main() {
   print_info "Symlink dotfiles"
 
-  for i in ${FILES_TO_SYMLINK[@]}; do
+  for i in ${SHELL_FILES_TO_SYMLINK[@]}; do
     symlink_shell_file $i
+  done
+
+  for i in ${FOLDERS_TO_SYMLINK[@]}; do
+    symlink_folder $i
   done
 }
 
