@@ -4,10 +4,11 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-let g:enable_italic_font=1
-let g:hybrid_reduced_contrast=1
-let g:hybrid_custom_term_colors=1
-colorscheme hybrid_material
+" let g:enable_italic_font=1
+" let g:hybrid_reduced_contrast=1
+" let g:hybrid_custom_term_colors=1
+" colorscheme hybrid_material
+colorscheme quantum
 
 set autoindent
 set autoread
@@ -43,3 +44,5 @@ set visualbell
 set wildmenu
 set wildmode=list:longest
 set updatetime=100
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
