@@ -51,10 +51,10 @@ install_language() {
     if answer_is_yes; then
       asdf install "$language" "$latest_version" && \
         asdf global "$language" "$latest_version"
+
+      print_result $? "asdf (install $language $latest_version)"
     fi
   fi
-
-  print_result $? "asdf (install $language $latest_version)"
 }
 
 main() {
