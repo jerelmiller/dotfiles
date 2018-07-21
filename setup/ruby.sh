@@ -37,6 +37,8 @@ configure_bundler() {
 main() {
   print_info "ruby"
 
+  . $ASDF_SOURCE &> /dev/null
+
   if using_system_ruby; then
     print_warning "Using system ruby. Skipping ruby setup..."
     return 0
