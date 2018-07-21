@@ -30,6 +30,7 @@ cask_install iterm2
 cask_install visual-studio-code
 cask_install visualboyadvance-m
 cask_install ngrok
+cask_install docker
 
 # Misc
 cask_install 1password
