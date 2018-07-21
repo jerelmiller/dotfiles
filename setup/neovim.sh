@@ -8,7 +8,7 @@ declare -r VIM_PLUG_LOCATION="$NVIM_DIRECTORY/autoload/plug.vim"
 declare -r VIM_PLUG_REPO_URL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
 install_neovim() {
-   pip install neovim
+   pip install neovim && pip3 install neovim
 
    print_result $? "neovim (install)"
 }
