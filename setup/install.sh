@@ -13,3 +13,5 @@ ask_for_sudo
 
 ./nvm.sh
 ./asdf.sh
+
+./ruby.sh
