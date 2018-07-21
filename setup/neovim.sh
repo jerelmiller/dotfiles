@@ -27,12 +27,19 @@ install_ruby_gem() {
   print_result $? "neovim (ruby gem)"
 }
 
+install_npm_package() {
+  npm install -g neovim
+
+  print_result $? "neovim (npm package)"
+}
+
 main() {
   print_info "neovim"
 
   install_neovim
   install_vim_plug
   install_ruby_gem
+  install_npm_package
 }
 
 main
