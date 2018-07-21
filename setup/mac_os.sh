@@ -7,6 +7,8 @@ print_info "macOS Setup"
 
 ask_for_sudo
 
+./close_system_preferences_panes.applescript
+
 # Enable tap-to-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
