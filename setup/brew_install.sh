@@ -32,3 +32,4 @@ brew install imagemagick
 brew install cmake
 brew install gpg2
 brew install libxml2
+brew install ffmpeg
