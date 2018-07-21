@@ -13,3 +13,9 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 print_success "Tap to click"
+
+for app in "Finder"; do
+  killall "${app}" &> /dev/null
+done
+
+print_in_green "   Settings applied"
