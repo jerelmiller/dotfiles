@@ -1,0 +1,15 @@
+# GIT
+alias ga='git add'
+alias gcm='git commit -m'
+alias gcM='gcm'
+alias gmc='gcm'
+alias fetch='git fetch'
+alias pull='git pull'
+alias push='git push'
+alias gd='git diff'
+alias gb='git branch'
+alias gs='git status'
+
+# MISC
+alias vim='nvim'
+alias code='cd $HOME/code'

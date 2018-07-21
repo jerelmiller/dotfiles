@@ -9,6 +9,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/bash_aliases"
   "shell/tmux.conf"
   "shell/zshrc"
+  "shell/aliases"
 )
 
 declare -a FOLDERS_TO_SYMLINK=(
