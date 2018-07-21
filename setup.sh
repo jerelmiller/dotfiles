@@ -2,9 +2,6 @@
 
 currentdir=$(pwd)
 
-echo "Setting up Vim Plug..."
-./scripts/setup_vim_plug.sh
-
 echo "Setting up dein..."
 ./scripts/setup_dein.sh
 
