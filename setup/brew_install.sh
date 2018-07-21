@@ -53,6 +53,6 @@ brew_install libxml2
 brew_install ffmpeg
 brew_install youtube-dl
 brew_install watchman
-brew install dockutil
-brew install python3
-brew install zsh
+brew_install dockutil
+brew_install python3
+brew_install zsh
