@@ -26,4 +26,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 # macOS settings
 ./mac_os.sh
 
+./restart.sh
+
 source $HOME/.bash_profile
