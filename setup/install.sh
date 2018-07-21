@@ -22,4 +22,6 @@ ask_for_sudo
 ./neovim.sh
 ./tmux.sh
 
+./git_config.sh
+
 source $HOME/.bash_profile
