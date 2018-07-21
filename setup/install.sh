@@ -23,6 +23,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./neovim.sh
 ./tmux.sh
 
+./global_node_modules
+
 ./git_config.sh
 ./powerline_fonts.sh
 

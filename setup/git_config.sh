@@ -19,6 +19,7 @@ git config --global github.user jerelmiller
 print_success "github"
 
 git config --global core.editor nvim
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 print_success "core"
 
