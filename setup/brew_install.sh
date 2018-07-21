@@ -10,7 +10,7 @@ brew_install() {
   if brew list $formula &> /dev/null; then
     print_success "$formula"
   else
-    brew_install $formula $options
+    brew install $formula $options
 
     print_result $? "$formula"
   fi
