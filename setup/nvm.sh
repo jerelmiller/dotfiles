@@ -1,8 +1,6 @@
 #!/bin/sh
 
-cd "$(dirname "${BASH_SOURCE[0]}")" && \
-  . ./utils.sh \
-  . ./paths.sh
+cd "$(dirname "${BASH_SOURCE[0]}")" && . ./utils.sh
 
 declare -r NVM_GIT_REPO_URL="https://github.com/creationix/nvm.git"
 

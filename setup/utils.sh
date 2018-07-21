@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ./paths.sh
+
 answer_is_yes() {
   [[ "$REPLY" =~ ^[Yy]$ ]] \
     && return 0 \

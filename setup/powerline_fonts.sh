@@ -1,8 +1,6 @@
 #!/bin/sh
 
-cd "$(dirname "${BASH_SOURCE[0]}")" && \
-  . ./utils.sh && \
-  . ./paths.sh
+cd "$(dirname "${BASH_SOURCE[0]}")" && . ./utils.sh
 
 declare -r FONT_DIRECTORY="$CODE_DIRECTORY/fonts"
 
