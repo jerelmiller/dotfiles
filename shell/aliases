@@ -9,6 +9,8 @@ alias push='git push'
 alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
+alias stash='git stash'
+alias pop='git status pop'
 
 # MISC
 alias vim='nvim'
