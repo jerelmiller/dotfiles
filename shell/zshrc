@@ -66,6 +66,7 @@ plugins=(
   git
   aws
   docker
+  heroku
   osx
   tmux
   yarn
