@@ -8,6 +8,9 @@ declare -a FILES_TO_SYMLINK=(
   "shell/bash_profile"
   "shell/bash_aliases"
   "shell/tmux.conf"
+)
+
+declare -a SPECIAL_FILES=(
   "config/nvim"
 )
 
@@ -17,10 +20,9 @@ symlink_file() {
   print_result $? "$1 → $2"
 }
 
-symlink_source() {
-  local name="$1"
-  local source_file="$(cd .. && pwd)/$name"
-  local target_file="$HOME/.$(printf "%s" "$name" | sed "s/.*\/\(.*\)/\1/g")"
+maybe_symlink_file() {
+  local source_file="$1"
+  local target_file="$2"
 
   if [ ! -e "$target_file" ]; then
     symlink_file $source_file $target_file
@@ -36,11 +38,19 @@ symlink_source() {
   fi
 }
 
+symlink_shell_file() {
+  local name="$1"
+  local source_file="$(cd .. && pwd)/$name"
+  local target_file="$HOME/.$(printf "%s" "$name" | sed "s/.*\/\(.*\)/\1/g")"
+
+  maybe_symlink_file $source_file $target_file
+}
+
 main() {
   print_info "Symlink dotfiles"
 
   for i in ${FILES_TO_SYMLINK[@]}; do
-    symlink_source $i
+    symlink_shell_file $i
   done
 }
 
