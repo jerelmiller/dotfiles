@@ -19,3 +19,4 @@ ask_for_sudo
 ./ruby.sh
 
 ./neovim
+./term
