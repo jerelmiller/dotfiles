@@ -46,8 +46,12 @@ install_language() {
   local latest_version="$(asdf list-all "$language" | grep -v "[a-z]" | tail -1)"
 
   if ! language_installed $language $latest_version; then
-    asdf install "$language" "$latest_version" && \
-      asdf global "$language" "$latest_version"
+    ask_for_confirmation "Do you want to install $language ($latest_version) now?"
+
+    if answer_is_yes; then
+      asdf install "$language" "$latest_version" && \
+        asdf global "$language" "$latest_version"
+    fi
   fi
 
   print_result $? "asdf (install $language $latest_version)"
@@ -65,12 +69,11 @@ main() {
   fi
 
   add_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
-  install_language "ruby"
-
-  add_plugin "erlang"
-  install_language "erlang" "https://github.com/asdf-vm/asdf-erlang.git"
-
+  add_plugin "erlang" "https://github.com/asdf-vm/asdf-erlang.git"
   add_plugin "elixir" "https://github.com/asdf-vm/asdf-elixir.git"
+
+  install_language "ruby"
+  install_language "erlang"
   install_language "elixir"
 }
 
