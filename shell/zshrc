@@ -65,6 +65,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   aws
+  colored-man-pages
   docker
   heroku
   mix
