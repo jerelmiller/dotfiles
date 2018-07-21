@@ -40,15 +40,6 @@ echo "Installing Tmux plugin manager..."
 
 brew install elixir
 
-if ! command -v rvm > /dev/null; then
-  echo "Installing rvm..."
-
-  curl -sSL https://get.rvm.io | bash -s stable
-
-  echo "Installing latest ruby..."
-  rvm install ruby --latest
-fi
-
 echo "Configuring ruby..."
 
 gem update --system
