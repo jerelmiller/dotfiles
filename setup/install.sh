@@ -12,6 +12,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./brew_install.sh
 ./brew_cask_install.sh
 
+./zsh.sh
+
 ./nvm.sh
 ./asdf.sh
 
@@ -23,8 +25,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 
 ./git_config.sh
 ./powerline_fonts.sh
-
-./zsh.sh
 
 ./dock.sh
 ./mac_os.sh
