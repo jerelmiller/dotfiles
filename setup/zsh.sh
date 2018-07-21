@@ -13,6 +13,11 @@ main() {
   print_info "zsh"
 
   install_oh_my_zsh
+
+  # Set zsh as login shell
+  chsh -s $(command -v zsh)
+
+  print_success "Set login shell"
 }
 
 main
