@@ -2,24 +2,6 @@
 
 currentdir=$(pwd)
 
-if [ ! -f $HOME/.tmux.conf ]; then
-  echo "Linking .tmux.conf"
-  ln -s $currentdir/tmux.conf $HOME/.tmux.conf
-fi
-
-if [ ! -f $HOME/.bash_profile ]; then
-  echo "Linking bash profile"
-  ln -s $currentdir/bash_profile $HOME/.bash_profile
-fi
-
-if [ ! -f $HOME/.bash_aliases ]; then
-  echo "Linking bash aliases"
-  ln -s $currentdir/bash_aliases $HOME/.bash_aliases
-fi
-
-echo "Setting up neovim..."
-./scripts/symlink_nvim_dotfiles.sh
-
 echo "Setting up Vim Plug..."
 ./scripts/setup_vim_plug.sh
 
