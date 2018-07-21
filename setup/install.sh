@@ -8,6 +8,7 @@ ask_for_sudo
 ./xcode.sh
 ./homebrew.sh
 ./nvm.sh
+./asdf.sh
 
 ./brew_install.sh
 ./brew_cask_install.sh
