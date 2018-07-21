@@ -21,6 +21,8 @@ print_info "Install homebrew packages"
 brew_install git
 brew_install hub
 
+brew_install git-recent
+
 brew_install tmux
 brew_install reattach-to-user-namespace
 
