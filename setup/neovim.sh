@@ -21,11 +21,18 @@ install_vim_plug() {
   print_result $? "neovim (vim plug)"
 }
 
+install_ruby_gem() {
+  gem install neovim
+
+  print_result $? "neovim (ruby gem)"
+}
+
 main() {
   print_info "neovim"
 
   install_neovim
   install_vim_plug
+  install_ruby_gem
 }
 
 main
