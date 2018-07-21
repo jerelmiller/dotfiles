@@ -5,9 +5,6 @@ currentdir=$(pwd)
 echo "Setting up dein..."
 ./scripts/setup_dein.sh
 
-echo "Installing Tmux plugin manager..."
-./scripts/install_tmux_plugin_manager.sh
-
 
 if [ ! -d $HOME/code/fonts ]; then
   cd $HOME/code
