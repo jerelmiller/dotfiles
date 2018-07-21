@@ -16,6 +16,7 @@ brew cask install brave
 brew cask install iterm2
 brew cask install visual-studio-code
 brew cask install visualboyadvance-m
+brew cask install ngrok
 
 # Misc
 brew cask install 1password
