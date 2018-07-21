@@ -20,10 +20,6 @@ symlink_file() {
   print_result $? "$1 → $2"
 }
 
-basename() {
-  printf "%s" "$1" | sed "s/.*\/\(.*\)/\1/g"
-}
-
 maybe_symlink_file() {
   local source_file="$1"
   local target_file="$2"
