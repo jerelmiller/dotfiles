@@ -57,7 +57,7 @@ symlink_folder() {
   maybe_symlink_file $source_folder $target_folder
 }
 
-symlink_bin() {
+symlink_binstubs() {
   local source_file="$1"
   local target_file="/usr/local/bin/$(basename "$source_file")"
 
@@ -76,7 +76,7 @@ main() {
   done
 
   for filename in $(cd .. && pwd)/bin/*; do
-    symlink_bin $filename
+    symlink_binstubs $filename
   done
 }
 
