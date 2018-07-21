@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 . ./paths.sh
 
@@ -89,4 +89,22 @@ print_error() {
 
 print_info() {
   print_in_purple "\n $1\n\n"
+}
+
+append_to_shell_config() {
+  local text="$1"
+  local skip_new_line="${2:-0}"
+
+  if [ ! -w "$LOCAL_SHELL_CONFIG_FILE" ]; then
+    print_error ".zshrc.local is not writable"
+    return 1
+  fi
+
+  if ! grep -Fqs "$text" "$LOCAL_SHELL_CONFIG_FILE"; then
+    if [ "$skip_new_line" -eq 1 ]; then
+      printf "%s\\n" "$text" >> "$LOCAL_SHELL_CONFIG_FILE"
+    else
+      printf "\\n%s\\n" "$text" >> "$LOCAL_SHELL_CONFIG_FILE"
+    fi
+  fi
 }
