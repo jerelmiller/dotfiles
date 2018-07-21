@@ -1,9 +1,8 @@
 #!/bin/sh
 
-cd "$(dirname "${BASH_SOURCE[0]}")" &&
-  . ./utils.sh
-
-declare -r SYSTEM_RUBY_BIN="/usr/bin/ruby"
+cd "$(dirname "${BASH_SOURCE[0]}")" && \
+  . ./utils.sh && \
+  . ./paths.sh
 
 using_system_ruby() {
   [ "$(command -v ruby)" == "$SYSTEM_RUBY_BIN" ]
