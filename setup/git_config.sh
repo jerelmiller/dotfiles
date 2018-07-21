@@ -14,4 +14,4 @@ git config --global github.user jerelmiller
 
 git config --global core.editor nvim
 
-git config --global alias.graph log --graph --oneline --decorate
+git config --global alias.graph "log --graph --oneline --decorate"
