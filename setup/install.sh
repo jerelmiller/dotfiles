@@ -20,3 +20,5 @@ ask_for_sudo
 
 ./neovim
 ./term
+
+source $HOME/.bash_profile
