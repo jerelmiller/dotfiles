@@ -13,3 +13,4 @@ alias gs='git status'
 # MISC
 alias vim='nvim'
 alias code='cd $HOME/code'
+alias resource="source $HOME/.zshrc"
