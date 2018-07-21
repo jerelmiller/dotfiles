@@ -96,3 +96,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+[[ -f $HOME/.aliases ]] && source $HOME/.aliases
