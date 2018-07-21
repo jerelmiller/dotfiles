@@ -17,3 +17,5 @@ ask_for_sudo
 ./asdf.sh
 
 ./ruby.sh
+
+./neovim
