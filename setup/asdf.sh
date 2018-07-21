@@ -43,7 +43,7 @@ add_plugin() {
 
 install_language() {
   local language="$1"
-  local latest_version="asdf list-all $language | grep -v \"[a-z]\" | tail -1"
+  local latest_version="$(asdf list-all "$language" | grep -v "[a-z]" | tail -1)"
 
   if ! language_installed $language $latest_version; then
     asdf install "$language" "$latest_version"
