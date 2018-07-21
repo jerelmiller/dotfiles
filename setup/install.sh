@@ -8,7 +8,7 @@ ask_for_sudo
 ./xcode.sh
 ./homebrew.sh
 
-./symlink_dotfiles
+./symlink_dotfiles.sh
 
 ./brew_install.sh
 ./brew_cask_install.sh
