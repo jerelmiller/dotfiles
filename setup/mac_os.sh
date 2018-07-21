@@ -16,13 +16,17 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 print_success "Tap to click"
 
+# Much faster keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+print_success "Key repeat"
+
 # Save screenshots in iCloud Drive
 defaults write com.apple.screencapture location $ICLOUD_DRIVE/Screenshots
 
-print_success "Updated screenshot location"
+print_success "Screenshot location"
 
 for app in "Finder"; do
   killall "${app}" &> /dev/null
 done
-
-print_in_green "   Settings applied"
