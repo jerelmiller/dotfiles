@@ -20,6 +20,10 @@ symlink_file() {
   print_result $? "$1 → $2"
 }
 
+basename() {
+  printf "%s" "$1" | sed "s/.*\/\(.*\)/\1/g"
+}
+
 maybe_symlink_file() {
   local source_file="$1"
   local target_file="$2"
@@ -41,7 +45,7 @@ maybe_symlink_file() {
 symlink_shell_file() {
   local name="$1"
   local source_file="$(cd .. && pwd)/$name"
-  local target_file="$HOME/.$(printf "%s" "$name" | sed "s/.*\/\(.*\)/\1/g")"
+  local target_file="$HOME/.$(basename "$name")"
 
   maybe_symlink_file $source_file $target_file
 }
@@ -53,6 +57,13 @@ symlink_folder() {
   maybe_symlink_file $source_folder $target_folder
 }
 
+symlink_bin() {
+  local source_file="$1"
+  local target_file="/usr/local/bin/$(basename "$source_file")"
+
+  maybe_symlink_file $source_file $target_file
+}
+
 main() {
   print_info "Symlink dotfiles"
 
@@ -62,6 +73,10 @@ main() {
 
   for i in ${FOLDERS_TO_SYMLINK[@]}; do
     symlink_folder $i
+  done
+
+  for filename in $(cd .. && pwd)/bin/*; do
+    symlink_bin $filename
   done
 }
 
