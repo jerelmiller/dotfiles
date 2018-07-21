@@ -70,6 +70,7 @@ plugins=(
   mix
   osx
   tmux
+  web-search
   yarn
 )
 
