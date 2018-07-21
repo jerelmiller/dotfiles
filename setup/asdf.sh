@@ -50,7 +50,7 @@ install_language() {
     asdf global "$language" "$latest_version"
   fi
 
-  print_result $? "asdf (install $language $version)"
+  print_result $? "asdf (install $language $latest_version)"
 }
 
 main() {
