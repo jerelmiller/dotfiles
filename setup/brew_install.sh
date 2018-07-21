@@ -44,7 +44,6 @@ brew_install redis
 
 # Misc
 brew_install openssl
-brew_install neovim
 brew_install the_silver_searcher
 brew_install imagemagick
 brew_install cmake
