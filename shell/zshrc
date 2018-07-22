@@ -73,6 +73,7 @@ plugins=(
   tmux
   web-search
   yarn
+  zsh-autosuggestions
   zsh_reload
 )
 
