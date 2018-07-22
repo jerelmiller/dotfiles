@@ -96,6 +96,9 @@ else
   export EDITOR='nvim'
 fi
 
+# Remember history in IEx
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
