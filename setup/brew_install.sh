@@ -60,6 +60,7 @@ brew_install python3
 
 # zsh
 brew_install zsh
+brew_install zsh-completions
 brew_install zsh-syntax-highlighting
 
 # uninstall node installed from heroku-cli
