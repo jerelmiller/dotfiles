@@ -13,6 +13,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./brew_cask_install.sh
 
 ./zsh.sh
+./zsh_plugins.sh
 
 ./nvm.sh
 ./asdf.sh
