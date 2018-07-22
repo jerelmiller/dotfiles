@@ -1,14 +1,20 @@
 let mapleader=','
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+if (has("termguicolors"))
+  set termguicolors
+end
+
 filetype plugin indent on
 syntax enable
 
-set background=dark
+" set background=dark
 " let g:enable_italic_font=1
 " let g:hybrid_reduced_contrast=1
 " let g:hybrid_custom_term_colors=1
 " colorscheme hybrid_material
-colorscheme quantum
+colorscheme OceanicNext
 
 set autoindent
 set autoread
@@ -38,11 +44,8 @@ set smarttab
 set splitright
 set splitbelow
 set softtabstop=2
-set termguicolors
 set tabstop=2
 set visualbell
 set wildmenu
 set wildmode=list:longest
 set updatetime=100
-
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1

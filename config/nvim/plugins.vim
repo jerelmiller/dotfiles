@@ -8,6 +8,7 @@ Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " JavaScript
 Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
@@ -74,6 +75,7 @@ Plug 'w0rp/ale'
 " Syntax colors
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'mhartington/oceanic-next'
 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
