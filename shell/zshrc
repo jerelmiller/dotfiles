@@ -107,10 +107,64 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Spaceship theme config
-# SPACESHIP_PROMPT_ADD_NEWLINE=false
-# SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_PROMPT_DEFAULT_PREFIX="• "
+
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_TIME_12HR=true
+
+SPACESHIP_DIR_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+
+SPACESHIP_ELIXIR_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+SPACESHIP_ELIXIR_SYMBOL="懲"
+
+SPACESHIP_GIT_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+
+SPACESHIP_PACKAGE_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+SPACESHIP_PACKAGE_SYMBOL=" "
+
+SPACESHIP_NODE_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+SPACESHIP_NODE_SYMBOL=" "
+
+SPACESHIP_RUBY_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+SPACESHIP_RUBY_SYMBOL=" "
+
+SPACESHIP_SWIFT_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
+SPACESHIP_SWIFT_SYMBOL="ﯣ "
+
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stampts section
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git
+  docker        # Docker section
+  aws           # Amazon Web Services section
+  venv          # virtualenv section
+  pyenv         # Pyenv section
+  dotnet        # .NET section
+  ember         # Ember.js section
+  kubecontext   # Kubectl context section
+  exec_time     # Execution time
+  line_sep      # Line break
+  battery
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
+SPACESHIP_RPROMPT_ORDER=(
+  package       # Package version
+  node          # Node.js section
+  ruby          # Ruby section
+  elixir        # Elixir section
+  xcode         # Xcode section
+  swift         # Swift section
+  golang        # Go section
+  php           # PHP section
+  rust          # Rust section
+  haskell       # Haskell Stack section
+)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
