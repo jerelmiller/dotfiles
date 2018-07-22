@@ -41,6 +41,12 @@ install_brew_fonts() {
   print_result $? "Homebrew (fonts)"
 }
 
+install_brew_command_not_found() {
+  brew tap homebrew/command-not-found
+
+  print_result $? "Homebrew (command-not-found)"
+}
+
 opt_out_of_analytics() {
   local path=""
 
@@ -63,6 +69,7 @@ main() {
   opt_out_of_analytics
   install_brew_cask
   install_brew_cask_versions
+  install_brew_command_not_found
   install_brew_fonts
 
   brew update
