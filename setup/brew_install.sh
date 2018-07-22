@@ -57,4 +57,10 @@ brew_install youtube-dl
 brew_install watchman
 brew_install dockutil
 brew_install python3
+
+# zsh
 brew_install zsh
+brew_install zsh-syntax-highlighting
+
+# uninstall node installed from heroku-cli
+brew uninstall node --ignore-dependencies node &> /dev/null
