@@ -66,6 +66,7 @@ plugins=(
   git
   aws
   colored-man-pages
+  command-not-found
   docker
   heroku
   mix
