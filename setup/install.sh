@@ -14,6 +14,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 
 ./zsh.sh
 ./zsh_plugins.sh
+./zsh_themes.sh
 
 ./nvm.sh
 ./asdf.sh
