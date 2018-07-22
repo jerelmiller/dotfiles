@@ -177,5 +177,6 @@ SPACESHIP_RPROMPT_ORDER=(
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
+[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
