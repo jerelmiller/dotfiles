@@ -109,3 +109,7 @@ fi
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
