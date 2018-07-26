@@ -109,6 +109,6 @@ append_to_shell_config() {
   fi
 }
 
-source_config() {
+source_local_config() {
   . $LOCAL_SHELL_CONFIG_FILE
 }
