@@ -12,3 +12,11 @@ alias pop='git status pop'
 # MISC
 alias vim='nvim'
 alias code='cd $HOME/code'
+
+webhooks() {
+  if [ -z "$1" ]; then
+    ngrok http -subdomain=jerelmiller 80
+  else
+    ngrok http -subdomain=jerelmiller "$1"
+  fi
+}
