@@ -124,3 +124,17 @@ endsnippet
 snippet react "react" b
 import React from 'react'
 endsnippet
+
+snippet icon "feather icon" b
+import React from 'react'
+import FeatherSVG from './FeatherSVG'
+
+const `!v expand("%:t:r")` = props => (
+  <FeatherSVG {...props}>
+    <title>$1</title>
+		$2
+  </FeatherSVG>
+)
+
+export default `!v expand("%:t:r")`
+endsnippet
