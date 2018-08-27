@@ -3,3 +3,4 @@ config/nvim/plugged
 config/nvim/dein
 .netrwhist
 .git
+.tern-port
