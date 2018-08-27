@@ -11,7 +11,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/zshrc"
   "shell/aliases"
   "shell/psqlrc"
-  "shell/prettier.config.js"
+  "shell/prettierrc.js"
 )
 
 declare -a FOLDERS_TO_SYMLINK=(
