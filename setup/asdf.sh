@@ -59,7 +59,7 @@ add_asdf_configs() {
   append_to_shell_config ". \$HOME/.asdf/asdf.sh"
   append_to_shell_config ". \$HOME/.asdf/completions/asdf.bash" 1
 
-  . $LOCAL_SHELL_CONFIG_FILE
+  source_local_config
 
   print_success "asdf (update $LOCAL_SHELL_CONFIG_FILE)"
 }

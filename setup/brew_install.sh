@@ -58,6 +58,7 @@ brew_install watchman
 brew_install dockutil
 brew_install python3
 brew_install wireguard-tools
+brew_install jq
 
 # zsh
 brew_install zsh

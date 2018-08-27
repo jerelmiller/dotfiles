@@ -36,7 +36,7 @@ install_npm_package() {
 main() {
   print_info "neovim"
 
-  . $LOCAL_SHELL_CONFIG_FILE
+  source_local_config
 
   install_neovim
   install_vim_plug

@@ -10,6 +10,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/tmux.conf"
   "shell/zshrc"
   "shell/aliases"
+  "shell/psqlrc"
 )
 
 declare -a FOLDERS_TO_SYMLINK=(
