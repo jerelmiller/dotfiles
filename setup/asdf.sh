@@ -67,14 +67,14 @@ add_asdf_configs() {
 main() {
   print_info "asdf"
 
-  . $ASDF_SOURCE &> /dev/null
-
   if ! cmd_exists "asdf"; then
     install_asdf
     add_asdf_configs
   else
     upgrade_asdf
   fi
+
+  . $ASDF_SOURCE &> /dev/null
 
   add_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
   add_plugin "erlang" "https://github.com/asdf-vm/asdf-erlang.git"
