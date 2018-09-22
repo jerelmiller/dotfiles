@@ -67,12 +67,12 @@ add_asdf_configs() {
 main() {
   print_info "asdf"
 
-  . $ASDF_SOURCE &> /dev/null
-
   if ! cmd_exists "asdf"; then
     install_asdf
     add_asdf_configs
+    . $ASDF_SOURCE &> /dev/null
   else
+    . $ASDF_SOURCE &> /dev/null
     upgrade_asdf
   fi
 
