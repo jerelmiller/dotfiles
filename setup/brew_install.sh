@@ -59,6 +59,7 @@ brew_install dockutil
 brew_install python3
 brew_install wireguard-tools
 brew_install jq
+brew_install rbenv
 
 # zsh
 brew_install zsh
