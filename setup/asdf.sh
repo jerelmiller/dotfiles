@@ -70,17 +70,15 @@ main() {
   if ! cmd_exists "asdf"; then
     install_asdf
     add_asdf_configs
+    . $ASDF_SOURCE &> /dev/null
   else
+    . $ASDF_SOURCE &> /dev/null
     upgrade_asdf
   fi
 
-  . $ASDF_SOURCE &> /dev/null
-
-  add_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
   add_plugin "erlang" "https://github.com/asdf-vm/asdf-erlang.git"
   add_plugin "elixir" "https://github.com/asdf-vm/asdf-elixir.git"
 
-  install_language "ruby"
   install_language "erlang"
   install_language "elixir"
 }
