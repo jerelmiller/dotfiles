@@ -9,6 +9,9 @@ alias pushnew='git push origin -u HEAD'
 alias gs='git status'
 alias stash='git stash'
 alias pop='git status pop'
+alias amend='git commit --amend'
+alias namend='git commit --amend --no-edit'
+alias fpush='git push --force-with-lease'
 
 # MISC
 alias vim='nvim'
