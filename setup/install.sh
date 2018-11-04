@@ -24,6 +24,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./term.sh
 ./neovim.sh
 ./tmux.sh
+./vscode.sh
 
 ./global_node_modules
 
