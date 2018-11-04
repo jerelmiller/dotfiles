@@ -12,6 +12,8 @@ alias pop='git status pop'
 alias amend='git commit --amend'
 alias namend='git commit --amend --no-edit'
 alias fpush='git push --force-with-lease'
+alias pgstart='pg_ctl -D /usr/local/var/postgres start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop'
 
 # MISC
 alias vim='nvim'
