@@ -59,6 +59,15 @@ brew_install wireguard-tools
 brew_install jq
 brew_install rbenv
 
+# node canvas requirements
+brew_install pkg-config
+brew_install cairo
+brew_install pango
+brew_install libpng
+brew_install jpeg
+brew_install giflib
+brew_install librsvg
+
 # zsh
 brew_install zsh
 brew_install zsh-completions
