@@ -40,8 +40,9 @@ Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'j
 Plug 'vim-scripts/matchit.zip'
 
 " Typescript
-Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'typescript.tsx'] }
-Plug 'mhartington/nvim-typescript', { 'for': ['typescript', 'typescript.tsx'], 'do': './install.sh' }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'Quramy/tsuquyomi'
 
 " Tests
 Plug 'janko-m/vim-test'
