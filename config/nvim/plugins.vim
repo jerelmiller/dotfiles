@@ -41,8 +41,8 @@ Plug 'vim-scripts/matchit.zip'
 
 " Typescript
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-Plug 'Quramy/tsuquyomi'
 
 " Tests
 Plug 'janko-m/vim-test'
