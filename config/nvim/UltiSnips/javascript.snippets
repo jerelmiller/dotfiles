@@ -2,6 +2,22 @@ snippet emo "Emotion" b
 import styled from 'react-emotion'
 endsnippet
 
+snippet ptf "prop types func" b
+PropTypes.func
+endsnippet
+
+snippet ptb "prop types bool" b
+PropTypes.bool
+endsnippet
+
+snippet ptn "prop types number" b
+PropTypes.number
+endsnippet
+
+snippet pts "prop types string" b
+PropTypes.string
+endsnippet
+
 snippet sc "styled-components" b
 import styled from 'styled-components'
 endsnippet
@@ -79,10 +95,7 @@ import $1 from '$2'
 endsnippet
 
 snippet pt "propTypes" b
-static propTypes = {
-	$1: PropTypes.$2
-}
-
+import PropTypes from 'prop-types'
 endsnippet
 
 snippet if
