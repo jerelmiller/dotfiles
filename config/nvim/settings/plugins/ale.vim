@@ -8,7 +8,8 @@ let g:ale_fixers = {
 \  'javascript': ['prettier'],
 \  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
-\  'elixir': ['mix_format']
+\  'elixir': ['mix_format'],
+\  'scss': ['prettier']
 \}
 
 let g:ale_fix_on_save = 1
