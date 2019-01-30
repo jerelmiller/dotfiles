@@ -126,7 +126,7 @@ maybe_symlink_file() {
   if [ ! -e "$target_file" ]; then
     symlink_file "$source_file" "$target_file"
   elif [ "$(readlink "$target_file")" == "$source_file" ]; then
-    print_success "$target_file → $source_file"
+    print_success "$source_file → $target_file"
   else
     ask_for_confirmation "'$target_file' already exists, do you want to overwrite it?"
 
