@@ -1,0 +1,40 @@
+{
+  "editor.fontSize": 13,
+  "editor.fontFamily": "Hack",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "workbench.colorTheme": "Hybrid Next",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["0"], "after": ["^"] },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "n", "t"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "a", "g"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["<leader>", "c", "h"],
+      "commands": [":nohl"]
+    }
+  ],
+  "vim.leader": ",",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "editor.scrollBeyondLastLine": false,
+  "vim.hlsearch": true,
+  "editor.tabCompletion": "on",
+  "editor.insertSpaces": false
+}
