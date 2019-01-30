@@ -34,9 +34,18 @@ symlink_settings() {
   done
 }
 
+install_extensions() {
+  ask_for_confirmation "Would you like to install extensions?"
+
+  if answer_is_yes; then
+    cat ../vscode/extensions | xargs -L 1 /usr/local/bin/code --install-extension
+  fi
+}
+
 main() {
   setup_key_repeating
   symlink_settings
+  install_extensions
 }
 
 main
