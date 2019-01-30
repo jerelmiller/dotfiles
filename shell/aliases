@@ -18,6 +18,7 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop'
 # MISC
 alias vim='nvim'
 alias code='cd $HOME/code'
+alias vscode='/usr/local/bin/code'
 
 webhooks() {
   if [ -z "$1" ]; then
