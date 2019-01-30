@@ -112,3 +112,27 @@ append_to_shell_config() {
 source_local_config() {
   . $LOCAL_SHELL_CONFIG_FILE
 }
+
+symlink_file() {
+  ln -fs "$1" "$2"
+
+  print_result $? "$1 → $2"
+}
+
+maybe_symlink_file() {
+  local source_file="$1"
+  local target_file="$2"
+
+  if [ ! -e "$target_file" ]; then
+    symlink_file "$source_file" "$target_file"
+  elif [ "$(readlink "$target_file")" == "$source_file" ]; then
+    print_success "$target_file → $source_file"
+  else
+    ask_for_confirmation "'$target_file' already exists, do you want to overwrite it?"
+
+    if answer_is_yes; then
+      rm -rf "$target_file"
+      symlink_file $source_file $target_file
+    fi
+  fi
+}
