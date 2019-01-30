@@ -67,16 +67,16 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  aws
+  # aws
   colored-man-pages
-  command-not-found
+  # command-not-found
   docker
-  heroku
+  # heroku
   mix
   osx
   postgres
   tmux
-  web-search
+  # web-search
   yarn
   zsh-autosuggestions
   zsh_reload
