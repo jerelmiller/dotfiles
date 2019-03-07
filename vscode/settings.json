@@ -36,5 +36,6 @@
   "editor.scrollBeyondLastLine": false,
   "vim.hlsearch": true,
   "editor.tabCompletion": "on",
-  "editor.insertSpaces": false
+  "editor.insertSpaces": false,
+  "editor.lineNumbers": "relative"
 }
