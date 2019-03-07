@@ -6,6 +6,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'avdgaag/vim-phoenix', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
+" Typescript
+" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+
 " JavaScript
 Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'othree/yajs.vim'
@@ -38,11 +43,6 @@ Plug 'lucapette/vim-textobj-underscore'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'thinca/vim-textobj-function-javascript', { 'for': [ 'javascript', 'js', 'jsx' ]}
 Plug 'vim-scripts/matchit.zip'
-
-" Typescript
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 " Tests
 Plug 'janko-m/vim-test'
