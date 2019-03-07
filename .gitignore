@@ -4,3 +4,4 @@ config/nvim/dein
 .netrwhist
 .git
 .tern-port
+.DS_Store
