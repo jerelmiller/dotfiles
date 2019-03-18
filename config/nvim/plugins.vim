@@ -47,6 +47,9 @@ Plug 'vim-scripts/matchit.zip'
 " Tests
 Plug 'janko-m/vim-test'
 
+" Peg
+Plug 'gf3/peg.vim'
+
 " Happiness
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
