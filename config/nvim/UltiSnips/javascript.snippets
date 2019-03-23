@@ -1,5 +1,5 @@
 snippet emo "Emotion" b
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 endsnippet
 
 snippet ptf "prop types func" b
@@ -22,8 +22,16 @@ snippet sc "styled-components" b
 import styled from 'styled-components'
 endsnippet
 
+snippet scm "styled-components macro" b
+import styled from 'styled-components/macro'
+endsnippet
+
 snippet gql "graphql-tag" b
 import gql from 'graphql-tag'
+endsnippet
+
+snippet exp "export" b
+export default `!v expand("%:t:r")`
 endsnippet
 
 snippet rc "React Component" b
