@@ -26,7 +26,7 @@ brew_install git-recent
 brew_install tmux
 brew_install reattach-to-user-namespace
 
-brew_install yarn --without-node
+brew_install yarn
 
 # required by asdf
 brew_install coreutils
@@ -72,6 +72,3 @@ brew_install librsvg
 brew_install zsh
 brew_install zsh-completions
 brew_install zsh-syntax-highlighting
-
-# uninstall node installed from heroku-cli
-brew uninstall node --ignore-dependencies node &> /dev/null

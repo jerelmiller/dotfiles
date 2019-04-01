@@ -37,5 +37,7 @@
   "vim.hlsearch": true,
   "editor.tabCompletion": "on",
   "editor.insertSpaces": false,
+  "editor.tabSize": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.lineNumbers": "relative"
 }
