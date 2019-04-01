@@ -14,6 +14,7 @@ alias namend='git commit --amend --no-edit'
 alias fpush='git push --force-with-lease'
 alias pgstart='pg_ctl -D /usr/local/var/postgres start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop'
+alias bundler_version='cat Gemfile.lock | grep -A 1 "BUNDLED WITH" | tail -n 1'
 
 # MISC
 alias vim='nvim'
@@ -26,4 +27,12 @@ webhooks() {
   else
     ngrok http -subdomain=jerelmiller "$1"
   fi
+}
+
+free_port() {
+  kill "$(lsof -t -i :$1)"
+}
+
+kill_port() {
+  kill -kill "$(lsof -t -i :$1)"
 }
