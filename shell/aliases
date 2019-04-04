@@ -31,9 +31,9 @@ webhooks() {
 }
 
 free_port() {
-  kill "$(lsof -t -i :$1)"
+  lsof -t -i ":$1" | xargs kill
 }
 
 kill_port() {
-  kill -kill "$(lsof -t -i :$1)"
+  lsof -t -i ":$1" | xargs kill -kill
 }
