@@ -1,7 +1,7 @@
 let g:ale_linters = {
 \  'graphql': [],
 \  'javascript': ['eslint', 'flow'],
-\  'typescript': ['tsserver', 'typescript-eslint-parser']
+\  'typescript': ['eslint', 'tsserver']
 \}
 
 let g:ale_fixers = {
