@@ -40,3 +40,7 @@ kill_port() {
   lsof -t -i ":$1" | xargs kill -kill
 }
 
+docker_ports() {
+  sudo lsof -i -n -P | grep TCP | grep dock
+}
+
