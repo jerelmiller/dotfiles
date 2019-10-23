@@ -1,7 +1,7 @@
 let g:ale_linters = {
 \  'graphql': [],
 \  'javascript': ['eslint', 'flow'],
-\  'typescript': ['tsserver', 'typescript-eslint-parser']
+\  'typescript': ['eslint', 'tsserver']
 \}
 
 let g:ale_fixers = {
@@ -10,7 +10,8 @@ let g:ale_fixers = {
 \  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
 \  'elixir': ['mix_format'],
-\  'scss': ['prettier']
+\  'scss': ['prettier'],
+\  'python': ['black']
 \}
 
 let g:ale_fix_on_save = 1

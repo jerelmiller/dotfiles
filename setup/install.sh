@@ -18,6 +18,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 
 ./nvm.sh
 ./asdf.sh
+./rbenv.sh
+./pyenv.sh
 
 ./ruby.sh
 
