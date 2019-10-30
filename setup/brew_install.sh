@@ -59,6 +59,7 @@ brew_install wireguard-tools
 brew_install jq
 brew_install rbenv
 brew_install fabianishere/personal/pam_reattach
+brew_install pyenv
 
 # node canvas requirements
 brew_install pkg-config
