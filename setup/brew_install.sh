@@ -60,7 +60,10 @@ brew_install jq
 brew_install rbenv
 brew_install fabianishere/personal/pam_reattach
 brew_install pyenv
+
+# easily create localhost certificates
 brew_install mkcert
+brew_install nss
 
 # node canvas requirements
 brew_install pkg-config
