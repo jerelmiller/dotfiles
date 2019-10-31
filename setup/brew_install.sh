@@ -60,6 +60,7 @@ brew_install jq
 brew_install rbenv
 brew_install fabianishere/personal/pam_reattach
 brew_install pyenv
+brew_install mkcert
 
 # node canvas requirements
 brew_install pkg-config
