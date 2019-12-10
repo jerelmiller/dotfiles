@@ -9,6 +9,7 @@
     "typescript",
     "typescriptreact"
   ],
+  "eslint.autoFixOnSave": true,
   "prettier.singleQuote": true,
   "prettier.semi": false
 }
