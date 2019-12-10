@@ -21,3 +21,17 @@ endsnippet
 snippet cx "cx import" b
 import cx from 'classnames'
 endsnippet
+
+snippet rsl "Stateless component" b
+import React from 'react'
+
+const `!v expand("%:t:r")` = (${1:{ children }}) => (
+	${2:<div>{children}</div>}
+)
+
+export default `!v expand("%:t:r")`
+endsnippet
+
+snippet exp "export" b
+export default `!v expand("%:t:r")`
+endsnippet
