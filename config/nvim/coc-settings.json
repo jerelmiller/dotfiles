@@ -1,0 +1,14 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "graphql",
+    "json",
+    "javascript",
+    "javascriptreact",
+    "scss",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.singleQuote": true,
+  "prettier.semi": false
+}
