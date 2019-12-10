@@ -1,4 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Language pack that includes most languages
 Plug 'sheerun/vim-polyglot'
 

@@ -10,6 +10,9 @@ augroup filetypes
 
   " Always open quickfix window on bottom
   autocmd FileType qf wincmd J
+
+  " Add comment syntax for json files
+  autocmd FileType json syntax match Comment +\/\/.\+$+
 augroup END
 
 function! HelpFileMode()
@@ -24,4 +27,11 @@ augroup Mkdir
     \ if !isdirectory(expand("<afile>:p:h")) |
         \ call mkdir(expand("<afile>:p:h"), "p") |
     \ endif
+augroup END
+
+augroup coc
+  autocmd!
+
+  " Highlight symbol under cursor on CursorHold
+  autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup END

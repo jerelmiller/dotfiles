@@ -20,6 +20,7 @@ set autoread
 set clipboard=unnamed
 set colorcolumn=80
 set cursorline
+set cmdheight=2
 set expandtab
 set guicursor=
 set hidden
@@ -31,9 +32,12 @@ set nobackup
 set noswapfile
 set number
 set nowrap
+set nowritebackup
 set relativenumber
 set ruler
 set scrolloff=4
+" https://github.com/neoclide/coc.nvim#example-vim-configuration
+set shortmess+=c
 set sidescrolloff=5
 set shiftround
 set shiftwidth=2
