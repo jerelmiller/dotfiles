@@ -8,6 +8,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/bash_profile"
   "shell/bash_aliases"
   "shell/tmux.conf"
+  "shell/ideavimrc"
   "shell/zshrc"
   "shell/aliases"
   "shell/psqlrc"
