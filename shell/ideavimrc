@@ -1,2 +1,9 @@
 set surround
 set commentary
+set hlsearch
+set ignorecase
+set incsearch
+set number
+set relativenumber
+set sidescrolloff=5
+set smartcase
