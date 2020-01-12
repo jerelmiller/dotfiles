@@ -1,0 +1,14 @@
+inoremap jk <esc>
+inoremap Jk <esc>
+
+nnoremap gcc :xcmenucmd Comment Selection<CR>
+vnoremap gcc :xcmenucmd Comment Selection<CR>
+
+set clipboard=unnamed
+set expandtab
+set hlsearch
+set incsearch
+set number
+set nowrap
+set relativenumber
+set smartcase

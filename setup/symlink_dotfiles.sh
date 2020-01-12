@@ -10,6 +10,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/tmux.conf"
   "shell/ideavimrc"
   "shell/zshrc"
+  "shell/xvimrc"
   "shell/aliases"
   "shell/psqlrc"
   "shell/prettierrc.js"
