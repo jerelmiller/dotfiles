@@ -2,7 +2,7 @@ inoremap jk <esc>
 inoremap Jk <esc>
 
 nnoremap gcc :xcmenucmd Comment Selection<CR>
-vnoremap gcc :xcmenucmd Comment Selection<CR>
+vnoremap gc :xcmenucmd Comment Selection<CR>
 
 set clipboard=unnamed
 set expandtab
