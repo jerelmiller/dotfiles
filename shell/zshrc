@@ -178,7 +178,8 @@ SPACESHIP_RPROMPT_ORDER=(
 
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
-[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(pyenv init -)"
 
