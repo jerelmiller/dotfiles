@@ -31,6 +31,7 @@ cask_install visual-studio-code
 cask_install visualboyadvance-m
 cask_install ngrok
 cask_install docker
+cask_install google-cloud-sdk
 
 # Misc
 cask_install 1password
