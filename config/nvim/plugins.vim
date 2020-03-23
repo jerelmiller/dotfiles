@@ -19,7 +19,7 @@ Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'js', 'jsx'], 'branch': 'main' }
 
 " GraphQL
@@ -64,7 +64,7 @@ Plug 'rking/ag.vim'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'SirVer/ultisnips'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
