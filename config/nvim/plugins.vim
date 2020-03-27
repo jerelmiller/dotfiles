@@ -19,7 +19,6 @@ Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'js', 'jsx'], 'branch': 'main' }
 
 " GraphQL
