@@ -74,7 +74,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
-Plug 'w0rp/ale'
 
 " Syntax colors
 Plug 'kristijanhusak/vim-hybrid-material'
