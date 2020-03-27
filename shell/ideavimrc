@@ -1,9 +1,17 @@
+let mapleader=','
+
 set surround
 set commentary
 set hlsearch
 set ignorecase
 set incsearch
+set ideajoin
 set number
 set relativenumber
 set sidescrolloff=5
 set smartcase
+
+inoremap jk <esc>
+inoremap Jk <esc>
+
+nnoremap <leader>ch :noh<cr>
