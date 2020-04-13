@@ -1,18 +1,9 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "graphql",
-    "json",
-    "javascript",
-    "javascriptreact",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
   "eslint.autoFixOnSave": true,
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.bracketSpacing": true,
-  "prettier.onlyUseLocalVersion": true
+  "prettier.trailingComma": "none",
+  "prettier.onlyUseLocalVersion": true,
 }
