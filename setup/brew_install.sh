@@ -60,7 +60,8 @@ brew_install jq
 brew_install rbenv
 brew_install fabianishere/personal/pam_reattach
 brew_install pyenv
-brew install kubernetes-cli
+brew_install kubernetes-cli
+brew_install vault
 
 # easily create localhost certificates
 brew_install mkcert
