@@ -184,3 +184,6 @@ SPACESHIP_RPROMPT_ORDER=(
 eval "$(pyenv init -)"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
