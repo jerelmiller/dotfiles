@@ -8,6 +8,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'avdgaag/vim-phoenix', { 'for': 'elixir' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
+" MDX
+Plug 'jxnblk/vim-mdx-js'
+
 " Typescript
 " Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'peitalin/vim-jsx-typescript'
