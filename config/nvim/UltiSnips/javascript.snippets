@@ -67,8 +67,8 @@ endsnippet
 snippet rsl "Stateless component" b
 import React from 'react'
 
-const `!v expand("%:t:r")` = ({ children$0 }) => (
-	<div>{children}</div>
+const `!v expand("%:t:r")` = () => (
+	$0
 )
 
 export default `!v expand("%:t:r")`
