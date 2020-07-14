@@ -34,7 +34,7 @@ Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
 
 " Text
 Plug 'PeterRincker/vim-argumentative'
-" Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/ruby-matchit', { 'for': 'ruby' }
 Plug 'kana/vim-textobj-user'
