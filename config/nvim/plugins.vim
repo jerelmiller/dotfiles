@@ -4,7 +4,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'sheerun/vim-polyglot'
 
 " Elixir
-" Plug 'avdgaag/vim-phoenix', { 'for': 'elixir' }
 " Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " MDX
@@ -21,10 +20,6 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
-" GraphQL
-" Plug 'jparise/vim-graphql'
 
 " JSON
 Plug 'kevinoid/vim-jsonc'
