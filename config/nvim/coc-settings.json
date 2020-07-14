@@ -1,9 +1,9 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "*"
+  ],
   "eslint.autoFixOnSave": true,
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
-  "prettier.bracketSpacing": true,
-  "prettier.trailingComma": "none",
-  "prettier.onlyUseLocalVersion": true,
+  "tsserver.npm": "/usr/local/bin/npm",
+  "yaml.format.enable": true,
+  "yaml.format.singleQuote": true
 }
