@@ -29,6 +29,7 @@ brew_install reattach-to-user-namespace
 brew_install yarn
 
 # required by asdf
+brew_install asdf
 brew_install coreutils
 brew_install automake
 brew_install autoconf
