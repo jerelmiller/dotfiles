@@ -1,9 +1,13 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "*"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
   "eslint.autoFixOnSave": true,
+  "prettier.tabWidth": 2,
   "tsserver.npm": "/usr/local/bin/npm",
   "yaml.format.enable": true,
-  "yaml.format.singleQuote": true
+  "yaml.format.singleQuote": true,
+  "markdownlint.config": {
+    "MD004": {
+      "style": "dash"
+    }
+  }
 }
