@@ -1,1 +1,1 @@
-" let g:polyglot_disabled = ['typescript', 'typescript.tsx', 'javascript', 'javascript.jsx']
+let g:polyglot_disabled = ['elixir']
