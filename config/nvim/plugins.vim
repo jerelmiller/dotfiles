@@ -4,6 +4,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'sheerun/vim-polyglot'
 
 " Elixir
+Plug 'elixir-editors/vim-elixir'
 " Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " MDX
