@@ -1,9 +1,10 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'sheerun/vim-polyglot'
 
 " Elixir
+Plug 'elixir-editors/vim-elixir'
 " Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " MDX
@@ -27,7 +28,9 @@ Plug 'kevinoid/vim-jsonc'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
-Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
+" Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Ruby
 " Plug 'tpope/vim-rails'
@@ -73,7 +76,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
-Plug 'wakatime/vim-wakatime'
+" Plug 'wakatime/vim-wakatime'
 
 " Syntax colors
 Plug 'kristijanhusak/vim-hybrid-material'

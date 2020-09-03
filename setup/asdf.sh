@@ -2,15 +2,6 @@
 
 cd "$(dirname "${BASH_SOURCE[0]}")" && . ./utils.sh
 
-declare -r ASDF_REPO_URL="https://github.com/asdf-vm/asdf.git"
-
-install_asdf() {
-  git clone --quiet $ASDF_REPO_URL $ASDF_DIRECTORY && \
-    git checkout --quiet $(git describe --abbrev=0 --tags)
-
-  print_result $? "asdf (install)"
-}
-
 upgrade_asdf() {
   asdf update
 
@@ -56,8 +47,7 @@ install_language() {
 }
 
 add_asdf_configs() {
-  append_to_shell_config ". \$HOME/.asdf/asdf.sh"
-  append_to_shell_config ". \$HOME/.asdf/completions/asdf.bash" 1
+  append_to_shell_config ". \$(brew --prefix asdf)/asdf.sh"
 
   source_local_config
 
@@ -68,7 +58,6 @@ main() {
   print_info "asdf"
 
   if ! cmd_exists "asdf"; then
-    install_asdf
     add_asdf_configs
     . $ASDF_SOURCE &> /dev/null
   else
