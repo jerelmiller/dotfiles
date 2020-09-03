@@ -1,7 +1,17 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "*"
+    "css",
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "graphql",
+    "ruby",
+    "elixir"
   ],
+  "prettier.onlyUseLocalVersion": true,
   "eslint.autoFixOnSave": true,
   "tsserver.npm": "/usr/local/bin/npm",
   "yaml.format.enable": true,
