@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "eslint.autoFixOnSave": true,
   "prettier.tabWidth": 2,
   "tsserver.npm": "/usr/local/bin/npm",
@@ -8,6 +9,7 @@
   "markdownlint.config": {
     "MD004": {
       "style": "dash"
-    }
+    },
+    "MD033": false
   }
 }
