@@ -14,6 +14,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/aliases"
   "shell/psqlrc"
   "shell/prettierrc.js"
+  "shell/alacritty.yml"
 )
 
 declare -a FOLDERS_TO_SYMLINK=(
