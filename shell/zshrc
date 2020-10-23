@@ -2,8 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-eval "$(hub alias -s)"
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jerelmiller/.oh-my-zsh"
 
