@@ -19,7 +19,7 @@ brew_install() {
 print_info "Install homebrew packages"
 
 brew_install git
-brew_install hub
+brew_install gh
 
 brew_install git-recent
 
@@ -63,6 +63,7 @@ brew_install fabianishere/personal/pam_reattach
 brew_install pyenv
 brew_install kubernetes-cli
 brew_install vault
+brew_install glow
 
 # easily create localhost certificates
 brew_install mkcert
