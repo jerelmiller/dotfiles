@@ -96,6 +96,8 @@ else
   export EDITOR='nvim'
 fi
 
+export GH_PAGER='bat'
+
 # Remember history in IEx
 export ERL_AFLAGS="-kernel shell_history enabled"
 
