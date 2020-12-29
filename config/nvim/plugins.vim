@@ -5,7 +5,6 @@ Plug 'sheerun/vim-polyglot'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
-" Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " MDX
 " Plug 'jxnblk/vim-mdx-js'
@@ -55,7 +54,7 @@ Plug 'vim-scripts/matchit.zip'
 " Plug 'gf3/peg.vim'
 
 " Happiness
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

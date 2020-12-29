@@ -7,6 +7,7 @@
   "tsserver.npm": "/usr/local/bin/npm",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
+  "git.enableGutters": false,
   "markdownlint.config": {
     "MD004": {
       "style": "dash"

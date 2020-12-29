@@ -17,6 +17,7 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop'
 alias bundler_version='cat Gemfile.lock | grep -A 1 "BUNDLED WITH" | tail -n 1'
 alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias dc='docker-compose'
+alias dcr='docker-compose run --rm'
 
 # MISC
 alias vim='nvim'
@@ -44,4 +45,3 @@ kill_port() {
 docker_ports() {
   sudo lsof -i -n -P | grep TCP | grep dock
 }
-
