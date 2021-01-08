@@ -24,7 +24,6 @@ brew_install gh
 brew_install git-recent
 
 brew_install tmux
-brew_install reattach-to-user-namespace
 
 brew_install yarn
 
