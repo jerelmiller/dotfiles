@@ -61,7 +61,7 @@ Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/goyo.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 " Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'SirVer/ultisnips'

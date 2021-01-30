@@ -2,8 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-eval "$(hub alias -s)"
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jerelmiller/.oh-my-zsh"
 
@@ -97,6 +95,8 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+export GH_PAGER='bat'
 
 # Remember history in IEx
 export ERL_AFLAGS="-kernel shell_history enabled"

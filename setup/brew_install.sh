@@ -63,6 +63,7 @@ brew_install pyenv
 brew_install kubernetes-cli
 brew_install vault
 brew_install glow
+brew_install bat
 
 # easily create localhost certificates
 brew_install mkcert

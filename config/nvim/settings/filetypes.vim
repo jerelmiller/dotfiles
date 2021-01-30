@@ -6,7 +6,7 @@ augroup filetypes
   autocmd filetype help call HelpFileMode()
 
   " Go to variable definition using gb
-  autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+  " autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
   " Always open quickfix window on bottom
   autocmd FileType qf wincmd J
