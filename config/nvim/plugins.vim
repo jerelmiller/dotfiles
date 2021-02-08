@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/lightline.vim'
+" Plug 'sheerun/vim-polyglot'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
@@ -16,10 +16,11 @@ Plug 'elixir-editors/vim-elixir'
 
 " JavaScript
 " Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
-" Plug 'othree/yajs.vim'
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
-" Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " JSON
 Plug 'kevinoid/vim-jsonc'
@@ -78,7 +79,8 @@ Plug 'tpope/vim-unimpaired'
 " Plug 'wakatime/vim-wakatime'
 
 " Syntax colors
-Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'ryanoasis/vim-devicons'
 call plug#end()

@@ -15,9 +15,9 @@ syntax enable
 
 set background=dark
 let g:enable_italic_font=1
-let g:hybrid_reduced_contrast=1
-let g:hybrid_custom_term_colors=1
-colorscheme hybrid_material
+" let g:hybrid_reduced_contrast=1
+" let g:hybrid_custom_term_colors=1
+colorscheme nord
 
 highlight clear SignColumn
 
@@ -59,6 +59,7 @@ set visualbell
 set wildmenu
 set wildmode=list:longest
 set updatetime=100
+set noshowmode
 
 for config_file in split(glob('~/.config/nvim/settings/**/*'), '\n')
   if filereadable(config_file)
