@@ -19,8 +19,10 @@ Plug 'elixir-editors/vim-elixir'
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'js', 'jsx'] }
+Plug 'neoclide/vim-jsx-improve'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+Plug 'jparise/vim-graphql'
 
 " JSON
 Plug 'kevinoid/vim-jsonc'
@@ -49,7 +51,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'vim-scripts/matchit.zip'
 
 " Tests
-" Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
 
 " Peg
 " Plug 'gf3/peg.vim'

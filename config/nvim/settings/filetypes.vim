@@ -3,6 +3,7 @@ augroup filetypes
 
   autocmd BufNewFile,BufReadPost .eslintrc,.babelrc set filetype=json
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  autocmd BufRead,BufNewFile *.js set filetype=javascriptreact
   autocmd filetype help call HelpFileMode()
 
   " Go to variable definition using gb
