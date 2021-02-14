@@ -10,7 +10,7 @@ Plug 'elixir-editors/vim-elixir'
 " Plug 'jxnblk/vim-mdx-js'
 
 " Typescript
-" Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'peitalin/vim-jsx-typescript'
 " Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
