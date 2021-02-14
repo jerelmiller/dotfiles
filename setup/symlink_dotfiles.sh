@@ -15,6 +15,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/psqlrc"
   "shell/prettierrc.js"
   "shell/alacritty.yml"
+  "shell/pryrc"
 )
 
 declare -a FOLDERS_TO_SYMLINK=(
