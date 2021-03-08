@@ -1,10 +1,10 @@
-hi link tsxTagName Function
-hi link tsxCloseTag Identifier
-hi link tsxAttributeBraces Type
-hi link tsxAttrib Type
-hi tsxEqual guifg=NONE
-hi tsxTypeBraces guifg=#666666
-hi link tsxTypes Structure
+" hi link tsxTagName Function
+" hi link tsxCloseTag Identifier
+" hi link tsxAttributeBraces Type
+" hi link tsxAttrib Type
+" hi tsxEqual guifg=NONE
+" hi tsxTypeBraces guifg=#666666
+" hi link tsxTypes Structure
 
 " hi ReactState guifg=#C176A7
 " hi ReactProps guifg=#D19A66

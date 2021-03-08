@@ -1,16 +1,16 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " Elixir
-Plug 'elixir-editors/vim-elixir'
+" Plug 'elixir-editors/vim-elixir'
 
 " MDX
 " Plug 'jxnblk/vim-mdx-js'
 
 " Typescript
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'peitalin/vim-jsx-typescript'
 " Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
@@ -18,21 +18,21 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-Plug 'neoclide/vim-jsx-improve'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'neoclide/vim-jsx-improve'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 
 " JSON
-Plug 'kevinoid/vim-jsonc'
+" Plug 'kevinoid/vim-jsonc'
 
 " Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
+" Plug 'godlygeek/tabular'
+" Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
 " Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" Plug 'mzlogin/vim-markdown-toc'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Ruby
 " Plug 'tpope/vim-rails'
@@ -53,9 +53,6 @@ Plug 'vim-scripts/matchit.zip'
 " Tests
 Plug 'vim-test/vim-test'
 
-" Peg
-" Plug 'gf3/peg.vim'
-
 " Happiness
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -65,7 +62,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
 Plug 'mileszs/ack.vim'
-" Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'SirVer/ultisnips'
 Plug 'tmux-plugins/vim-tmux'
@@ -73,11 +69,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-" Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'wakatime/vim-wakatime'
 
 " Syntax colors
 " Plug 'kristijanhusak/vim-hybrid-material'

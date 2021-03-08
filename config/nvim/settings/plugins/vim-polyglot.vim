@@ -1,1 +1,1 @@
-let g:polyglot_disabled = ['elixir']
+" let g:polyglot_disabled = ['elixir']

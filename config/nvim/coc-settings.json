@@ -1,9 +1,25 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "*"
+    "css",
+    "elixir",
+    "javascript",
+    "javascriptreact",
+    "jsx",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "jsonc",
+    "graphql",
+    "html",
+    "markdown",
+    "ruby",
+    "scss",
+    "yaml"
   ],
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "eslint.autoFixOnSave": true,
+  "prettier.disableSuccessMessage": true,
+  "prettier.eslintIntegration": true,
   "prettier.onlyUseLocalVersion": true,
   "prettier.tabWidth": 2,
   "tsserver.npm": "/usr/local/bin/npm",

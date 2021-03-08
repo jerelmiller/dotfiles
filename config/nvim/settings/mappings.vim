@@ -27,8 +27,6 @@ nnoremap <leader>p viwp<ESC>b
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
-nnoremap <leader>lt :LivedownToggle<cr>
-
 " Use tab for autocompletion
 inoremap <silent><expr> <TAB>
 		\ pumvisible() ? "\<C-n>" :
@@ -58,6 +56,11 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -69,8 +72,5 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
 
 runtime macros/matchit.vim " use % to jump between start/end of methods
