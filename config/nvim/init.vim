@@ -31,7 +31,7 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'godlygeek/tabular'
 " Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
 " Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
-" Plug 'mzlogin/vim-markdown-toc'
+Plug 'mzlogin/vim-markdown-toc'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Ruby
