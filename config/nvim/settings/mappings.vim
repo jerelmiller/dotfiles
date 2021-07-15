@@ -14,15 +14,27 @@ nnoremap <C-l> <C-W><C-l>
 
 inoremap jk <esc>
 inoremap Jk <esc>
+inoremap <C-c> <ESC>
 
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap <leader>pc :PlugClean<cr>
+" misc
 nnoremap <leader>vi :sp $MYVIMRC<cr>
 nnoremap <leader>so :source $MYVIMRC<cr>
 nnoremap <leader>ch :silent noh<cr>
 nnoremap <leader>rs :syntax sync fromstart<cr>
-
 nnoremap <leader>p viwp<ESC>b
+
+" vim-plug
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>t <cmd>Telescope git_files<cr>
+
+" vim-fugitive
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
 
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
@@ -51,7 +63,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" Remap keys for gotos
+" GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -72,5 +84,21 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" if has('patch8.1.1068')
+"   " Use `complete_info` if your (Neo)Vim version supports it.
+"   inoremap <expr> <cr> complete_info()["selected"] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
+" else
+  " imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" endif
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Run :Tsc to populate all typescript errors in the project in a quickfix
+" window. Run :copen to view them all
+command! -nargs=0 Tsc :call CocAction('runCommand', 'tsserver.watchBuild')
 
 runtime macros/matchit.vim " use % to jump between start/end of methods

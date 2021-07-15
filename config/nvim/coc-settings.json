@@ -22,10 +22,10 @@
   "prettier.eslintIntegration": true,
   "prettier.onlyUseLocalVersion": true,
   "prettier.tabWidth": 2,
-  "tsserver.npm": "/usr/local/bin/npm",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
   "git.enableGutters": false,
+  "tsserver.log": "normal",
   "markdownlint.config": {
     "MD004": {
       "style": "asterisk"

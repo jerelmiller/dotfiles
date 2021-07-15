@@ -1,1 +1,1 @@
-nnoremap <leader>t :GFiles --cached --others --exclude-standard<cr>
+" nnoremap <leader>t :GFiles --cached --others --exclude-standard<cr>
