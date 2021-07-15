@@ -3,8 +3,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
 
-" Elixir
-" Plug 'elixir-editors/vim-elixir'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'neovim/nvim-lspconfig'
 
 " MDX
 " Plug 'jxnblk/vim-mdx-js'
@@ -72,6 +73,7 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
 
 " Syntax colors
 " Plug 'kristijanhusak/vim-hybrid-material'
@@ -89,6 +91,12 @@ end
 
 filetype plugin indent on
 syntax enable
+
+" Nord settings which must be set before `colorscheme`
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
 
 set background=dark
 let g:enable_italic_font=1
@@ -143,3 +151,19 @@ for config_file in split(glob('~/.config/nvim/settings/**/*'), '\n')
     execute 'source' config_file
   endif
 endfor
+
+" Treesitter setup
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  },
+  playground = {
+    enable = true
+  },
+}
+EOF
