@@ -7,6 +7,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'neovim/nvim-lspconfig'
 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " MDX
 " Plug 'jxnblk/vim-mdx-js'
 
@@ -57,8 +61,8 @@ Plug 'vim-test/vim-test'
 " Happiness
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/goyo.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Olical/vim-enmasse', { 'on': 'EnMasse' }
@@ -166,4 +170,10 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
 }
+
+require'lspconfig'.elixirls.setup {
+  cmd = { "~/.elixir-ls/release/language_server.sh" }
+}
+
+require'lspconfig'.tsserver.setup{}
 EOF

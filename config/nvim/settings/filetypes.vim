@@ -1,6 +1,6 @@
 " Resync syntax highlighting
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+" autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+" autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 autocmd BufNewFile,BufReadPost .eslintrc,.babelrc set filetype=json
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80

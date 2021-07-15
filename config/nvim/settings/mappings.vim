@@ -16,14 +16,25 @@ inoremap jk <esc>
 inoremap Jk <esc>
 inoremap <C-c> <ESC>
 
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap <leader>pc :PlugClean<cr>
+" misc
 nnoremap <leader>vi :sp $MYVIMRC<cr>
 nnoremap <leader>so :source $MYVIMRC<cr>
 nnoremap <leader>ch :silent noh<cr>
 nnoremap <leader>rs :syntax sync fromstart<cr>
-
 nnoremap <leader>p viwp<ESC>b
+
+" vim-plug
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>t <cmd>Telescope git_files<cr>
+
+" vim-fugitive
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
 
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
