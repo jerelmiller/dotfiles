@@ -29,7 +29,8 @@ nnoremap <leader>pc :PlugClean<cr>
 
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>t <cmd>Telescope git_files<cr>
+" nnoremap <leader>t <cmd>Telescope git_files<cr>
+nnoremap <leader>t :GFiles --cached --others --exclude-standard<cr>
 
 " vim-fugitive
 nnoremap <leader>gb :Gblame<cr>
