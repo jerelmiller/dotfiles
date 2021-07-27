@@ -172,7 +172,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require'lspconfig'.elixirls.setup {
-  cmd = { "~/.elixir-ls/release/language_server.sh" }
+  cmd = { os.getenv("HOME") .. "/.elixir-ls/release/language_server.sh" }
 }
 
 require'lspconfig'.tsserver.setup{}
