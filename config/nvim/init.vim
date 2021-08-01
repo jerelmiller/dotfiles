@@ -11,6 +11,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+Plug 'windwp/nvim-autopairs'
+
 " MDX
 " Plug 'jxnblk/vim-mdx-js'
 
@@ -158,19 +160,6 @@ endfor
 
 " Treesitter setup
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,
-  },
-  indent = {
-    enable = true
-  },
-  playground = {
-    enable = true
-  },
-}
-
 require'lspconfig'.elixirls.setup {
   cmd = { os.getenv("HOME") .. "/.elixir-ls/release/language_server.sh" }
 }
