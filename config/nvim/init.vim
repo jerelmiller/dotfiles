@@ -25,8 +25,6 @@ Plug 'windwp/nvim-autopairs'
 " Plug 'moll/vim-node', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'js', 'jsx'] }
 " Plug '1995eaton/vim-better-javascript-completion', { 'for': ['javascript', 'js', 'jsx'] }
-" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-" Plug 'neoclide/vim-jsx-improve'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Plug 'jparise/vim-graphql'
@@ -84,6 +82,7 @@ Plug 'tpope/vim-abolish'
 " Syntax colors
 " Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'arcticicestudio/nord-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
