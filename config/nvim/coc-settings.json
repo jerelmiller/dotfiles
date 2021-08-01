@@ -18,6 +18,7 @@
   ],
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
   "prettier.disableSuccessMessage": true,
   "prettier.eslintIntegration": true,
   "prettier.onlyUseLocalVersion": true,
