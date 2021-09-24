@@ -33,9 +33,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>t :GFiles --cached --others --exclude-standard<cr>
 
 " vim-fugitive
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gb :Git blame<cr>
+nnoremap <leader>gd :Git diff<cr>
+nnoremap <leader>gs :Git status<cr>
 
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
