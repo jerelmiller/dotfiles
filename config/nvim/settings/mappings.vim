@@ -35,7 +35,7 @@ nnoremap <leader>t :GFiles --cached --others --exclude-standard<cr>
 " vim-fugitive
 nnoremap <leader>gb :Git blame<cr>
 nnoremap <leader>gd :Git diff<cr>
-nnoremap <leader>gs :Git status<cr>
+nnoremap <leader>gs :Git<cr>
 
 " replace word under cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
