@@ -79,7 +79,6 @@ plugins=(
   # web-search
   yarn
   zsh-autosuggestions
-  zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh
