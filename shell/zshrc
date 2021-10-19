@@ -75,10 +75,10 @@ plugins=(
   osx
   postgres
   tmux
+  pyenv
   # web-search
   yarn
   zsh-autosuggestions
-  zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -182,7 +182,7 @@ SPACESHIP_RPROMPT_ORDER=(
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(gh completion --shell zsh)"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

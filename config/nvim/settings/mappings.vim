@@ -34,7 +34,7 @@ nnoremap <leader>t :GFiles --cached --others --exclude-standard<cr>
 
 " vim-fugitive
 nnoremap <leader>gb :Git blame<cr>
-nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gd :Git diff<cr>
 nnoremap <leader>gs :Git<cr>
 nnoremap <leader>grm :GRemove<cr>
 
