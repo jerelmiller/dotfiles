@@ -1,10 +1,10 @@
 {
   "editor.fontSize": 13,
   "editor.fontFamily": "Hack",
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
-  "workbench.colorTheme": "Hybrid Next",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorTheme": "Nord",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -28,16 +28,60 @@
     {
       "before": ["<leader>", "c", "h"],
       "commands": [":nohl"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.focusSideBar"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["editor.action.rename"]
     }
   ],
   "vim.leader": ",",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
-  "editor.scrollBeyondLastLine": false,
+  "vim.cursorStylePerMode.insert": "block",
   "vim.hlsearch": true,
+  "editor.scrollBeyondLastLine": false,
   "editor.tabCompletion": "on",
   "editor.insertSpaces": false,
   "editor.tabSize": 2,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "codestream.email": "jerelmiller@gmail.com",
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "eslint.alwaysShowStatus": true,
+  "emmet.includeLanguages": {
+    "html-eex": "html"
+  },
+  "[elixir]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+  }
 }
