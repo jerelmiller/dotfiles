@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 endsnippet
 
 snippet css "Emotion" b
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 endsnippet
 
 snippet exp "export" b
@@ -11,8 +11,6 @@ export default `!v expand("%:t:r")`
 endsnippet
 
 snippet rsl "Stateless component" b
-import React from 'react'
-
 const `!v expand("%:t:r")` = () => {
 	return <div />
 }
