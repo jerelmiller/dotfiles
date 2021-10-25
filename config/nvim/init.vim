@@ -159,9 +159,9 @@ endfor
 
 " Treesitter setup
 lua <<EOF
-require'lspconfig'.elixirls.setup {
-  cmd = { os.getenv("HOME") .. "/.elixir-ls/release/language_server.sh" }
-}
+-- require'lspconfig'.elixirls.setup {
+--  cmd = { os.getenv("HOME") .. "/.elixir-ls/release/language_server.sh" }
+-- }
 
-require'lspconfig'.tsserver.setup{}
+-- require'lspconfig'.tsserver.setup{}
 EOF
