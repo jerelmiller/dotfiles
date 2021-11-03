@@ -103,6 +103,11 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
 
+augroup nord-theme-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight! CocUnusedHighlight cterm=underline ctermfg=4 gui=underline guifg=#4C5669
+augroup END
+
 set background=dark
 let g:enable_italic_font=1
 " let g:hybrid_reduced_contrast=1
