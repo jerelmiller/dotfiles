@@ -14,5 +14,6 @@ let g:coc_global_extensions = [
 \  'coc-sql',
 \  'coc-svg',
 \  'coc-tsserver',
-\  'coc-yaml'
+\  'coc-yaml',
+\  'coc-stylelint'
 \]
