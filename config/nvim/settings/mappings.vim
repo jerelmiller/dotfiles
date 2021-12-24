@@ -27,6 +27,12 @@ nnoremap <leader>p viwp<ESC>b
 nnoremap <leader>pi :PlugInstall<cr>
 nnoremap <leader>pc :PlugClean<cr>
 
+" Vimux
+nnoremap <leader>vp :VimuxPromptCommand<cr>
+nnoremap <leader>vl :VimuxRunLastCommand<cr>
+nnoremap <leader>vi :VimuxInspectRunner<cr>
+nnoremap <leader>vz :VimuxZoomRunner<cr>
+
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 " nnoremap <leader>t <cmd>Telescope git_files<cr>
