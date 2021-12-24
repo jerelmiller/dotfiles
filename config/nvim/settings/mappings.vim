@@ -32,6 +32,11 @@ nnoremap <leader>vp :VimuxPromptCommand<cr>
 nnoremap <leader>vl :VimuxRunLastCommand<cr>
 nnoremap <leader>vi :VimuxInspectRunner<cr>
 nnoremap <leader>vz :VimuxZoomRunner<cr>
+nnoremap <leader>vc :VimuxCloseRunner<cr>
+
+nnoremap <leader>jr :RunJest<cr>
+nnoremap <leader>jc :RunJestOnBuffer<cr>
+nnoremap <leader>jf :RunJestFocused<cr>
 
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
