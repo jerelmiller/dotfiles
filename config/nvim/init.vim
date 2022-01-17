@@ -73,7 +73,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'SirVer/ultisnips'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
+" Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-unimpaired'
