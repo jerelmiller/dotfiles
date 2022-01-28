@@ -38,6 +38,9 @@ nnoremap <leader>jr :RunJest<cr>
 nnoremap <leader>jc :RunJestOnBuffer<cr>
 nnoremap <leader>jf :RunJestFocused<cr>
 
+nnoremap <leader>mc :call VimuxRunCommand("clear; mix test " . bufname("%"))<cr>
+nnoremap <leader>ml :call VimuxRunCommand("clear; mix test " . bufname("%") . ":" . line("."))<cr>
+
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 " nnoremap <leader>t <cmd>Telescope git_files<cr>
