@@ -11,6 +11,10 @@ export ZSH="/Users/jerelmiller/.oh-my-zsh"
 # ZSH_THEME="spaceship"
 ZSH_THEME="robbyrussell"
 
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init --path)"
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -72,7 +76,7 @@ plugins=(
   docker
   # heroku
   mix
-  osx
+  macos
   postgres
   tmux
   pyenv
@@ -182,7 +186,6 @@ SPACESHIP_RPROMPT_ORDER=(
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(pyenv init --path)"
 eval "$(gh completion --shell zsh)"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
