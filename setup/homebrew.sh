@@ -36,9 +36,9 @@ install_brew_cask_versions() {
 }
 
 install_brew_fonts() {
-  brew tap caskroom/fonts
+  brew tap homebrew/cask-fonts
 
-  print_result $? "Homebrew (fonts)"
+  print_result $? "Homebrew (cask-fonts)"
 }
 
 install_brew_command_not_found() {
