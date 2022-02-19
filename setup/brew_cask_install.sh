@@ -10,7 +10,7 @@ cask_install() {
   if brew cask list $formula &> /dev/null; then
     print_success "$formula"
   else
-    brew cask install $formula $options
+    brew install $formula --cask $options
 
     print_result $? "$formula"
   fi
