@@ -17,7 +17,7 @@ get_homebrew_git_config_file_path() {
 
 install_homebrew() {
   if ! cmd_exists "brew"; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
   print_result $? "Homebrew"
