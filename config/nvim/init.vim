@@ -110,6 +110,8 @@ let g:nord_underline = 1
 augroup nord-theme-overrides
   autocmd!
   autocmd ColorScheme nord highlight! CocUnusedHighlight cterm=underline ctermfg=4 gui=underline guifg=#4C5669
+  autocmd ColorScheme nord highlight! CocMenuSel ctermfg=15 ctermbg=8 guifg=#ECEFF4 guibg=#4C566A
+  autocmd ColorScheme nord highlight! CocPumSearch cterm=underline ctermfg=3 gui=underline guifg=#EBCB8B
 augroup END
 
 set background=dark
