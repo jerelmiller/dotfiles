@@ -41,7 +41,7 @@ Plug 'tyewang/vimux-jest-test'
 " Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
 " Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
 Plug 'mzlogin/vim-markdown-toc'
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Ruby
 " Plug 'tpope/vim-rails'
