@@ -20,8 +20,6 @@
   "elixirLS.fetchDeps": false,
   "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
-  "prettier.disableSuccessMessage": true,
-  "prettier.eslintIntegration": true,
   "prettier.onlyUseLocalVersion": true,
   "prettier.tabWidth": 2,
   "yaml.format.enable": true,
