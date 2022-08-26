@@ -22,6 +22,7 @@
   "eslint.packageManager": "yarn",
   "prettier.onlyUseLocalVersion": true,
   "prettier.tabWidth": 2,
+  "suggest.noselect": true,
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
   "git.enableGutters": false,
