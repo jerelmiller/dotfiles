@@ -13,6 +13,8 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'windwp/nvim-autopairs'
 
+Plug 'github/copilot.vim'
+
 Plug 'preservim/vimux'
 Plug 'tyewang/vimux-jest-test'
 " MDX
