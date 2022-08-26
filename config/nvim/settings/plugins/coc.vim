@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
 \  'coc-jest',
 \  'coc-json',
 \  'coc-git',
+\  'coc-markdownlint',
 \  'coc-prettier',
 \  'coc-snippets',
 \  'coc-styled-components',
@@ -18,4 +19,3 @@ let g:coc_global_extensions = [
 \]
 
 " \  'coc-stylelint',
-" \  'coc-markdownlint',
