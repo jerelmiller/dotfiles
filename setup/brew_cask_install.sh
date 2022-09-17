@@ -37,7 +37,7 @@ cask_install google-cloud-sdk
 cask_install 1password
 cask_install slack
 cask_install spotify
-cask_install spectacle
+cask_install rectangle
 
 # Fonts
 cask_install font-hack-nerd-font
