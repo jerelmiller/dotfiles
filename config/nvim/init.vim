@@ -112,7 +112,7 @@ augroup nord-theme-overrides
   autocmd ColorScheme nord highlight! CocUnusedHighlight cterm=underline ctermfg=4 gui=underline guifg=#4C5669
   autocmd ColorScheme nord highlight! CocMenuSel cterm=bold ctermbg=8 gui=bold guibg=#4C566A
   autocmd ColorScheme nord highlight! CocPumSearch ctermfg=6 guifg=#88C0D0
-  autocmd ColorScheme nord highlight! CocFloating cterm=bold gui=bold
+  autocmd ColorScheme nord highlight! CocFloating cterm=bold gui=bold guibg=#3B4252
 augroup END
 
 set background=dark
