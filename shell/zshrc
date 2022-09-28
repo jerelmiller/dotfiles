@@ -4,8 +4,6 @@ export NVM_DIR="$HOME/.nvm"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(rbenv init -)"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Path to your oh-my-zsh installation.
@@ -81,6 +79,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   1password
   asdf
+  brew
   git
   # aws
   colored-man-pages
@@ -92,6 +91,7 @@ plugins=(
   postgres
   tmux
   pyenv
+  rbenv
   # web-search
   yarn
   zsh-autosuggestions
