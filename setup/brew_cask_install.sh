@@ -38,6 +38,7 @@ cask_install 1password
 cask_install slack
 cask_install spotify
 cask_install rectangle
+cask_install 1password/tap/1password-cli
 
 # Fonts
 cask_install font-hack-nerd-font
