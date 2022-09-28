@@ -1,10 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init -)"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -197,6 +199,12 @@ source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+[[ -f $HOME/.aliases ]] && source $HOME/.aliases
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
+eval "$(gh completion --shell zsh)"
+
 # Automatically load node version if the current directory has an .nvmrc
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -218,9 +226,3 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
-[[ -f $HOME/.aliases ]] && source $HOME/.aliases
-[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
-
-eval "$(gh completion --shell zsh)"
