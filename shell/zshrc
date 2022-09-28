@@ -81,6 +81,7 @@ plugins=(
   asdf
   brew
   git
+  gh
   # aws
   colored-man-pages
   # command-not-found
@@ -202,8 +203,6 @@ complete -o nospace -C /usr/local/bin/vault vault
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
-
-eval "$(gh completion --shell zsh)"
 
 # Automatically load node version if the current directory has an .nvmrc
 autoload -U add-zsh-hook
