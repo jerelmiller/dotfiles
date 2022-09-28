@@ -64,6 +64,7 @@ brew_install kubernetes-cli
 brew_install vault
 brew_install glow
 brew_install bat
+brew_install ripgrep
 
 # easily create localhost certificates
 brew_install mkcert
