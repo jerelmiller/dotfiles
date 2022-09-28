@@ -91,7 +91,8 @@ plugins=(
   tmux
   pyenv
   rbenv
-  # web-search
+  ssh-agent
+  web-search
   yarn
   zsh-autosuggestions
 )
