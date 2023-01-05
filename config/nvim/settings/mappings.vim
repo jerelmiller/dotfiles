@@ -22,6 +22,7 @@ nnoremap <leader>so :source $MYVIMRC<cr>
 nnoremap <leader>ch :silent noh<cr>
 nnoremap <leader>rs :syntax sync fromstart<cr>
 nnoremap <leader>p viwp<ESC>b
+nnoremap <leader>cr :CocRestart<cr>
 
 " vim-plug
 nnoremap <leader>pi :PlugInstall<cr>
