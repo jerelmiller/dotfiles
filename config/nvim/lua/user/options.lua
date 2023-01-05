@@ -31,6 +31,12 @@ vim.o.cursorline = true
 -- Use spaces to for indents
 vim.o.expandtab = true
 
+-- Encode written files with UTF-8 encoding
+vim.o.filencoding = "utf-8"
+
+-- Don't insert current comment leader automatically when hitting 'o' or 'O' in normal mode
+vim.opt.formatoptions:remove({ "o" })
+
 -- Don't add cursor styling
 vim.o.guicursor = ''
 
@@ -48,6 +54,9 @@ vim.wo.number = true
 
 -- Show line number relative to line cursor is on
 vim.wo.relativenumber = true
+
+-- separate vim plugins from neovim in case vim still in use
+vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
 
 -- # of lines of text above/below the cursor when scrolling
 vim.o.scrolloff = 4
