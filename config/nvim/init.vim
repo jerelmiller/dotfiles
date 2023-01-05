@@ -34,7 +34,7 @@ Plug 'tyewang/vimux-jest-test'
 " Plug 'jparise/vim-graphql'
 
 " JSON
-" Plug 'kevinoid/vim-jsonc'
+Plug 'kevinoid/vim-jsonc'
 
 " Markdown
 " Plug 'godlygeek/tabular'
