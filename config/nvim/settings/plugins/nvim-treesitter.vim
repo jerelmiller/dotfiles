@@ -21,6 +21,7 @@ require'nvim-treesitter.configs'.setup {
     "ruby",
     "scss",
     "typescript",
+    "tsx",
     "vim",
     "yaml"
   },
