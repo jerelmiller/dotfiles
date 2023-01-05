@@ -27,10 +27,6 @@
   "yaml.format.singleQuote": true,
   "git.enableGutters": false,
   "tsserver.log": "normal",
-  "markdownlint.config": {
-    "MD004": {
-      "style": "asterisk"
-    },
-    "MD033": false
-  }
+  "tsserver.useLocalTsdk": true,
+  "typescript.preferences.jsxAttributeCompletionStyle": "none"
 }
