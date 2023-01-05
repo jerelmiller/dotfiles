@@ -11,7 +11,11 @@ export default `!v expand("%:t:r")`
 endsnippet
 
 snippet rsl "Stateless component" b
-const `!v expand("%:t:r")` = () => {
+interface `!v expand("%:t:r")`Props {
+
+}
+
+const `!v expand("%:t:r")` = ({}: `!v expand("%:t:r")`Props) => {
 	return <div />
 }
 
