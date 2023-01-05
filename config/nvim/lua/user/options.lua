@@ -1,4 +1,5 @@
 vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 -- Nord settings which must be set before 'colorscheme'
 vim.g.nord_cursor_line_number_background = 1
