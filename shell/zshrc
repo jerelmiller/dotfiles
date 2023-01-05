@@ -90,7 +90,6 @@ plugins=(
   postgres
   tmux
   pyenv
-  rbenv
   ssh-agent
   web-search
   yarn
