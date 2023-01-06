@@ -102,6 +102,7 @@ packer.startup(function(use)
 
   -- Git integration
   use 'tpope/vim-fugitive'
+  use 'lewis6991/gitsigns.nvim'
 
   -- Misc
   use 'tpope/vim-surround'
