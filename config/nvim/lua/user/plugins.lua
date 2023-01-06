@@ -104,6 +104,9 @@ packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
 
+  -- Add indentation guides even on blank lines
+  use 'lukas-reineke/indent-blankline.nvim' 
+
   -- Misc
   use 'tpope/vim-surround'
 
