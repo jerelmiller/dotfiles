@@ -110,6 +110,9 @@ packer.startup(function(use)
   -- Highlight instances of word under cursor
   use 'RRethy/vim-illuminate'
 
+  -- Add missing lsp colors
+  use 'folke/lsp-colors.nvim'
+
   -- Nicer diagnostics
   use {
     'folke/trouble.nvim',
