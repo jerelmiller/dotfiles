@@ -110,6 +110,14 @@ packer.startup(function(use)
   -- Highlight instances of word under cursor
   use 'RRethy/vim-illuminate'
 
+  -- Nicer diagnostics
+  use {
+    "folke/trouble.nvim",
+    requires = {
+      "kyazdani42/nvim-web-devicons"
+    },
+  }
+
   -- Misc
   use 'tpope/vim-surround'
 
