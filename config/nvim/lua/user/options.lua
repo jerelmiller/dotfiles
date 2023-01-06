@@ -1,16 +1,6 @@
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
--- Nord settings which must be set before 'colorscheme'
-vim.g.nord_cursor_line_number_background = 1
-vim.g.nord_italic = 1
-vim.g.nord_italic_comments = 1
-vim.g.nord_underline = 1
-
--- Colorscheme
-vim.o.termguicolors = true
-vim.cmd [[colorscheme nord]]
-
 -- Automatically re-read the file if changed outside of vim
 vim.o.autoread = true
 
@@ -103,6 +93,9 @@ vim.o.swapfile = false
 
 -- # of spaces for a tab
 vim.o.tabstop = 2
+
+-- Enable term gui colors
+vim.o.termguicolors = true
 
 -- Faster time to wait for a mapped sequence to complete (in milliseconds)
 vim.o.timeoutlen = 300
