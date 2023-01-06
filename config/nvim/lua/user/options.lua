@@ -7,6 +7,9 @@ vim.o.autoread = true
 -- Don't create a backup file
 vim.o.backup = false
 
+-- Use darker theme when available
+vim.o.background = 'dark'
+
 -- Allow neovim to access the system clipboard
 vim.o.clipboard = 'unnamedplus'
 
