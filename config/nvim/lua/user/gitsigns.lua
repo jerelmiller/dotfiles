@@ -2,8 +2,10 @@ local gs = require('gitsigns')
 
 gs.setup({
   on_attach = function(bufnr)
-    local map = function(mode, keys, func)
-      vim.keymap.set(mode, keys, func, { buffer = bufnr })
+    local map = function(mode, keys, func, opts)
+      opts = opts or {}
+      opts.buffer = bufnr
+      vim.keymap.set(mode, keys, func, opts)
     end
 
     -- Next hunk
