@@ -51,6 +51,9 @@ packer.startup(function(use)
   -- Additional lua configuration, makes nvim stuff amazing
   use 'folke/neodev.nvim'
 
+  -- Smart commenting
+  use 'numToStr/Comment.nvim'
+
   -- Helpful functions used by several plugins
   use 'nvim-lua/plenary.nvim'
 
