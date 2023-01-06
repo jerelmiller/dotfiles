@@ -39,6 +39,8 @@ vim.keymap.set('n', '<leader>grm', ':GRemove<cr>', opts)
 
 -- Trouble
 vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle<cr>', opts)
+vim.keymap.set('n', '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<cr>', opts)
+vim.keymap.set('n', "<leader>xd", '<cmd>TroubleToggle document_diagnostics<cr>', opts)
 
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
