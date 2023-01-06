@@ -1,12 +1,28 @@
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 
+  ensure_installed = {
+    'bash',
+    'comment',
     'css',
+    'dockerfile',
+    'eex',
+    'elixir',
+    'git_rebase',
+    'gitcommit',
+    'gitignore',
+    'graphql',
     'help',
     'html',
-    'lua',
     'javascript',
     'json',
+    'json5',
+    'jsonc',
+    'lua',
+    'markdown',
+    'markdown_inline',
+    'regex',
+    'ruby',
     'scss',
+    'sql',
     'tsx',
     'typescript',
     'vim',
@@ -35,7 +51,7 @@ require('nvim-treesitter.configs').setup({
       enable = true,
 
       -- Automatically jump forward to textobj, similar to targets.vim
-      lookahead = true, 
+      lookahead = true,
       keymaps = {
         ['aa'] = { query = '@parameter.outer', desc = '[a]round [a]rgument' },
         ['ia'] = { query = '@parameter.inner', desc = '[i]nside [a]rgument' },
