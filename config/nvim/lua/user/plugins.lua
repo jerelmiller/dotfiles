@@ -107,6 +107,9 @@ packer.startup(function(use)
   -- Add indentation guides even on blank lines
   use 'lukas-reineke/indent-blankline.nvim' 
 
+  -- Highlight instances of word under cursor
+  use 'RRethy/vim-illuminate'
+
   -- Misc
   use 'tpope/vim-surround'
 
