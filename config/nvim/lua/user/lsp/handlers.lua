@@ -41,6 +41,5 @@ return {
   end,
 
   setup = function()
-    print 'setup'
   end,
 }
