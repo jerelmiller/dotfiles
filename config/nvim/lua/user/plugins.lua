@@ -95,9 +95,8 @@ packer.startup(function(use)
 end)
 
 -- Automatically source and re-compile packer whenever you save the plugins.lua file
-local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
-  command = 'source <afile> | silent! LspStop | silent! LspStart | PackerInstall',
-  group = packer_group,
+  command = 'source <afile> | PackerInstall',
+  group = vim.api.nvim_create_augroup('Packer', { clear = true }),
   pattern = 'plugins.lua'
 })
