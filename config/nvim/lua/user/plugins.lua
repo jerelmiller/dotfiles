@@ -112,9 +112,9 @@ packer.startup(function(use)
 
   -- Nicer diagnostics
   use {
-    "folke/trouble.nvim",
+    'folke/trouble.nvim',
     requires = {
-      "kyazdani42/nvim-web-devicons"
+      'kyazdani42/nvim-web-devicons'
     },
   }
 
