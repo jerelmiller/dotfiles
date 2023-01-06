@@ -1,0 +1,80 @@
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 
+    'css',
+    'help',
+    'html',
+    'lua',
+    'javascript',
+    'json',
+    'scss',
+    'tsx',
+    'typescript',
+    'vim',
+    'yaml',
+  },
+  endwise = {
+    enable = true,
+  },
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<C-space>',
+      node_incremental = '<C-space>',
+      scope_incremental = '<C-s>',
+      node_decremental = '<C-backspace>',
+    },
+  },
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj, similar to targets.vim
+      lookahead = true, 
+      keymaps = {
+        ['aa'] = { query = '@parameter.outer', desc = '[a]round [a]rgument' },
+        ['ia'] = { query = '@parameter.inner', desc = '[i]nside [a]rgument' },
+        ['af'] = { query = '@function.outer', desc = '[a]round [f]unction' },
+        ['if'] = { query = '@function.inner', desc = '[i]inside [f]unction' },
+        ['ac'] = { query = '@class.outer', desc = '[a]round [c]lass' },
+        ['ic'] = { query = '@class.inner', desc = '[i]nside [c]lass' },
+      },
+    },
+    move = {
+      enable = true,
+
+      -- Whether to set jumps in the jumplist
+      set_jumps = true,
+      goto_next_start = {
+        [']m'] = '@function.outer',
+        [']]'] = '@class.outer',
+      },
+      goto_next_end = {
+        [']M'] = '@function.outer',
+        [']['] = '@class.outer',
+      },
+      goto_previous_start = {
+        ['[m'] = '@function.outer',
+        ['[['] = '@class.outer',
+      },
+      goto_previous_end = {
+        ['[M'] = '@function.outer',
+        ['[]'] = '@class.outer',
+      },
+    },
+    swap = {
+      enable = true,
+      swap_next = {
+        ['<leader>a'] = '@parameter.inner',
+      },
+      swap_previous = {
+        ['<leader>A'] = '@parameter.inner',
+      },
+    }
+  }
+})

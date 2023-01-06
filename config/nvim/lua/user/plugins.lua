@@ -64,6 +64,23 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
 
+  -- Highlight, edit, and navigate code
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
+    end,
+  }
+
+  use {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    after = 'nvim-treesitter',
+  }
+
+  -- Smart autopairing
+  use 'windwp/nvim-autopairs'
+  use 'RRethy/nvim-treesitter-endwise'
+
   -- Color schemes
   use 'arcticicestudio/nord-vim'
 
