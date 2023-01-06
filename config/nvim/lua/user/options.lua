@@ -14,7 +14,7 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.colorcolumn = 80
 
 -- Better completion experience
-vim.opt.completeopt = { 'menuone', 'noselect' }
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 -- Highlight the current line
 vim.o.cursorline = true
