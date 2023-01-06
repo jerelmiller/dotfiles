@@ -1,4 +1,5 @@
 local servers = {
+  'elixirls',
   'sumneko_lua',
   'tsserver',
 }
