@@ -80,6 +80,8 @@ packer.startup(function(use)
     after = 'nvim-treesitter',
   }
 
+  use 'nvim-treesitter/playground'
+
   -- Smart autopairing
   use 'windwp/nvim-autopairs'
   use 'RRethy/nvim-treesitter-endwise'
