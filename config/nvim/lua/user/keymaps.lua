@@ -6,6 +6,9 @@ vim.keymap.set('i', 'jk', '<Esc>', opts)
 vim.keymap.set('i', 'Jk', '<Esc>', opts)
 vim.keymap.set('i', '<C-c>', '<Esc>', opts)
 
+-- Remove highlight
+vim.keymap.set('n', 'ch', ':noh<cr>', opts)
+
 -- Use ctrl-h/j/k/l to move between splits
 vim.keymap.set('n', '<C-h>', '<C-W>h', opts)
 vim.keymap.set('n', '<C-j>', '<C-W>j', opts)
