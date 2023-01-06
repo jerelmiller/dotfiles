@@ -31,6 +31,12 @@ vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
+-- Fugitive
+vim.keymap.set('n', '<leader>gb', ':Git blame<cr>', opts)
+vim.keymap.set('n', '<leader>gd', ':Git diff<cr>', opts)
+vim.keymap.set('n', '<leader>gs', ':Git<cr>', opts)
+vim.keymap.set('n', '<leader>grm', ':GRemove<cr>', opts)
+
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', builtin.buffers, { desc = '[ ] Find existing buffers' })

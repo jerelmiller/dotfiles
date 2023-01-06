@@ -100,6 +100,12 @@ packer.startup(function(use)
     cond = vim.fn.executable 'make' == 1
   }
 
+  -- Git integration
+  use 'tpope/vim-fugitive'
+
+  -- Misc
+  use 'tpope/vim-surround'
+
   -- Color schemes
   use 'arcticicestudio/nord-vim'
 
