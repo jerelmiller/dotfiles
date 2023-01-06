@@ -65,6 +65,7 @@ brew_install vault
 brew_install glow
 brew_install bat
 brew_install ripgrep
+brew_install ncurses
 
 # easily create localhost certificates
 brew_install mkcert
