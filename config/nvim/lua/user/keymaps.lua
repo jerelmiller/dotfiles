@@ -37,6 +37,10 @@ vim.keymap.set('n', '<leader>gd', ':Git diff<cr>', opts)
 vim.keymap.set('n', '<leader>gs', ':Git<cr>', opts)
 vim.keymap.set('n', '<leader>grm', ':GRemove<cr>', opts)
 
+-- Nvim Tree
+vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', opts)
+vim.keymap.set('n', '<leader>f', ':NvimTreeFindFile<cr>', opts)
+
 -- Trouble
 vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle<cr>', opts)
 vim.keymap.set('n', '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<cr>', opts)
