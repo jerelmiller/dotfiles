@@ -37,6 +37,9 @@ vim.keymap.set('n', '<leader>gd', ':Git diff<cr>', opts)
 vim.keymap.set('n', '<leader>gs', ':Git<cr>', opts)
 vim.keymap.set('n', '<leader>grm', ':GRemove<cr>', opts)
 
+-- Trouble
+vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle<cr>', opts)
+
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', builtin.buffers, { desc = '[ ] Find existing buffers' })
