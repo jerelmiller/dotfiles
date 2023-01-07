@@ -54,9 +54,6 @@ packer.startup(function(use)
   -- Smart commenting
   use 'numToStr/Comment.nvim'
 
-  -- Helpful functions used by several plugins
-  use 'nvim-lua/plenary.nvim'
-
   -- Autocompletion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
@@ -128,6 +125,14 @@ packer.startup(function(use)
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
+
+  -- Formatting and linting
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = {
+      use 'nvim-lua/plenary.nvim'
     },
   }
 
