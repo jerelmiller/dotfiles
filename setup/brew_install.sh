@@ -66,6 +66,7 @@ brew_install glow
 brew_install bat
 brew_install ripgrep
 brew_install ncurses
+brew_install stylua
 
 # easily create localhost certificates
 brew_install mkcert
