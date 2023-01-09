@@ -1,23 +1,23 @@
 require('nvim-tree').setup({
   renderer = {
     indent_markers = {
-      enable = true
+      enable = true,
     },
     icons = {
       glyphs = {
         git = {
-          unstaged = "ﰣ",
-          staged = "",
-          unmerged = "",
-          renamed = "➜",
-          untracked = "",
-          deleted = "",
-          ignored = "◌",
-        }
-      }
-    }
+          unstaged = 'ﰣ',
+          staged = '',
+          unmerged = '',
+          renamed = '➜',
+          untracked = '',
+          deleted = '',
+          ignored = '◌',
+        },
+      },
+    },
   },
   diagnostics = {
-    enable = true
-  }
+    enable = true,
+  },
 })

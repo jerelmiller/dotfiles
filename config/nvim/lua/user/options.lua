@@ -18,10 +18,14 @@ vim.o.background = 'dark'
 vim.o.clipboard = 'unnamedplus'
 
 -- Show a column indicator
-vim.o.colorcolumn = 80
+vim.opt.colorcolumn = '80'
 
 -- Better completion experience
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+vim.opt.completeopt = {
+  'menu',
+  'menuone',
+  'noselect',
+}
 
 -- Highlight the current line
 vim.o.cursorline = true
@@ -30,10 +34,12 @@ vim.o.cursorline = true
 vim.o.expandtab = true
 
 -- Encode written files with UTF-8 encoding
-vim.o.filencoding = "utf-8"
+vim.o.filencoding = 'utf-8'
 
 -- Don't insert current comment leader automatically when hitting 'o' or 'O' in normal mode
-vim.opt.formatoptions:remove({ "o" })
+vim.opt.formatoptions:remove({
+  'o',
+})
 
 -- Don't add cursor styling
 vim.o.guicursor = ''
@@ -54,7 +60,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- separate vim plugins from neovim in case vim still in use
-vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
+vim.opt.runtimepath:remove('/usr/share/vim/vimfiles')
 
 -- # of lines of text above/below the cursor when scrolling
 vim.o.scrolloff = 4
@@ -66,7 +72,7 @@ vim.o.shiftround = true
 vim.o.shiftwidth = 2
 
 -- Don't give |ins-completion-menu| messages
-vim.opt.shortmess:append 'c'
+vim.opt.shortmess:append('c')
 
 -- Don't show messages like -- INSERT --
 vim.o.showmode = false

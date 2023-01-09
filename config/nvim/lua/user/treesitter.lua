@@ -53,12 +53,30 @@ require('nvim-treesitter.configs').setup({
       -- Automatically jump forward to textobj, similar to targets.vim
       lookahead = true,
       keymaps = {
-        ['aa'] = { query = '@parameter.outer', desc = '[a]round [a]rgument' },
-        ['ia'] = { query = '@parameter.inner', desc = '[i]nside [a]rgument' },
-        ['af'] = { query = '@function.outer', desc = '[a]round [f]unction' },
-        ['if'] = { query = '@function.inner', desc = '[i]inside [f]unction' },
-        ['ac'] = { query = '@class.outer', desc = '[a]round [c]lass' },
-        ['ic'] = { query = '@class.inner', desc = '[i]nside [c]lass' },
+        ['aa'] = {
+          query = '@parameter.outer',
+          desc = '[a]round [a]rgument',
+        },
+        ['ia'] = {
+          query = '@parameter.inner',
+          desc = '[i]nside [a]rgument',
+        },
+        ['af'] = {
+          query = '@function.outer',
+          desc = '[a]round [f]unction',
+        },
+        ['if'] = {
+          query = '@function.inner',
+          desc = '[i]inside [f]unction',
+        },
+        ['ac'] = {
+          query = '@class.outer',
+          desc = '[a]round [c]lass',
+        },
+        ['ic'] = {
+          query = '@class.inner',
+          desc = '[i]nside [c]lass',
+        },
       },
     },
     move = {
@@ -91,6 +109,6 @@ require('nvim-treesitter.configs').setup({
       swap_previous = {
         ['<leader>A'] = '@parameter.inner',
       },
-    }
-  }
+    },
+  },
 })

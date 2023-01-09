@@ -1,7 +1,7 @@
 return {
   settings = {
     elixirLS = {
-      dialyzerEnabled = true
-    }
-  }
+      dialyzerEnabled = true,
+    },
+  },
 }

@@ -15,7 +15,7 @@ require('telescope').setup({
       n = {
         ['<C-t>'] = trouble.open_with_trouble,
       },
-    }
+    },
   },
 })
 

@@ -4,7 +4,12 @@ local luasnip = require('luasnip')
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+  return col ~= 0
+    and vim.api
+        .nvim_buf_get_lines(0, line - 1, line, true)[1]
+        :sub(col, col)
+        :match('%s')
+      == nil
 end
 
 local cmp_kinds = {
@@ -35,7 +40,7 @@ local cmp_kinds = {
   TypeParameter = '  ',
 }
 
-vim.cmd [[
+vim.cmd([[
   highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough guifg=#4C566A
   highlight! link CmpItemAbbrMatch Statement
 
@@ -53,28 +58,28 @@ vim.cmd [[
   highlight! link CmpItemKindUnit CmpItemKindKeyword
 
   highlight! link CmpItemKindClass SpecialChar
-]]
+]])
 
 cmp.setup({
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-    end
+    end,
   },
   formatting = {
     format = function(_, vim_item)
       vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. vim_item.kind
       return vim_item
-    end
+    end,
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm {
+    ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
-    },
+    }),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -86,7 +91,10 @@ cmp.setup({
       else
         fallback()
       end
-    end, { 'i', 's' }),
+    end, {
+      'i',
+      's',
+    }),
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -95,12 +103,23 @@ cmp.setup({
       else
         fallback()
       end
-    end, { 'i', 's' }),
+    end, {
+      'i',
+      's',
+    }),
   }),
   sources = {
-    { name = 'nvim_lsp' },
-    { name = "luasnip" },
-    { name = "buffer" },
-    { name = "path" },
+    {
+      name = 'nvim_lsp',
+    },
+    {
+      name = 'luasnip',
+    },
+    {
+      name = 'buffer',
+    },
+    {
+      name = 'path',
+    },
   },
 })
