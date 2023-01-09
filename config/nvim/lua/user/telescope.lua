@@ -17,6 +17,11 @@ require('telescope').setup({
       },
     },
   },
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+  },
 })
 
 pcall(require('telescope').load_extension, 'fzf')
