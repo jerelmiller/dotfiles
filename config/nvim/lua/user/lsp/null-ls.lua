@@ -13,7 +13,7 @@ null_ls.setup({
     formatting.stylua,
     formatting.prettier,
     formatting.mix,
-    diagnostics.eslint,
+    -- diagnostics.eslint,
   },
   on_attach = function(client, bufnr)
     if client.supports_method('textDocument/formatting') then
