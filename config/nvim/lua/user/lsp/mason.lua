@@ -1,5 +1,6 @@
 local servers = {
   'elixirls',
+  'graphql',
   'sumneko_lua',
   'tsserver',
 }
