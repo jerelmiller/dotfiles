@@ -1,4 +1,6 @@
 local servers = {
+  'cssls',
+  'cssmodules_ls',
   'elixirls',
   'graphql',
   'sumneko_lua',
