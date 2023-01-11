@@ -150,6 +150,8 @@ packer.startup(function(use)
 
   -- Misc
   use('tpope/vim-surround')
+  use('tpope/vim-repeat')
+  use('tpope/vim-unimpaired')
 
   -- Color schemes
   use('arcticicestudio/nord-vim')
