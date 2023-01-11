@@ -3,6 +3,7 @@ local trouble = require('trouble.providers.telescope')
 
 require('telescope').setup({
   defaults = {
+    file_ignore_patterns = { '.git' },
     mappings = {
       i = {
         ['<C-n>'] = actions.cycle_history_next,
