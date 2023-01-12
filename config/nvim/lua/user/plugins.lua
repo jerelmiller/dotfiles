@@ -73,6 +73,8 @@ packer.startup(function(use)
   -- Snippets
   use('L3MON4D3/LuaSnip')
   use('saadparwaiz1/cmp_luasnip')
+  use('SirVer/ultisnips')
+  use('quangnguyen30192/cmp-nvim-ultisnips')
 
   -- Highlight, edit, and navigate code
   use({

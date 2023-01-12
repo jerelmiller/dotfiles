@@ -1,5 +1,6 @@
 local cmp = require('cmp')
-local luasnip = require('luasnip')
+-- local luasnip = require('luasnip')
+local cmp_ultisnips_mappings = require('cmp_nvim_ultisnips.mappings')
 
 local has_words_before = function()
   unpack = unpack or table.unpack
@@ -63,7 +64,7 @@ vim.cmd([[
 cmp.setup({
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      vim.fn['UltiSnips#Anon'](args.body)
     end,
   },
   formatting = {
@@ -82,27 +83,37 @@ cmp.setup({
     }),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
-      else
-        fallback()
-      end
+      cmp_ultisnips_mappings.compose({
+        'select_next_item',
+        'jump_forwards',
+        'expand',
+      })(fallback)
+
+      -- if cmp.visible() then
+      --   cmp.select_next_item()
+      -- elseif luasnip.expand_or_jumpable() then
+      --   luasnip.expand_or_jump()
+      -- elseif has_words_before() then
+      --   cmp.complete()
+      -- else
+      --   fallback()
+      -- end
     end, {
       'i',
       's',
     }),
     ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
+      cmp_ultisnips_mappings.compose({
+        'select_prev_item',
+        'jump_backwards',
+      })(fallback)
+      -- if cmp.visible() then
+      --   cmp.select_prev_item()
+      -- elseif luasnip.jumpable(-1) then
+      --   luasnip.jump(-1)
+      -- else
+      --   fallback()
+      -- end
     end, {
       'i',
       's',
@@ -113,17 +124,10 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   sources = {
-    {
-      name = 'nvim_lsp',
-    },
-    {
-      name = 'luasnip',
-    },
-    {
-      name = 'buffer',
-    },
-    {
-      name = 'path',
-    },
+    { name = 'ultisnips' },
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'buffer' },
+    { name = 'path' },
   },
 })
