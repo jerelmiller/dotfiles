@@ -24,6 +24,7 @@ mason_lspconfig.setup_handlers({
 
     local require_ok, conf_opts =
       pcall(require, 'user.lsp.settings.' .. server_name)
+
     if require_ok then
       opts = vim.tbl_deep_extend('force', conf_opts, opts)
     end
