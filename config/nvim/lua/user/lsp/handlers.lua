@@ -5,6 +5,9 @@ return {
   capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities),
 
   on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+
     local nmap = function(keys, func, desc)
       if desc then
         desc = 'LSP: ' .. desc
