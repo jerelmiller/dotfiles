@@ -124,10 +124,10 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   sources = {
+    { name = 'buffer' },
     { name = 'ultisnips' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'buffer' },
     { name = 'path' },
   },
 })
