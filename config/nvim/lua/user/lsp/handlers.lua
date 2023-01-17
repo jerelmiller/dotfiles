@@ -69,7 +69,17 @@ return {
 
   setup = function()
     vim.diagnostic.config({
-      float = { border = 'rounded' },
+      virtual_text = {
+        format = function(diagnostic)
+          return string.format('[%s] %s', diagnostic.source, diagnostic.message)
+        end,
+      },
+      float = {
+        format = function(diagnostic)
+          return string.format('[%s] %s', diagnostic.source, diagnostic.message)
+        end,
+        border = 'rounded',
+      },
     })
 
     vim.lsp.handlers['textDocument/hover'] =
