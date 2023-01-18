@@ -34,6 +34,9 @@ vim.keymap.set('n', '<C-l>', '<C-W>l', opts)
 vim.keymap.set('n', '<S-l>', ':bnext<CR>', opts)
 vim.keymap.set('n', '<S-h>', ':bprevious<CR>', opts)
 
+-- Show code actions
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
