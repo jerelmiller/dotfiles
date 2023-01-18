@@ -150,6 +150,9 @@ packer.startup(function(use)
     },
   })
 
+  -- Show indications where code actions are available
+  use('kosayoda/nvim-lightbulb')
+
   -- Misc
   use('tpope/vim-surround')
   use('tpope/vim-repeat')
