@@ -153,6 +153,14 @@ packer.startup(function(use)
   -- Show indications where code actions are available
   use('kosayoda/nvim-lightbulb')
 
+  -- Refactoring
+  use({
+    'ThePrimeagen/refactoring.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+    },
+  })
+
   -- Misc
   use('tpope/vim-surround')
   use('tpope/vim-repeat')
