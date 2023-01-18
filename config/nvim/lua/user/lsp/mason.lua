@@ -30,6 +30,13 @@ mason_lspconfig.setup_handlers({
       opts = vim.tbl_deep_extend('force', conf_opts, opts)
     end
 
+    if server_name == 'tsserver' then
+      require('typescript').setup({
+        server = opts,
+      })
+      return
+    end
+
     require('lspconfig')[server_name].setup(opts)
   end,
 })
