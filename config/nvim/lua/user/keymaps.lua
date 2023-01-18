@@ -37,6 +37,20 @@ vim.keymap.set('n', '<S-h>', ':bprevious<CR>', opts)
 -- Show code actions
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
 
+-- Refactoring
+vim.keymap.set(
+  'v',
+  '<leader>rr',
+  "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+  opts
+)
+vim.keymap.set(
+  'n',
+  '<leader>rv',
+  ":lua require('refactoring').debug.print_var({ normal = true })<CR>",
+  { noremap = true }
+)
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next)

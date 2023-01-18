@@ -18,6 +18,7 @@ null_ls.setup({
 
     -- code actions
     code_actions.eslint,
+    code_actions.refactoring,
     require('typescript.extensions.null-ls.code-actions'),
   },
   on_attach = function(client, bufnr)
