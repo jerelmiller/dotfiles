@@ -146,7 +146,7 @@ packer.startup(function(use)
   use({
     'jose-elias-alvarez/null-ls.nvim',
     requires = {
-      use('nvim-lua/plenary.nvim'),
+      'nvim-lua/plenary.nvim',
     },
   })
 
