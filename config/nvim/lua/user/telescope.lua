@@ -18,6 +18,11 @@ require('telescope').setup({
       },
     },
   },
+  extensions = {
+    ['ui-select'] = {
+      require('telescope.themes').get_dropdown(),
+    },
+  },
   pickers = {
     find_files = {
       hidden = true,
@@ -26,3 +31,4 @@ require('telescope').setup({
 })
 
 pcall(require('telescope').load_extension, 'fzf')
+pcall(require('telescope').load_extension, 'ui-select')
