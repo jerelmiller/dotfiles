@@ -2,6 +2,7 @@ local servers = {
   'cssls',
   'cssmodules_ls',
   'elixirls',
+  'html',
   'graphql',
   'sumneko_lua',
   'tsserver',
