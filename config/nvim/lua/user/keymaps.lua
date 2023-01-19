@@ -82,12 +82,16 @@ vim.keymap.set(
   opts
 )
 
--- Telescope keymaps
+-- Telescope
 vim.keymap.set('n', '<leader>?', builtin.oldfiles, {
   desc = '[?] Find recently opened files',
 })
 vim.keymap.set('n', '<leader><space>', builtin.buffers, {
   desc = '[ ] Find existing buffers',
+})
+
+vim.keymap.set('n', '<leader>hl', builtin.highlights, {
+  desc = 'Search [h]igh[l]ight groups',
 })
 
 vim.keymap.set('n', '<leader>/', function()
