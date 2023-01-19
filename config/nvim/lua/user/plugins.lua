@@ -167,6 +167,7 @@ packer.startup(function(use)
   use('tpope/vim-unimpaired')
   use('jose-elias-alvarez/typescript.nvim')
   use('nvim-telescope/telescope-ui-select.nvim')
+  use('alexghergh/nvim-tmux-navigation')
 
   -- Color schemes
   use('arcticicestudio/nord-vim')
