@@ -63,6 +63,26 @@ require('nvim-treesitter.configs').setup({
       -- Automatically jump forward to textobj, similar to targets.vim
       lookahead = true,
       keymaps = {
+        ['am'] = {
+          query = '@comment.outer',
+          desc = '[a]round comment',
+        },
+        ['an'] = {
+          query = '@conditional.outer',
+          desc = '[a]round co[n]ditional',
+        },
+        ['in'] = {
+          query = '@conditional.inner',
+          desc = '[i]nside co[n]ditional',
+        },
+        ['al'] = {
+          query = '@loop.outer',
+          desc = '[a]round [l]oop',
+        },
+        ['il'] = {
+          query = '@loop.inner',
+          desc = '[i]nside [l]oop',
+        },
         ['aa'] = {
           query = '@parameter.outer',
           desc = '[a]round [a]rgument',
