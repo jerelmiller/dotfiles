@@ -5,6 +5,7 @@ local servers = {
   'html',
   'graphql',
   'sumneko_lua',
+  'tailwindcss',
   'tsserver',
 }
 
