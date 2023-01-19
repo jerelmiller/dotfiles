@@ -29,6 +29,12 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   callback = function()
     mod_hl('Pmenu', { bg = 'NONE' })
     mod_hl('@text.uri', { italic = true, fg = nord8 })
+
+    vim.api.nvim_set_hl(0, '@punctuation.bracket', { fg = nord7 })
+    vim.api.nvim_set_hl(0, '@tag.delimiter', { fg = nord9 })
+    vim.api.nvim_set_hl(0, '@jsx.tag', { fg = nord9, bold = true })
+    vim.api.nvim_set_hl(0, '@jsx.component', { fg = nord7 })
+    vim.api.nvim_set_hl(0, '@jsx.delimiter', { link = '@tag.delimiter' })
   end,
 })
 
