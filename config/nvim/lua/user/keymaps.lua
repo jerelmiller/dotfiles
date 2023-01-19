@@ -1,4 +1,5 @@
 local builtin = require('telescope.builtin')
+local ts_repeat_move = require('nvim-treesitter.textobjects.repeatable_move')
 local opts = {
   noremap = true,
   silent = true,
@@ -9,6 +10,16 @@ vim.api.nvim_create_user_command('Q', 'q', {})
 vim.api.nvim_create_user_command('W', 'w', {})
 vim.api.nvim_create_user_command('Wq', 'wq', {})
 vim.api.nvim_create_user_command('Qa', 'qa', {})
+
+-- Textobjects
+vim.keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move_next)
+vim.keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_previous)
+
+-- Make builtins repeatable
+vim.keymap.set({ 'n', 'x', 'o' }, 'f', ts_repeat_move.builtin_f)
+vim.keymap.set({ 'n', 'x', 'o' }, 'F', ts_repeat_move.builtin_F)
+vim.keymap.set({ 'n', 'x', 'o' }, 't', ts_repeat_move.builtin_t)
+vim.keymap.set({ 'n', 'x', 'o' }, 'T', ts_repeat_move.builtin_T)
 
 -- Escape insert mode with 'jk'
 vim.keymap.set('i', 'jk', '<Esc>', opts)
