@@ -1,4 +1,4 @@
-; inherits: tsx
+; extends
 
 (jsx_opening_element 
   name: (identifier) @jsx.tag
