@@ -71,7 +71,12 @@ return {
     vim.diagnostic.config({
       virtual_text = {
         format = function(diagnostic)
-          return string.format('[%s] %s', diagnostic.source, diagnostic.message)
+          return string.format(
+            '[%s] %s (%s)',
+            diagnostic.source,
+            diagnostic.message,
+            diagnostic.code
+          )
         end,
       },
       float = {
