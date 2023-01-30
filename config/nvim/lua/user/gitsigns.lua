@@ -57,7 +57,6 @@ gs.setup({
     map('n', '<leader>hD', function()
       gs.diffthis('~')
     end)
-    map('n', '<leader>td', gs.toggle_deleted)
     map({
       'o',
       'x',
