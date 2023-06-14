@@ -4,7 +4,7 @@ local servers = {
   'elixirls',
   'html',
   'graphql',
-  'sumneko_lua',
+  'lua_ls',
   'tailwindcss',
   'tsserver',
 }
