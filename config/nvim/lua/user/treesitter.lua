@@ -12,7 +12,6 @@ require('nvim-treesitter.configs').setup({
     'gitcommit',
     'gitignore',
     'graphql',
-    'help',
     'html',
     'javascript',
     'json',
@@ -29,6 +28,7 @@ require('nvim-treesitter.configs').setup({
     'tsx',
     'typescript',
     'vim',
+    'vimdoc',
     'yaml',
   },
   endwise = {
