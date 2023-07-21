@@ -1,3 +1,5 @@
+vim.treesitter.language.register('markdown', 'mdx')
+
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
     'bash',
