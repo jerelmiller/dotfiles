@@ -18,6 +18,7 @@ alias bundler_version='cat Gemfile.lock | grep -A 1 "BUNDLED WITH" | tail -n 1'
 alias icloud='cd $HOME/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
+alias watchdel="watchman watch-del $PWD ; watchman watch-project $PWD"
 
 # MISC
 alias vim='nvim'
