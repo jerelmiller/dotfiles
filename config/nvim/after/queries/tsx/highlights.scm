@@ -5,16 +5,16 @@
 ) 
 
 (jsx_opening_element 
-  (nested_identifier (identifier) @jsx.tag)
+  name: (member_expression (identifier) @jsx.tag (property_identifier) @jsx.tag)
 )
 
 (jsx_opening_element 
-  ((identifier) @jsx.component (#lua-match? @jsx.component "^[A-Z]"))
+  ((identifier) @jsx.component (#match? @jsx.component "^[A-Z]"))
 )
 
 (jsx_opening_element 
-  (nested_identifier
-    ((identifier) @jsx.component (#lua-match? @jsx.component "^[A-Z]"))
+  (member_expression
+    ((identifier) @jsx.component (#match? @jsx.component "^[A-Z]") (property_identifier) @jsx.component)
   )
 )
 
@@ -23,25 +23,25 @@
 ) 
 
 (jsx_closing_element 
-  (nested_identifier (identifier) @jsx.tag)
+  (member_expression (identifier) @jsx.tag (property_identifier) @jsx.tag)
 )
 
 (jsx_closing_element 
-  ((identifier) @jsx.component (#lua-match? @jsx.component "^[A-Z]"))
+  ((identifier) @jsx.component (#match? @jsx.component "^[A-Z]"))
 )
 
 (jsx_closing_element 
-  (nested_identifier
-    ((identifier) @jsx.component (#lua-match? @jsx.component "^[A-Z]"))
+  (member_expression
+    ((identifier) @jsx.component (#match? @jsx.component "^[A-Z]") (property_identifier) @jsx.component)
   )
 )
 
 (jsx_opening_element
-  (nested_identifier (identifier) "." @jsx.delimiter)
+  (member_expression (identifier) "." @jsx.delimiter)
 )
 
 (jsx_closing_element 
-  (nested_identifier (identifier) "." @jsx.delimiter)
+  (member_expression (identifier) "." @jsx.delimiter)
 )
 
 (jsx_self_closing_element
@@ -49,15 +49,15 @@
 )
 
 (jsx_self_closing_element
-  ((identifier) @jsx.component (#lua-match? @jsx.component "^[A-Z]"))
+  ((identifier) @jsx.component (#match? @jsx.component "^[A-Z]"))
 )
 
 (jsx_self_closing_element
-  (nested_identifier (identifier) @jsx.tag)
+  (member_expression (identifier) @jsx.tag (property_identifier) @jsx.tag)
 )
 
 (jsx_self_closing_element
-  (nested_identifier
-    ((identifier) @jsx.component (#lua-match? @jsx.component "^[A-Z]"))
+  (member_expression
+    ((identifier) @jsx.component (#match? @jsx.component "^[A-Z]") (property_identifier) @jsx.component)
   )
 )
