@@ -146,9 +146,6 @@ packer.startup(function(use)
     },
   })
 
-  -- Show indications where code actions are available
-  use('kosayoda/nvim-lightbulb')
-
   -- Refactoring
   use({
     'ThePrimeagen/refactoring.nvim',
