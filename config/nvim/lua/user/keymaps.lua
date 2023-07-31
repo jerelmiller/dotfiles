@@ -1,5 +1,5 @@
 local builtin = require('telescope.builtin')
-local ts_repeat_move = require('nvim-treesitter.textobjects.repeatable_move')
+-- local ts_repeat_move = require('nvim-treesitter.textobjects.repeatable_move')
 local opts = {
   noremap = true,
   silent = true,
@@ -20,8 +20,8 @@ vim.keymap.set({ 'n', 'v' }, 'j', 'gj')
 vim.keymap.set({ 'n', 'v' }, 'k', 'gk')
 
 -- Textobjects
-vim.keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move_next)
-vim.keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_previous)
+-- vim.keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move_next)
+-- vim.keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_previous)
 
 -- Make builtins repeatable
 -- vim.keymap.set({ 'n', 'x', 'o' }, 'f', ts_repeat_move.builtin_f)
