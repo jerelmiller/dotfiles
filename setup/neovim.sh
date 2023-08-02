@@ -33,6 +33,12 @@ install_npm_package() {
   print_result $? "neovim (npm package)"
 }
 
+install_langservers_package() {
+  npm install -g vscode-langservers-extracted
+
+  print_result $? "neovim (langservers package)"
+}
+
 main() {
   print_info "neovim"
 
@@ -42,6 +48,7 @@ main() {
   install_vim_plug
   install_ruby_gem
   install_npm_package
+  install_langservers_package
 }
 
 main
