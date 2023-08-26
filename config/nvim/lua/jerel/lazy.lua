@@ -58,9 +58,12 @@ require('lazy').setup({
   'tpope/vim-unimpaired',
   'tpope/vim-abolish',
   'tpope/vim-fugitive',
-  'windwp/nvim-autopairs',
   'lewis6991/gitsigns.nvim',
   'lukas-reineke/indent-blankline.nvim',
   'nvim-telescope/telescope-ui-select.nvim',
-  'alexghergh/nvim-tmux-navigation'
+  'alexghergh/nvim-tmux-navigation',
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter"
+  }
 })
