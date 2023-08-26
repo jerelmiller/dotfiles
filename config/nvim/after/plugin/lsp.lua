@@ -106,16 +106,6 @@ cmp.setup({
         'jump_forwards',
         'expand',
       })(fallback)
-
-      -- if cmp.visible() then
-      --   cmp.select_next_item()
-      -- elseif luasnip.expand_or_jumpable() then
-      --   luasnip.expand_or_jump()
-      -- elseif has_words_before() then
-      --   cmp.complete()
-      -- else
-      --   fallback()
-      -- end
     end, {
       'i',
       's',
@@ -125,13 +115,6 @@ cmp.setup({
         'select_prev_item',
         'jump_backwards',
       })(fallback)
-      -- if cmp.visible() then
-      --   cmp.select_prev_item()
-      -- elseif luasnip.jumpable(-1) then
-      --   luasnip.jump(-1)
-      -- else
-      --   fallback()
-      -- end
     end, {
       'i',
       's',
@@ -141,13 +124,12 @@ cmp.setup({
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
-  -- sources = {
-  --   { name = 'buffer' },
-  --   { name = 'ultisnips' },
-  --   { name = 'nvim_lsp' },
-  --   { name = 'luasnip' },
-  --   { name = 'path' },
-  -- },
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'ultisnips' }
+  }, {
+    { name = 'buffer' }
+  })
 })
 
 vim.diagnostic.config({
