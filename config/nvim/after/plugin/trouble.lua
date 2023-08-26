@@ -15,3 +15,17 @@ for type, icon in pairs(signs) do
     numhl = '',
   })
 end
+
+vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle<cr>', opts)
+vim.keymap.set(
+  'n',
+  '<leader>xw',
+  '<cmd>TroubleToggle workspace_diagnostics<cr>',
+  opts
+)
+vim.keymap.set(
+  'n',
+  '<leader>xd',
+  '<cmd>TroubleToggle document_diagnostics<cr>',
+  opts
+)
