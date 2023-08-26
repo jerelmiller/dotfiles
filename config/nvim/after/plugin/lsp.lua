@@ -1,6 +1,7 @@
 local cmp = require('cmp')
 local cmp_ultisnips_mappings = require('cmp_nvim_ultisnips.mappings')
 local lsp = require('lsp-zero').preset({})
+local lspconfig = require('lspconfig')
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
@@ -30,6 +31,39 @@ lsp.setup_servers({
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
+
+lspconfig.tsserver.setup({
+  settings = {
+    typescript = {
+      format = {
+        enabled = false
+      }
+    }
+  }
+})
+
+lspconfig.lua_ls.setup({
+  settings = {
+    Lua = {
+      workspace = {
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})
+
+lspconfig.eslint.setup({
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      buffer = bufnr,
+      command = 'EslintFixAll',
+    })
+  end,
+  settings = {},
+})
 
 local cmp_kinds = {
   Text = '  ',
