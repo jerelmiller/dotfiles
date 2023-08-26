@@ -56,6 +56,7 @@ require('lazy').setup({
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  'folke/neodev.nvim',
   'tpope/vim-surround',
   'tpope/vim-repeat',
   'tpope/vim-unimpaired',
@@ -68,5 +69,6 @@ require('lazy').setup({
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter"
-  }
+  },
+  'mhartington/formatter.nvim'
 })
