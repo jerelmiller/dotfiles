@@ -52,5 +52,15 @@ require('lazy').setup({
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-  }
+  },
+  'tpope/vim-surround',
+  'tpope/vim-repeat',
+  'tpope/vim-unimpaired',
+  'tpope/vim-abolish',
+  'tpope/vim-fugitive',
+  'windwp/nvim-autopairs',
+  'lewis6991/gitsigns.nvim',
+  'lukas-reineke/indent-blankline.nvim',
+  'nvim-telescope/telescope-ui-select.nvim',
+  'alexghergh/nvim-tmux-navigation'
 })
