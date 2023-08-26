@@ -1,5 +1,7 @@
 -- reminder: mapleader set in lazy.lua
 
+local opts = { noremap = false, silent = true }
+
 -- Alias common mistyped commands
 vim.api.nvim_create_user_command('Q', 'q', {})
 vim.api.nvim_create_user_command('W', 'w', {})
