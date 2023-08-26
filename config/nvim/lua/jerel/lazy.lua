@@ -12,14 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set leader before plugins to ensure correct mappings
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 require('lazy').setup({
   {
     'arcticicestudio/nord-vim',
     lazy = false,
-    priority = 1000
+    priority = 1000,
+  },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -39,22 +44,22 @@ require('lazy').setup({
     branch = 'v2.x',
     dependencies = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-path'},
-      {'L3MON4D3/LuaSnip'},
-      {'quangnguyen30192/cmp-nvim-ultisnips'},
-    }
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-path' },
+      { 'L3MON4D3/LuaSnip' },
+      { 'quangnguyen30192/cmp-nvim-ultisnips' },
+    },
   },
   {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    'folke/trouble.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
   'folke/neodev.nvim',
   'tpope/vim-surround',
@@ -68,7 +73,7 @@ require('lazy').setup({
   'alexghergh/nvim-tmux-navigation',
   {
     'windwp/nvim-autopairs',
-    event = "InsertEnter"
+    event = 'InsertEnter',
   },
-  'mhartington/formatter.nvim'
+  'mhartington/formatter.nvim',
 })
