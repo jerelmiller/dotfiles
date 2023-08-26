@@ -31,7 +31,7 @@ vim.o.cursorline = true
 vim.o.expandtab = true
 
 -- Encode written files with UTF-8 encoding
-vim.o.fileencoding = 'utf-8'
+-- vim.o.fileencoding = 'utf-8'
 
 -- Don't insert current comment leader automatically when hitting 'o' or 'O' in normal mode
 vim.opt.formatoptions:remove({
