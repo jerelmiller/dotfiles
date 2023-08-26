@@ -40,9 +40,6 @@ vim.keymap.set('n', '<C-j>', '<C-W>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-W>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-W>l', opts)
 
--- Show code actions
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
-
 -- Resize with arrows
 -- vim.keymap.set('n', '<C-Up>', ':resize +2<CR>', opts)
 -- vim.keymap.set('n', '<C-Down>', ':resize -2<CR>', opts)

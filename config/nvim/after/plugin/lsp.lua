@@ -2,6 +2,9 @@ local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
+
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, '[R]e[name]')
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 end)
 
 lsp.setup_servers({
