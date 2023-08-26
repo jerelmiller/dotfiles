@@ -1,3 +1,4 @@
+require('jerel.lazy')
 require('user.filetypes')
 require('user.options')
 require('user.keymaps')

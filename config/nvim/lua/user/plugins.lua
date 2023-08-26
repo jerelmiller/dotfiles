@@ -93,15 +93,6 @@ packer.startup(function(use)
   use('windwp/nvim-autopairs')
   use('RRethy/nvim-treesitter-endwise')
 
-  -- Fuzzy Finder (files, lsp, etc)
-  use({
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
-    requires = {
-      'nvim-lua/plenary.nvim',
-    },
-  })
-
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use({
     'nvim-telescope/telescope-fzf-native.nvim',
@@ -170,9 +161,6 @@ packer.startup(function(use)
       'nvim-lua/plenary.nvim',
     },
   })
-
-  -- Color schemes
-  use('arcticicestudio/nord-vim')
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
