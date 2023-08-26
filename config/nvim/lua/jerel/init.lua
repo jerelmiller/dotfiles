@@ -1,3 +1,3 @@
 require('jerel.lazy')
-require('jerel.remap')
 require('jerel.set')
+require('jerel.remap')
