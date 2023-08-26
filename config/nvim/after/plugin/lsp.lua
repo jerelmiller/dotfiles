@@ -45,6 +45,9 @@ lspconfig.tsserver.setup({
 lspconfig.lua_ls.setup({
   settings = {
     Lua = {
+      diagnostics = {
+        globals = { 'vim' },
+      },
       workspace = {
         checkThirdParty = false,
       },
