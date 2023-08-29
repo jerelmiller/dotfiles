@@ -71,6 +71,7 @@ require('lazy').setup({
   'lukas-reineke/indent-blankline.nvim',
   'nvim-telescope/telescope-ui-select.nvim',
   'alexghergh/nvim-tmux-navigation',
+  'SirVer/ultisnips',
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
@@ -79,5 +80,12 @@ require('lazy').setup({
   {
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'jose-elias-alvarez/typescript.nvim',
+    },
   },
 })
