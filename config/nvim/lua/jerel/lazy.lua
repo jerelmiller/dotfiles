@@ -76,4 +76,8 @@ require('lazy').setup({
     event = 'InsertEnter',
   },
   'mhartington/formatter.nvim',
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
 })
