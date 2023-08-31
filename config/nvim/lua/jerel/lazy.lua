@@ -72,11 +72,12 @@ require('lazy').setup({
   'nvim-telescope/telescope-ui-select.nvim',
   'alexghergh/nvim-tmux-navigation',
   'SirVer/ultisnips',
+  'nvimdev/guard.nvim',
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
   },
-  'mhartington/formatter.nvim',
+  -- 'mhartington/formatter.nvim',
   {
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
