@@ -24,7 +24,7 @@ lsp.setup_servers({
   'jsonls',
   'tailwindcss',
   'tsserver',
-  'yamlls'
+  'yamlls',
 })
 
 -- (Optional) Configure lua language server for neovim
@@ -36,10 +36,10 @@ lspconfig.tsserver.setup({
   settings = {
     typescript = {
       format = {
-        enabled = false
-      }
-    }
-  }
+        enabled = false,
+      },
+    },
+  },
 })
 
 lspconfig.lua_ls.setup({
@@ -105,10 +105,10 @@ vim.cmd([[
   highlight! link CmpItemKindVariable Variable
   highlight! link CmpItemKindInterface CmpItemKindVariable
   highlight! link CmpItemKindText CmpItemKindVariable
- 
+
   highlight! link CmpItemKindFunction Function
   highlight! link CmpItemKindMethod CmpItemKindFunction
- 
+
   highlight! link CmpItemKindKeyword Keyword
   highlight! link CmpItemKindProperty CmpItemKindKeyword
   highlight! link CmpItemKindUnit CmpItemKindKeyword
@@ -164,10 +164,10 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'ultisnips' },
-    { name = 'path' }
+    { name = 'path' },
   }, {
-    { name = 'buffer' }
-  })
+    { name = 'buffer' },
+  }),
 })
 
 vim.diagnostic.config({
