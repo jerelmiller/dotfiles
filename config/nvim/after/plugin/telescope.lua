@@ -23,8 +23,11 @@ end, {
   desc = '[/] Fuzzily search in current buffer]',
 })
 
-vim.keymap.set('n', '<leader>t', builtin.find_files, {
-  desc = 'Find files',
+vim.keymap.set('n', '<leader>t', builtin.git_files, {
+  desc = 'Git files',
+})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {
+  desc = 'Git files',
 })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, {
   desc = '[S]earch [H]elp',
@@ -50,7 +53,6 @@ vim.keymap.set('n', '<leader>sgs', builtin.git_stash, {
 
 require('telescope').setup({
   defaults = {
-    file_ignore_patterns = { '.git', 'node_modules' },
     mappings = {
       i = {
         ['<C-n>'] = actions.cycle_history_next,
