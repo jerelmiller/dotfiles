@@ -117,7 +117,7 @@ vim.o.timeoutlen = 300
 vim.o.undofile = true
 
 -- Faster completion
-vim.o.updatetime = 300
+vim.o.updatetime = 50
 
 -- Don't wrap lines
 vim.o.wrap = false

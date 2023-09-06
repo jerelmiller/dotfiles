@@ -2,6 +2,10 @@ config/nvim/autoload
 config/nvim/plugged
 config/nvim/dein
 config/nvim/plugin
+config/nvim.backup/autoload
+config/nvim.backup/plugged
+config/nvim.backup/dein
+config/nvim.backup/plugin
 .netrwhist
 .git
 .tern-port
