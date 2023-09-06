@@ -31,7 +31,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" &&
 ./global_node_modules
 
 ./git_config.sh
-./powerline_fonts.sh
 
 ./dock.sh
 ./mac_os.sh
