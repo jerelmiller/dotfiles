@@ -67,6 +67,7 @@ brew_install bat
 brew_install ripgrep
 brew_install ncurses
 brew_install stylua
+brew_install git-delta
 
 # easily create localhost certificates
 brew_install mkcert
