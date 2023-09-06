@@ -16,6 +16,7 @@ declare -a SHELL_FILES_TO_SYMLINK=(
   "shell/prettierrc.js"
   "shell/alacritty.yml"
   "shell/pryrc"
+  "shell/gitconfig"
 )
 
 declare -a FOLDERS_TO_SYMLINK=(

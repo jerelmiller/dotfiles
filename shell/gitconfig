@@ -1,0 +1,32 @@
+[color]
+	ui = true
+[user]
+	name = Jerel Miller
+	email = jerelmiller@gmail.com
+[github]
+	user = jerelmiller
+[core]
+	editor = nvim
+	pager = delta --diff-so-fancy
+[alias]
+	graph = log --graph --oneline --decorate
+[gpg]
+	format = ssh
+[blame]
+	markIgnoredLines = true
+	markUnblamableLines = true
+[delta]
+	navigate = true
+	light = false
+	line-numbers = true
+	true-color = always
+	theme = Nord
+	line-numbers-zero-style = "#4C566A"
+	line-numbers-minus-style = "#BF616A"
+	line-numbers-plus-style = "#A3BE8C"
+[diff]
+	colorMoved = default
+[merge]
+	conflictstyle = diff3
+[interactive]
+	diffFilter = delta --color-only
