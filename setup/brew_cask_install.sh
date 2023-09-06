@@ -42,3 +42,4 @@ cask_install 1password/tap/1password-cli
 
 # Fonts
 cask_install font-hack-nerd-font
+cask_install font-jetbrains-mono-nerd-font
