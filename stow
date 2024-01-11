@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+declare -a STOW_FOLDERS=(
+  "bin"
+)
+
+if [[ -z $DOTFILES ]]; then
+  DOTFILES=$HOME/dotfiles
+fi
+
+pushd $DOTFILES &> /dev/null
+
+for folder in ${STOW_FOLDERS[@]}; do
+  stow --restow $folder
+done
+
+popd &> /dev/null
