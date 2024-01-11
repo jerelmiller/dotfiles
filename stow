@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 declare -a STOW_FOLDERS=(
+  "aliases"
   "bin"
   "zsh"
 )
