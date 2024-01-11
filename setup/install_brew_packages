@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+brew_install() {
+  local formula="$1"
+  local options="$2"
+
+  if ! brew list $formula &> /dev/null; then
+    brew install $formula $options
+  fi
+}
+
+brew_install neovim
+brew_install tmux
+brew_install jq
+brew_install gh
