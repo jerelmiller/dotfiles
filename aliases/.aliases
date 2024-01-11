@@ -1,2 +1,7 @@
+# Git
 alias gs='git status'
+alias gcm='git commit -m'
+
+# Navigation
+alias code='cd ~/code'
 alias dotfiles='cd ~/dotfiles'
