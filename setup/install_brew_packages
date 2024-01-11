@@ -9,8 +9,8 @@ brew_install() {
   fi
 }
 
-brew_install neovim
-brew_install tmux
-brew_install jq
 brew_install gh
 brew_install git
+brew_install jq
+brew_install neovim
+brew_install tmux
