@@ -7,6 +7,7 @@ return {
     config = function()
       local actions = require('telescope.actions')
       local builtin = require('telescope.builtin')
+      local trouble = require('trouble.providers.telescope')
 
       require('telescope').setup({
         defaults = {
@@ -17,11 +18,11 @@ return {
               ['<C-p>'] = actions.cycle_history_prev,
               ['<C-j>'] = actions.move_selection_next,
               ['<C-k>'] = actions.move_selection_previous,
-              -- ['<C-t>'] = trouble.open_with_trouble,
+              ['<C-t>'] = trouble.open_with_trouble,
               ['<Esc>'] = actions.close,
             },
             n = {
-              -- ['<C-t>'] = trouble.open_with_trouble,
+              ['<C-t>'] = trouble.open_with_trouble,
             },
           },
         },
@@ -37,7 +38,7 @@ return {
         },
       })
 
-      require("telescope").load_extension("ui-select")
+      require('telescope').load_extension('ui-select')
 
       vim.keymap.set('n', '<leader>ff', builtin.find_files)
       vim.keymap.set('n', '<leader>fw', builtin.live_grep)
