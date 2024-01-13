@@ -4,6 +4,9 @@ alias reload='source ~/.zshrc'
 # Git
 alias gs='git status'
 alias gcm='git commit -m'
+alias gcM='git commit -m'
+alias push='git push'
+alias pull='git pull'
 
 # Navigation
 alias code='cd ~/code'
