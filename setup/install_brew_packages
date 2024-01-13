@@ -11,6 +11,7 @@ brew_install() {
 
 brew_install gh
 brew_install git
+brew_install fnm
 brew_install jq
 brew_install neovim
 brew_install tmux
