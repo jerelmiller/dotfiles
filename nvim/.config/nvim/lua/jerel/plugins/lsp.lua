@@ -1,4 +1,3 @@
-
 return {
   {
     "williamboman/mason.nvim",
@@ -8,6 +7,8 @@ return {
       "neovim/nvim-lspconfig",
     },
     config = function()
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
       require("neodev").setup()
       require("mason").setup()
       require("mason-lspconfig").setup({
@@ -33,7 +34,9 @@ return {
         },
         handlers = {
           function(server_name)
-            require('lspconfig')[server_name].setup({})
+            require('lspconfig')[server_name].setup({
+              capabilities = capabilities
+            })
           end
         }
       })
