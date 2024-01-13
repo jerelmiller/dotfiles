@@ -7,6 +7,10 @@ vim.api.nvim_create_user_command('Qa', 'qa', {})
 -- Use 0 to go to first character instead of beginning of line
 vim.keymap.set('n', '0', '^')
 
+-- Move selected text up/down in the buffer
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- Use ctrl-h/j/k/l to move between splits
 vim.keymap.set('n', '<C-h>', '<C-W>h')
 vim.keymap.set('n', '<C-j>', '<C-W>j')
