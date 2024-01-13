@@ -5,14 +5,25 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    "quangnguyen30192/cmp-nvim-ultisnips"
+    "quangnguyen30192/cmp-nvim-ultisnips",
+    "onsails/lspkind.nvim"
   },
   config = function()
     local cmp = require("cmp")
+    local lspkind = require("lspkind")
 
     cmp.setup({
       completion = {
         completeopt = "menu,menuone,noinsert",
+      },
+      ---@diagnostic disable-next-line: missing-fields
+      formatting = {
+        format = lspkind.cmp_format({
+          mode = 'text_symbol',
+          maxwidth = 50,
+          ellipsis_char = '...',
+          show_labelDetails = true,
+        })
       },
       snippet = {
         expand = function(args)
