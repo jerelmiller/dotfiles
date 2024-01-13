@@ -13,11 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("jerel.plugins", {
   install = {
-    -- try to load one of these colorschemes when starting an installation during startup
-    colorscheme = { "catppuccin", "habamax" },
+    colorscheme = { "catppuccin-macchiato", "habamax" },
   },
   change_detection = {
-    -- Disable notifications when changes are found
     notify = false
   },
 })
