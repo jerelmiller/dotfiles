@@ -2,12 +2,14 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(
+  fnm
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
-
-# aliases
 source $HOME/.aliases
 
-# Set editor
 export EDITOR='nvim'
+
+eval "$(fnm env --use-on-cd)"
