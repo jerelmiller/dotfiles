@@ -5,6 +5,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
+    "quangnguyen30192/cmp-nvim-ultisnips"
   },
   config = function()
     local cmp = require("cmp")
@@ -12,6 +13,11 @@ return {
     cmp.setup({
       completion = {
         completeopt = "menu,menuone,noinsert",
+      },
+      snippet = {
+        expand = function(args)
+          require('luasnip').lsp_expand(args.body)
+        end,
       },
       mapping = cmp.mapping.preset.insert({
         ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -36,9 +42,18 @@ return {
       },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
+        { name = "luasnip" },
         { name = "path" }
       }, {
         { name = "buffer" }
+      })
+    })
+
+    cmp.setup.filetype('gitcommit', {
+      sources = cmp.config.sources({
+        { name = 'git' },
+      }, {
+        { name = 'buffer' },
       })
     })
   end
