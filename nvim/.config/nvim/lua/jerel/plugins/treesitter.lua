@@ -1,4 +1,5 @@
 return {
+  'windwp/nvim-ts-autotag',
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -50,5 +51,4 @@ return {
       })
     end
   },
-  'windwp/nvim-ts-autotag'
 }
