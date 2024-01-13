@@ -4,6 +4,7 @@ declare -a STOW_FOLDERS=(
   "aliases"
   "bin"
   "nvim"
+  "tmux"
   "zsh"
 )
 
