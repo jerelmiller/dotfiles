@@ -37,3 +37,9 @@ autocmd('LspAttach', {
     end)
   end,
 })
+
+autocmd({ "FileType" }, {
+  group = JerelGroup,
+  pattern = "*",
+  command = "setlocal formatoptions-=o"
+})
