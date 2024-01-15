@@ -1,5 +1,15 @@
 return {
   {
+    "j-hui/fidget.nvim",
+    opts = {
+      notification = {
+        window = {
+          border = "rounded"
+        }
+      }
+    }
+  },
+  {
     "echasnovski/mini.comment",
     opts = {
       options = {
