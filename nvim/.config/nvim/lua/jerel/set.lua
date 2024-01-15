@@ -121,3 +121,6 @@ vim.o.wrap = false
 vim.o.writebackup = false
 
 vim.o.textwidth = 80
+
+-- go to previous/next line with h,l when cursor reaches end/beginning of line
+vim.opt.whichwrap:append("hl")
