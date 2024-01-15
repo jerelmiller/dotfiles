@@ -1,10 +1,10 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "neovim/nvim-lspconfig",
     dependencies = {
       "folke/neodev.nvim",
+      "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp"
     },
     config = function()
