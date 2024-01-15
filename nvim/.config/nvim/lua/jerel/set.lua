@@ -105,6 +105,8 @@ vim.o.tabstop = 2
 -- Enable term gui colors
 vim.o.termguicolors = true
 
+vim.o.textwidth = 80
+
 -- Faster time to wait for a mapped sequence to complete (in milliseconds)
 vim.o.timeoutlen = 300
 
@@ -114,13 +116,11 @@ vim.o.undofile = true
 -- Faster completion
 vim.o.updatetime = 50
 
+-- go to previous/next line with h,l when cursor reaches end/beginning of line
+vim.opt.whichwrap:append("hl")
+
 -- Don't wrap lines
 vim.o.wrap = false
 
 -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.o.writebackup = false
-
-vim.o.textwidth = 80
-
--- go to previous/next line with h,l when cursor reaches end/beginning of line
-vim.opt.whichwrap:append("hl")
