@@ -119,3 +119,5 @@ vim.o.wrap = false
 
 -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.o.writebackup = false
+
+vim.o.textwidth = 80
