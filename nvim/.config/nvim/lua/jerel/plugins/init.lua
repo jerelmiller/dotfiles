@@ -1,4 +1,5 @@
 return {
+  "fladson/vim-kitty",
   {
     "j-hui/fidget.nvim",
     opts = {
