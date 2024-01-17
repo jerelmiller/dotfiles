@@ -13,6 +13,7 @@ return {
             ["@tag.delimiter"] = { fg = colors.maroon },
             ["@tag.tsx"] = { fg = colors.yellow },
             Comment = { fg = colors.surface1 },
+            DiagnosticUnderlineError = { undercurl = true },
             Operator = { fg = colors.subtext0 },
           }
         end
