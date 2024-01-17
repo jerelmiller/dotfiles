@@ -43,6 +43,9 @@ return {
           'vimdoc',
           'yaml'
         },
+        autotag = {
+          enable = true
+        },
         highlight = {
           enable = true,
         },
