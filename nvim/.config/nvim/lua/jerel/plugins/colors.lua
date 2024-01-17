@@ -8,9 +8,9 @@ return {
         macchiato = function(colors)
           return {
             ["@constant.builtin.typescript"] = { link = "Keyword" },
+            ["@function.builtin"] = { fg = colors.yellow },
             ["@lsp.type.class.typescript"] = { fg = colors.sky },
             ["@lsp.typemod.class.declaration.typescript"] = { fg = colors.blue },
-            ["@lsp.typemod.function.defaultLibrary.typescript"] = { fg = colors.yellow },
             ["@parameter"] = { fg = colors.rosewater },
             ["@punctuation.bracket"] = { fg = colors.red },
             ["@tag.attribute.tsx"] = { fg = colors.sky },
