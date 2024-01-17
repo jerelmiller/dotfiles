@@ -1,6 +1,15 @@
 return {
   "fladson/vim-kitty",
   {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {
+      scope = {
+        enabled = false
+      }
+    }
+  },
+  {
     "j-hui/fidget.nvim",
     opts = {
       notification = {
