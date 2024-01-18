@@ -19,7 +19,7 @@ return {
             Boolean = { fg = colors.mauve },
             CmpGhostText = { fg = colors.overlay0 },
             CmpItemAbbr = { fg = colors.text },
-            CmpItemAbbrMatch = { fg = colors.base, bg = colors.yellow, bold = true },
+            CmpItemAbbrMatch = { fg = colors.base, bg = colors.lavender, bold = true },
             CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
             Comment = { fg = colors.surface1 },
             DiagnosticUnderlineError = { undercurl = true },
