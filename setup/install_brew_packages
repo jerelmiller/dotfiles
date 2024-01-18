@@ -19,4 +19,5 @@ brew_install fzf
 brew_install stow
 
 # Needed for telescope.nvim
+brew_install fd
 brew_install ripgrep
