@@ -5,7 +5,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    "quangnguyen30192/cmp-nvim-ultisnips",
+    "saadparwaiz1/cmp_luasnip",
     "onsails/lspkind.nvim"
   },
   config = function()
