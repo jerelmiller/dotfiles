@@ -13,9 +13,6 @@ return {
     local lspkind = require("lspkind")
 
     cmp.setup({
-      completion = {
-        completeopt = "menu,menuone,noinsert",
-      },
       ---@diagnostic disable-next-line: missing-fields
       formatting = {
         format = lspkind.cmp_format({
