@@ -89,6 +89,17 @@ return {
               ["aa"] = "@parameter.outer",
               ["ia"] = "@parameter.inner",
             }
+          },
+          swap = {
+            enable = true,
+            swap_next = {
+              ["<leader>na"] = "@parameter.inner",
+              ["<leader>nm"] = "@function.outer"
+            },
+            swap_previous = {
+              ["<leader>pa"] = "@parameter.inner",
+              ["<leader>pm"] = "@function.outer"
+            },
           }
         }
       })
