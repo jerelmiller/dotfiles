@@ -1,5 +1,6 @@
 return {
   "fladson/vim-kitty",
+  "tpope/vim-abolish",
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
