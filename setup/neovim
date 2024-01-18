@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if command -v node &> /dev/null; then
+  npm install -g neovim
+fi
