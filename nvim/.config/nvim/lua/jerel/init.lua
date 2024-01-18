@@ -1,4 +1,4 @@
-require("jerel.set")
+require("jerel.opts")
 require("jerel.remap")
 require("jerel.lazy")
 require("jerel.autocmd")
