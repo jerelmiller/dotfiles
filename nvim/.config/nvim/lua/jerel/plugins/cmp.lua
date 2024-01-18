@@ -25,6 +25,11 @@ return {
           show_labelDetails = true,
         })
       },
+      experimental = {
+        ghost_text = {
+          hl_group = "CmpGhostText",
+        },
+      },
       snippet = {
         expand = function(args)
           require('luasnip').lsp_expand(args.body)

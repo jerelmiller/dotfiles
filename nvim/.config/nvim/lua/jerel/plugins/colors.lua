@@ -17,6 +17,7 @@ return {
             ["@tag.delimiter"] = { fg = colors.maroon },
             ["@tag.tsx"] = { fg = colors.yellow },
             Boolean = { fg = colors.mauve },
+            CmpGhostText = { fg = colors.overlay0 },
             CmpItemAbbr = { fg = colors.text },
             CmpItemAbbrMatch = { fg = colors.base, bg = colors.yellow, bold = true },
             CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
