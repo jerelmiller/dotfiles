@@ -5,6 +5,9 @@
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
+-- Disable python 3 support
+vim.g.loaded_python3_provider = 0
+
 -- Automatically re-read the file if changed outside of vim
 vim.o.autoread = true
 
