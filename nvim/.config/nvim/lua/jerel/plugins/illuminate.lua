@@ -1,6 +1,6 @@
 return {
-  'RRethy/vim-illuminate',
+  "RRethy/vim-illuminate",
   config = function()
-    require('illuminate').configure({})
-  end
+    require("illuminate").configure({})
+  end,
 }

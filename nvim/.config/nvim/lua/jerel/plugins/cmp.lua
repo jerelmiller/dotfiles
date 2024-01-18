@@ -6,7 +6,7 @@ return {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
-    "onsails/lspkind.nvim"
+    "onsails/lspkind.nvim",
   },
   config = function()
     local cmp = require("cmp")
@@ -16,11 +16,11 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       formatting = {
         format = lspkind.cmp_format({
-          mode = 'text_symbol',
+          mode = "text_symbol",
           maxwidth = 50,
-          ellipsis_char = '...',
+          ellipsis_char = "...",
           show_labelDetails = true,
-        })
+        }),
       },
       experimental = {
         ghost_text = {
@@ -29,12 +29,16 @@ return {
       },
       snippet = {
         expand = function(args)
-          require('luasnip').lsp_expand(args.body)
+          require("luasnip").lsp_expand(args.body)
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-n>"] = cmp.mapping.select_next_item({
+          behavior = cmp.SelectBehavior.Insert,
+        }),
+        ["<C-p>"] = cmp.mapping.select_prev_item({
+          behavior = cmp.SelectBehavior.Insert,
+        }),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
@@ -56,18 +60,18 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" },
-        { name = "path" }
+        { name = "path" },
       }, {
-        { name = "buffer" }
-      })
+        { name = "buffer" },
+      }),
     })
 
-    cmp.setup.filetype('gitcommit', {
+    cmp.setup.filetype("gitcommit", {
       sources = cmp.config.sources({
-        { name = 'git' },
+        { name = "git" },
       }, {
-        { name = 'buffer' },
-      })
+        { name = "buffer" },
+      }),
     })
-  end
+  end,
 }

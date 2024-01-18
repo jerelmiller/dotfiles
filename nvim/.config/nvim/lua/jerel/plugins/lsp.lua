@@ -5,7 +5,7 @@ return {
       "folke/neodev.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
-      "hrsh7th/cmp-nvim-lsp"
+      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -31,20 +31,26 @@ return {
           "tailwindcss",
           "taplo",
           "tsserver",
-          "yamlls"
+          "yamlls",
         },
         handlers = {
           function(server_name)
-            require('lspconfig')[server_name].setup({
+            require("lspconfig")[server_name].setup({
               capabilities = capabilities,
               handlers = {
-                ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-                ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
-              }
+                ["textDocument/hover"] = vim.lsp.with(
+                  vim.lsp.handlers.hover,
+                  { border = "rounded" }
+                ),
+                ["textDocument/signatureHelp"] = vim.lsp.with(
+                  vim.lsp.handlers.signature_help,
+                  { border = "rounded" }
+                ),
+              },
             })
-          end
-        }
+          end,
+        },
       })
-    end
-  }
+    end,
+  },
 }

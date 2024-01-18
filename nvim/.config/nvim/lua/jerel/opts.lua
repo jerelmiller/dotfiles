@@ -2,8 +2,8 @@
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 
-vim.g.mapleader = ','
-vim.g.maplocalleader = ','
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- Disable unused providers
 vim.g.loaded_python3_provider = 0
@@ -16,16 +16,16 @@ vim.o.autoread = true
 vim.o.backup = false
 
 -- Use darker theme when available
-vim.o.background = 'dark'
+vim.o.background = "dark"
 
 -- Show a column indicator
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = "80"
 
 -- Better completion experience
 vim.opt.completeopt = {
-  'menu',
-  'menuone',
-  'noselect',
+  "menu",
+  "menuone",
+  "noselect",
 }
 
 -- Highlight the current line
@@ -35,13 +35,13 @@ vim.o.cursorline = true
 vim.o.expandtab = true
 
 -- Encode written files with UTF-8 encoding
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 
 -- Don't insert current comment leader automatically when hitting 'o' or 'O' in normal mode
 vim.opt.formatoptions = "jtcrqln"
 
 -- Don't add cursor styling
-vim.o.guicursor = ''
+vim.o.guicursor = ""
 
 -- Don't Highlight all matches on previous search patterns
 vim.o.hlsearch = false
@@ -59,7 +59,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- separate vim plugins from neovim in case vim still in use
-vim.opt.runtimepath:remove('/usr/share/vim/vimfiles')
+vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
 
 -- # of lines of text above/below the cursor when scrolling
 vim.o.scrolloff = 4
@@ -71,7 +71,7 @@ vim.o.shiftround = true
 vim.o.shiftwidth = 2
 
 -- Don't give |ins-completion-menu| messages
-vim.opt.shortmess:append('c')
+vim.opt.shortmess:append("c")
 
 -- Don't show messages like -- INSERT --
 vim.o.showmode = false
@@ -80,7 +80,7 @@ vim.o.showmode = false
 vim.o.sidescrolloff = 5
 
 -- Always show the sign column to avoid text shift
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = "yes"
 
 -- Override ignorecase if pattern contains uppercase characters
 vim.o.smartcase = true

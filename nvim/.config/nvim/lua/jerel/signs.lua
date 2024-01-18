@@ -12,7 +12,7 @@ M.diagnostic = {
   Error = signs.error,
   Warn = signs.warning,
   Hint = signs.hint,
-  Info = signs.information
+  Info = signs.information,
 }
 
 return M

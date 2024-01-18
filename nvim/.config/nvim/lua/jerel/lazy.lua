@@ -16,6 +16,6 @@ require("lazy").setup("jerel.plugins", {
     colorscheme = { "catppuccin-macchiato", "habamax" },
   },
   change_detection = {
-    notify = false
+    notify = false,
   },
 })
