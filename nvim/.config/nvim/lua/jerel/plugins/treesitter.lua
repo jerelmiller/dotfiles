@@ -124,6 +124,14 @@ return {
               ["[M"] = "@function.outer",
               ["[]"] = "@class.outer",
             },
+          },
+          lsp_interop = {
+            enable = true,
+            border = "rounded",
+            peek_definition_code = {
+              ["<leader>df"] = "@function.outer",
+              ["<leader>dc"] = "@class.outer",
+            }
           }
         }
       })
