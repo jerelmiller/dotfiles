@@ -21,3 +21,6 @@ brew_install stow
 # Needed for telescope.nvim
 brew_install fd
 brew_install ripgrep
+
+# Formatting for lua files
+brew_install stylua
