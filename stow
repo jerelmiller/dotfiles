@@ -2,6 +2,7 @@
 
 declare -a STOW_FOLDERS=(
   "aliases"
+  "bat"
   "bin"
   "kitty"
   "nvim"
