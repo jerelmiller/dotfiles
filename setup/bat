@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Rebuild bat's cache to ensure the catppuccin theme is recognized
+bat cache --build
