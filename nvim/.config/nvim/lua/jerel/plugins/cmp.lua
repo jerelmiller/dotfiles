@@ -66,7 +66,7 @@ return {
       }),
     })
 
-    cmp.setup.filetype("gitcommit", {
+    cmp.setup.filetype({ "gitcommit", "markdown" }, {
       sources = cmp.config.sources({
         { name = "git" },
       }, {
