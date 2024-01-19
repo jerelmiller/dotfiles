@@ -24,3 +24,7 @@ brew_install ripgrep
 
 # Formatting for lua files
 brew_install stylua
+
+# Better `cat` output
+# Also used for tmux-sessionx
+brew_install bat
