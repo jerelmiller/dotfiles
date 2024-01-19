@@ -16,16 +16,12 @@ return {
         lualine_z = {},
       },
       sections = {
-        lualine_a = {
-          { "mode", separator = { left = "" } },
-        },
+        lualine_a = { "mode" },
         lualine_b = { "branch" },
         lualine_c = { "filename" },
         lualine_x = { "filetype" },
         lualine_y = { "progress" },
-        lualine_z = {
-          { "location", separator = { right = "" } },
-        },
+        lualine_z = { "location" },
       },
     })
   end,
