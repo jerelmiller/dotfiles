@@ -28,3 +28,4 @@ brew_install stylua
 # Better `cat` output
 # Also used for tmux-sessionx
 brew_install bat
+brew_install bat-extras
