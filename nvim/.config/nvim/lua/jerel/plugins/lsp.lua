@@ -26,7 +26,6 @@ return {
           "lua_ls",
           "marksman",
           "mdx_analyzer",
-          "remark_ls",
           "stylelint_lsp",
           "tailwindcss",
           "taplo",
