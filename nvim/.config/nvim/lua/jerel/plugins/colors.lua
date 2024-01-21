@@ -43,6 +43,8 @@ return {
         end,
       },
       integrations = {
+        fidget = true,
+        harpoon = true,
         notify = true,
         octo = true,
       },
