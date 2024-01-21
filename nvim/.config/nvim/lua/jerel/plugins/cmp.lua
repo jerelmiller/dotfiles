@@ -7,6 +7,7 @@ return {
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
     "onsails/lspkind.nvim",
+    "zbirenbaum/copilot-cmp",
   },
   config = function()
     local cmp = require("cmp")
@@ -22,11 +23,13 @@ return {
           show_labelDetails = true,
           menu = {
             buffer = "[Buffer]",
+            copilot = "[Copilot]",
             nvim_lsp = "[LSP]",
             luasnip = "[LuaSnip]",
             nvim_lua = "[Lua]",
             latex_symbols = "[Latex]",
           },
+          symbol_map = { Copilot = "" },
         }),
       },
       experimental = {
@@ -65,6 +68,7 @@ return {
         documentation = cmp.config.window.bordered(),
       },
       sources = cmp.config.sources({
+        { name = "copilot" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
@@ -82,5 +86,6 @@ return {
     })
 
     require("cmp_git").setup()
+    require("copilot_cmp").setup()
   end,
 }
