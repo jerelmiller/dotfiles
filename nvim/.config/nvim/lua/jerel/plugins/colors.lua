@@ -43,6 +43,7 @@ return {
         end,
       },
       integrations = {
+        aerial = true,
         fidget = true,
         harpoon = true,
         notify = true,
