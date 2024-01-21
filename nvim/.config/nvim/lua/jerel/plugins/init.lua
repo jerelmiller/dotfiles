@@ -2,16 +2,6 @@ return {
   "fladson/vim-kitty",
   "tpope/vim-abolish",
   {
-    "j-hui/fidget.nvim",
-    opts = {
-      notification = {
-        window = {
-          border = "rounded",
-        },
-      },
-    },
-  },
-  {
     "echasnovski/mini.comment",
     opts = {
       options = {
