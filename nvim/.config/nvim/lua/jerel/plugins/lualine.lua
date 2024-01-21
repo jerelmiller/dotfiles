@@ -1,7 +1,12 @@
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    "AndreM222/copilot-lualine",
+  },
   config = function()
+    local colors = require("catppuccin.palettes").get_palette("macchiato")
+
     require("lualine").setup({
       options = {
         theme = "catppuccin",
@@ -17,9 +22,27 @@ return {
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch" },
+        lualine_b = { "branch", "diff" },
         lualine_c = { "filename" },
-        lualine_x = { "filetype" },
+        lualine_x = {
+          {
+            "copilot",
+            show_loading = true,
+            show_colors = true,
+            symbols = {
+              status = {
+                hl = {
+                  enabled = colors.green,
+                  sleep = colors.subtext0,
+                  disabled = colors.surface1,
+                  warning = colors.yellow,
+                  unknown = colors.red,
+                },
+              },
+            },
+          },
+          "filetype",
+        },
         lualine_y = { "progress" },
         lualine_z = { "location" },
       },
