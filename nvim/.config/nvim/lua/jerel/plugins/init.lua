@@ -2,15 +2,6 @@ return {
   "fladson/vim-kitty",
   "tpope/vim-abolish",
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    opts = {
-      scope = {
-        enabled = false,
-      },
-    },
-  },
-  {
     "j-hui/fidget.nvim",
     opts = {
       notification = {
