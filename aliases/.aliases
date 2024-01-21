@@ -7,6 +7,8 @@ alias gcm='git commit -m'
 alias gcM='git commit -m'
 alias push='git push'
 alias pull='git pull'
+alias amend="git commit --amend"
+alias namend="git commit --amend --no-edit"
 
 # Navigation
 alias code='cd ~/code'
