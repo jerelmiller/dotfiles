@@ -46,6 +46,7 @@ return {
         aerial = true,
         fidget = true,
         harpoon = true,
+        mason = true,
         notify = true,
         octo = true,
       },
