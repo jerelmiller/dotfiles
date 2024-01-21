@@ -42,6 +42,9 @@ return {
           }
         end,
       },
+      integrations = {
+        notify = true,
+      },
     })
 
     vim.cmd.colorscheme("catppuccin-macchiato")
