@@ -44,6 +44,7 @@ return {
       },
       integrations = {
         notify = true,
+        octo = true,
       },
     })
 
