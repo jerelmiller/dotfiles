@@ -1,8 +1,3 @@
-config/nvim/autoload
-config/nvim/plugged
-config/nvim/dein
-config/nvim/plugin
 .netrwhist
-.git
 .tern-port
 .DS_Store
