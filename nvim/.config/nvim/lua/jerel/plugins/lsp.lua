@@ -6,6 +6,7 @@ return {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
+      "SmiteshP/nvim-navic",
     },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -35,6 +36,11 @@ return {
         handlers = {
           function(server_name)
             require("lspconfig")[server_name].setup({
+              on_attach = function(client, bufnr)
+                if client.server_capabilities.documentSymbolProvider then
+                  require("nvim-navic").attach(client, bufnr)
+                end
+              end,
               capabilities = capabilities,
               handlers = {
                 ["textDocument/hover"] = vim.lsp.with(

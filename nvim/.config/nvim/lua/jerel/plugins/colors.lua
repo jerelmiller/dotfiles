@@ -36,6 +36,7 @@ return {
               undercurl = true,
               italic = true,
             },
+            NavicText = { fg = colors.lavender },
             Number = { fg = colors.mauve },
             Operator = { fg = colors.subtext0 },
             Type = { fg = colors.rosewater },
@@ -47,6 +48,10 @@ return {
         fidget = true,
         harpoon = true,
         mason = true,
+        navic = {
+          enabled = true,
+          custom_bg = "NONE",
+        },
         notify = true,
         octo = true,
       },

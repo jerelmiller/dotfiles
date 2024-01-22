@@ -123,6 +123,9 @@ vim.o.updatetime = 50
 -- go to previous/next line with h,l when cursor reaches end/beginning of line
 vim.opt.whichwrap:append("hl")
 
+-- Add extra context in winbar
+vim.o.winbar = "%{%v:lua.require('nvim-navic').get_location()%}"
+
 -- Don't wrap lines
 vim.o.wrap = false
 
