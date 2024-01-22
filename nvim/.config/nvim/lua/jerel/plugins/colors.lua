@@ -37,6 +37,7 @@ return {
               italic = true,
             },
             NavicText = { fg = colors.lavender },
+            NavicSeparator = { fg = colors.flamingo },
             Number = { fg = colors.mauve },
             Operator = { fg = colors.subtext0 },
             Type = { fg = colors.rosewater },
