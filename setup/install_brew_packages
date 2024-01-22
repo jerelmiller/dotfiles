@@ -29,3 +29,6 @@ brew_install stylua
 # Also used for tmux-sessionx
 brew_install bat
 brew_install bat-extras
+
+# Casks
+brew_install raycast --cask
