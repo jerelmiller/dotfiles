@@ -136,6 +136,14 @@ return {
         },
       })
 
+      -- MDX
+      vim.filetype.add({
+        extension = {
+          mdx = "mdx",
+        },
+      })
+      vim.treesitter.language.register("markdown", "mdx")
+
       local ts_repeat_move =
         require("nvim-treesitter.textobjects.repeatable_move")
 
