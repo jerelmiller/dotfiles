@@ -47,15 +47,17 @@ return {
         lualine_y = { "progress" },
         lualine_z = { "location" },
       },
-      winbar = {
-        lualine_c = {
-          {
-            "navic",
-            color_correction = nil,
-            navic_opts = { highlight = true },
-          },
-        },
-      },
+      -- Re-enable when I can figure out why this conditionally shows up outside
+      -- of contexts.
+      -- winbar = {
+      --   lualine_c = {
+      --     {
+      --       "navic",
+      --       color_correction = nil,
+      --       navic_opts = { highlight = true },
+      --     },
+      --   },
+      -- },
     })
   end,
 }
