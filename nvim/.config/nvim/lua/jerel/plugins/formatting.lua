@@ -6,7 +6,9 @@ return {
         elixir = { "mix" },
         lua = { "stylua" },
         javascript = { { "prettierd", "prettier" } },
+        javascriptreact = { { "prettierd", "prettier" } },
         typescript = { { "prettierd", "prettier" } },
+        typescriptreact = { { "prettierd", "prettier" } },
       },
       format_on_save = {
         lsp_fallback = true,
