@@ -7,6 +7,9 @@ vim.api.nvim_create_user_command("Qa", "qa", {})
 -- Use 0 to go to first character instead of beginning of line
 vim.keymap.set("n", "0", "^")
 
+-- Easier quit
+vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>")
+
 -- Move selected text up/down in the buffer
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
