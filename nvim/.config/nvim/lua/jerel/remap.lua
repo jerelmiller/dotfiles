@@ -38,6 +38,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 
+-- Don't replace the yanked text when replacing other text
+vim.keymap.set("x", "<leader>p", '"_dP')
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
