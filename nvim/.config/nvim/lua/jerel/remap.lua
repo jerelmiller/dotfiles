@@ -31,6 +31,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Navigate soft wrapped lines with j/k
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
