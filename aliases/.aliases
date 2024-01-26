@@ -9,6 +9,7 @@ alias push='git push'
 alias pull='git pull'
 alias amend="git commit --amend"
 alias namend="git commit --amend --no-edit"
+alias fpush="git push --force-with-lease"
 
 # Navigation
 alias code='cd ~/code'
