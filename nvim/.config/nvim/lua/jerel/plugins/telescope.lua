@@ -14,7 +14,7 @@ return {
 
       require("telescope").setup({
         defaults = {
-          file_ignore_patterns = { "node_modules" },
+          file_ignore_patterns = { "^.git/" },
           mappings = {
             i = {
               ["<C-n>"] = actions.cycle_history_next,
