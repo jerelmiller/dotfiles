@@ -5,6 +5,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   fnm
   git
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh

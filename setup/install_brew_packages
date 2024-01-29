@@ -18,6 +18,9 @@ brew_install tmux
 brew_install fzf
 brew_install stow
 
+# Autosuggestions for zsh
+brew_install zsh-autosuggestions
+
 # Needed for telescope.nvim
 brew_install fd
 brew_install ripgrep
