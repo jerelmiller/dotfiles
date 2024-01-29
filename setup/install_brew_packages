@@ -20,6 +20,8 @@ brew_install stow
 
 # Autosuggestions for zsh
 brew_install zsh-autosuggestions
+# Better text highlighting for zsh
+brew_install zsh-syntax-highlighting
 
 # Needed for telescope.nvim
 brew_install fd
