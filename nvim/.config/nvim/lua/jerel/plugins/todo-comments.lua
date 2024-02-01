@@ -8,10 +8,15 @@ return {
 
     vim.keymap.set("n", "]t", function()
       todo.jump_next()
-    end)
+    end, { desc = "Next todo" })
     vim.keymap.set("n", "[t", function()
       todo.jump_prev()
-    end)
-    vim.keymap.set("n", "<leader>xt", vim.cmd.TodoTrouble)
+    end, { desc = "Previous todo" })
+    vim.keymap.set(
+      "n",
+      "<leader>xt",
+      vim.cmd.TodoTrouble,
+      { desc = "Show todos in trouble" }
+    )
   end,
 }
