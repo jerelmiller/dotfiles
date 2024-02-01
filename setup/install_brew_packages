@@ -18,6 +18,9 @@ brew_install tmux
 brew_install fzf
 brew_install stow
 
+# Used to manage elixir versions
+brew_install asdf
+
 # Autosuggestions for zsh
 brew_install zsh-autosuggestions
 # Better text highlighting for zsh
