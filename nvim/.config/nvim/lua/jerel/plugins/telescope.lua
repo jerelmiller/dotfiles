@@ -52,7 +52,7 @@ return {
 
       vim.keymap.set("n", "<leader>ff", builtin.find_files)
       vim.keymap.set("n", "<leader>fw", builtin.live_grep)
-      vim.keymap.set("n", "<leader>t", builtin.git_files)
+      vim.keymap.set("n", "<leader>gf", builtin.git_files)
     end,
   },
 }
