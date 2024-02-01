@@ -5,7 +5,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
   fnm
   git
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -18,3 +17,4 @@ eval "$(fnm env --use-on-cd)"
 bindkey "^H" backward-delete-word
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
