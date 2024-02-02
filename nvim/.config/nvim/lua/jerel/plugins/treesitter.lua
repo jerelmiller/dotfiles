@@ -21,6 +21,7 @@ return {
           "git_rebase",
           "gitcommit",
           "gitignore",
+          "graphql",
           "heex",
           "html",
           "http",
