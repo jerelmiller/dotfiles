@@ -16,5 +16,7 @@ return {
 
       return notify(message, level, opts)
     end
+
+    vim.keymap.set("n", "<leader>dn", notify.dismiss)
   end,
 }
