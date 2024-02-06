@@ -20,7 +20,7 @@ return {
       vim.keymap.set("n", "<leader>xl", function()
         trouble.toggle("loclist")
       end)
-      vim.keymap.set("n", "gR", function()
+      vim.keymap.set("n", "gr", function()
         trouble.toggle("lsp_references")
       end)
       vim.keymap.set("n", "]d", function()
