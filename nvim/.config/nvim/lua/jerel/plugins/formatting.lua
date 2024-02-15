@@ -7,6 +7,7 @@ return {
         lua = { "stylua" },
         javascript = { { "prettierd", "prettier" } },
         javascriptreact = { { "prettierd", "prettier" } },
+        json = { { "prettierd", "prettier" } },
         typescript = { { "prettierd", "prettier" } },
         typescriptreact = { { "prettierd", "prettier" } },
       },
