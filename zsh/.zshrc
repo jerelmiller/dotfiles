@@ -11,6 +11,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
+PATH=$HOME/.local/bin:$PATH
+
 export EDITOR='nvim'
 
 eval "$(fnm env --use-on-cd)"
