@@ -18,6 +18,10 @@ brew_install tmux
 brew_install fzf
 brew_install stow
 
+# Ruby version manager
+brew_install rbenv
+brew_install ruby-build
+
 # Used to manage elixir versions
 brew_install asdf
 
