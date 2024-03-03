@@ -16,6 +16,7 @@ PATH=$HOME/.local/bin:$PATH
 export EDITOR='nvim'
 
 eval "$(fnm env --use-on-cd)"
+eval "$(rbenv init - zsh)"
 
 bindkey "^H" backward-delete-word
 
