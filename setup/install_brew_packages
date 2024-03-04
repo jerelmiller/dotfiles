@@ -17,6 +17,7 @@ brew_install neovim
 brew_install tmux
 brew_install fzf
 brew_install stow
+brew_install ffmpeg
 
 # Ruby version manager
 brew_install rbenv
