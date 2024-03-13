@@ -10,6 +10,7 @@ return {
     },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local lspconfig = require("lspconfig")
 
       require("neodev").setup({
         library = { plugins = { "neotest" }, types = true },
@@ -38,7 +39,7 @@ return {
         },
         handlers = {
           function(server_name)
-            require("lspconfig")[server_name].setup({
+            lspconfig[server_name].setup({
               on_attach = function(client, bufnr)
                 if
                   client.server_capabilities.documentSymbolProvider
@@ -61,7 +62,7 @@ return {
             })
           end,
           ["eslint"] = function()
-            require("lspconfig").eslint.setup({
+            lspconfig.eslint.setup({
               capabilities = capabilities,
               on_attach = function(_, bufnr)
                 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -69,6 +70,18 @@ return {
                   command = "EslintFixAll",
                 })
               end,
+            })
+          end,
+          ["lua_ls"] = function()
+            lspconfig.lua_ls.setup({
+              capabilities = capabilities,
+              settings = {
+                Lua = {
+                  telemetry = {
+                    enable = false,
+                  },
+                },
+              },
             })
           end,
         },
