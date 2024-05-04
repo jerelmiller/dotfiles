@@ -12,6 +12,26 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
 
+      function on_attach(client, bufnr)
+        if
+          client.server_capabilities.documentSymbolProvider
+          and require("nvim-navic").is_available(client, bufnr)
+        then
+          require("nvim-navic").attach(client, bufnr)
+        end
+      end
+
+      local handlers = {
+        ["textDocument/hover"] = vim.lsp.with(
+          vim.lsp.handlers.hover,
+          { border = "rounded" }
+        ),
+        ["textDocument/signatureHelp"] = vim.lsp.with(
+          vim.lsp.handlers.signature_help,
+          { border = "rounded" }
+        ),
+      }
+
       require("neodev").setup({
         library = { plugins = { "neotest" }, types = true },
       })
@@ -40,25 +60,9 @@ return {
         handlers = {
           function(server_name)
             lspconfig[server_name].setup({
-              on_attach = function(client, bufnr)
-                if
-                  client.server_capabilities.documentSymbolProvider
-                  and require("nvim-navic").is_available(client, bufnr)
-                then
-                  require("nvim-navic").attach(client, bufnr)
-                end
-              end,
+              on_attach = on_attach,
               capabilities = capabilities,
-              handlers = {
-                ["textDocument/hover"] = vim.lsp.with(
-                  vim.lsp.handlers.hover,
-                  { border = "rounded" }
-                ),
-                ["textDocument/signatureHelp"] = vim.lsp.with(
-                  vim.lsp.handlers.signature_help,
-                  { border = "rounded" }
-                ),
-              },
+              handlers = handlers,
             })
           end,
           ["eslint"] = function()
@@ -82,13 +86,17 @@ return {
                   },
                 },
               },
+              handlers = handlers,
             })
           end,
           ["tailwindcss"] = function()
             lspconfig.tailwindcss.setup({
               capabilities = capabilities,
+              handlers = handlers,
+              on_attach = on_attach,
               settings = {
                 tailwindCSS = {
+                  validate = true,
                   experimental = {
                     classRegex = {
                       { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
