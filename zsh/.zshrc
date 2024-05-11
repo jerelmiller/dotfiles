@@ -15,6 +15,9 @@ PATH=$HOME/.local/bin:$PATH
 
 export EDITOR='nvim'
 
+# Keep shell history in iex
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 eval "$(fnm env --use-on-cd)"
 eval "$(rbenv init - zsh)"
 
