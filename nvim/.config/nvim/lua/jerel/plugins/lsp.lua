@@ -11,13 +11,11 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
+      local navic = require("nvim-navic")
 
       local function on_attach(client, bufnr)
-        if
-          client.server_capabilities.documentSymbolProvider
-          and require("nvim-navic").is_available(client, bufnr)
-        then
-          require("nvim-navic").attach(client, bufnr)
+        if client.server_capabilities.documentSymbolProvider then
+          navic.attach(client, bufnr)
         end
       end
 

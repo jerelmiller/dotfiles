@@ -7,6 +7,7 @@ return {
   },
   config = function()
     local colors = require("catppuccin.palettes").get_palette("macchiato")
+    local navic = require("nvim-navic")
 
     require("lualine").setup({
       options = {
@@ -49,15 +50,15 @@ return {
       },
       -- Re-enable when I can figure out why this conditionally shows up outside
       -- of contexts.
-      -- winbar = {
-      --   lualine_c = {
-      --     {
-      --       "navic",
-      --       color_correction = nil,
-      --       navic_opts = { highlight = true },
-      --     },
-      --   },
-      -- },
+      winbar = {
+        lualine_c = {
+          {
+            "navic",
+            color_correction = nil,
+            navic_opts = { highlight = true },
+          },
+        },
+      },
     })
   end,
 }
