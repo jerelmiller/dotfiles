@@ -3,7 +3,7 @@ local signs = require("jerel.signs")
 vim.diagnostic.config({
   float = {
     border = "rounded",
-    source = "always",
+    source = true,
   },
   virtual_text = {
     prefix = "●",
