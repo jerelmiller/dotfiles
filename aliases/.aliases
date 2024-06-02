@@ -2,6 +2,14 @@
 alias reload='source ~/.zshrc'
 
 # Git
+default_branch_name() {
+  git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+}
+
+gcom() {
+  git checkout $(default_branch_name)
+}
+
 alias gs='git status'
 alias gcm='git commit -m'
 alias gcM='git commit -m'
