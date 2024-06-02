@@ -2,7 +2,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "folke/neodev.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
@@ -30,9 +29,6 @@ return {
         ),
       }
 
-      require("neodev").setup({
-        library = { plugins = { "neotest" }, types = true },
-      })
       require("mason").setup()
       require("mason-lspconfig").setup({
         ensure_installed = {
