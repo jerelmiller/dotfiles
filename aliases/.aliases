@@ -7,7 +7,7 @@ default_branch_name() {
 }
 
 gcom() {
-  git checkout $(default_branch_name)
+  git checkout $(default_branch_name) && git pull
 }
 
 alias gs='git status'
