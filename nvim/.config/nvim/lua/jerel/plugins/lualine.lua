@@ -26,22 +26,22 @@ return {
         lualine_b = { "branch", "diff" },
         lualine_c = { "filename" },
         lualine_x = {
-          {
-            "copilot",
-            show_loading = true,
-            show_colors = true,
-            symbols = {
-              status = {
-                hl = {
-                  enabled = colors.green,
-                  sleep = colors.subtext0,
-                  disabled = colors.surface1,
-                  warning = colors.yellow,
-                  unknown = colors.red,
-                },
-              },
-            },
-          },
+          -- {
+          --   "copilot",
+          --   show_loading = true,
+          --   show_colors = true,
+          --   symbols = {
+          --     status = {
+          --       hl = {
+          --         enabled = colors.green,
+          --         sleep = colors.subtext0,
+          --         disabled = colors.surface1,
+          --         warning = colors.yellow,
+          --         unknown = colors.red,
+          --       },
+          --     },
+          --   },
+          -- },
           "filetype",
         },
         lualine_y = { "progress" },
