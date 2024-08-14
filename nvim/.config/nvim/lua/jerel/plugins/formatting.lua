@@ -16,7 +16,7 @@ return {
       default_format_opts = {
         stop_after_first = true,
       },
-      format_after_save = {
+      format_on_save = {
         lsp_format = "fallback",
       },
     })
