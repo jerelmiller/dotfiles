@@ -5,6 +5,7 @@ return {
       formatters_by_ft = {
         css = { "prettierd", "prettier" },
         elixir = { "mix" },
+        graphql = { "prettierd", "prettier" },
         lua = { "stylua" },
         javascript = { "prettierd", "prettier" },
         javascriptreact = { "prettierd", "prettier" },
