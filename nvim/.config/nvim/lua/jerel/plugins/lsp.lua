@@ -48,7 +48,7 @@ return {
           "stylelint_lsp",
           "tailwindcss",
           "taplo",
-          "tsserver",
+          "ts_ls",
           "yamlls",
         },
         handlers = {
