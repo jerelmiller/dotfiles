@@ -4,6 +4,3 @@
 
 # Disable analytics
 brew analytics off
-
-# Add font cask to install nerd fonts
-brew tap homebrew/cask-fonts
