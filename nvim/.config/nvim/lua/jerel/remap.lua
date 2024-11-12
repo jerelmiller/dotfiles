@@ -42,8 +42,12 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 vim.keymap.set("x", "<leader>p", '"_dP')
 
 -- Diagnostic keymaps
-vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", function()
+  vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+end)
+vim.keymap.set("n", "]g", function()
+  vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+end)
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
