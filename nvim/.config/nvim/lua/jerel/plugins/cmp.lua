@@ -73,7 +73,7 @@ return {
         { name = "luasnip" },
         { name = "path" },
       }, {
-        { name = "buffer", keyword_length = 4 },
+        { name = "buffer", keyword_length = 3 },
       }),
       -- sorting = {
       --   priority_weight = 2,
