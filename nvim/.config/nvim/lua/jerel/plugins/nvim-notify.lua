@@ -3,7 +3,8 @@ return {
   event = "VeryLazy",
   config = function()
     local notify = require("notify")
-    local filtered_messages = { "No information available" }
+    local filtered_messages =
+      { "No information available", "No code actions available" }
 
     -- Override notify function to filter out messages
     ---@diagnostic disable-next-line: duplicate-set-field
