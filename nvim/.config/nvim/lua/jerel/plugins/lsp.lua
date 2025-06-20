@@ -29,8 +29,27 @@ return {
         ),
       }
 
+      vim.lsp.config("*", {
+        capabilities = capabilities,
+      })
+
+      vim.lsp.config("eslint", {
+        on_attach = function(_, bufnr)
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            callback = function()
+              vim.lsp.buf.code_action({
+                context = { only = { "source.fixAll" } },
+                apply = true,
+              })
+            end,
+          })
+        end,
+      })
+
       require("mason").setup()
       require("mason-lspconfig").setup({
+        automatic_enable = true,
         ensure_installed = {
           "astro",
           "bashls",
@@ -57,17 +76,6 @@ return {
               on_attach = on_attach,
               capabilities = capabilities,
               handlers = handlers,
-            })
-          end,
-          ["eslint"] = function()
-            lspconfig.eslint.setup({
-              capabilities = capabilities,
-              on_attach = function(_, bufnr)
-                vim.api.nvim_create_autocmd("BufWritePre", {
-                  buffer = bufnr,
-                  command = "EslintFixAll",
-                })
-              end,
             })
           end,
           ["lua_ls"] = function()
