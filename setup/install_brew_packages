@@ -18,6 +18,7 @@ brew_install tmux
 brew_install fzf
 brew_install stow
 brew_install ffmpeg
+brew_install lazygit
 
 # Ruby version manager
 brew_install rbenv
