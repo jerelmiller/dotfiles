@@ -10,7 +10,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 
-PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 export EDITOR='nvim'
 
