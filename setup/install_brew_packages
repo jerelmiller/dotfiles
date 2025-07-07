@@ -46,3 +46,4 @@ brew_install bat-extras
 
 # Casks
 brew_install raycast --cask
+brew_install ghostty --cask
