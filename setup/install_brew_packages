@@ -20,6 +20,7 @@ brew_install stow
 brew_install ffmpeg
 brew_install lazygit
 brew_install rustup
+brew_install protobuf
 
 # Ruby version manager
 brew_install rbenv
