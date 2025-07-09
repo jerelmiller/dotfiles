@@ -112,6 +112,42 @@ return {
           end,
         },
       })
+
+      local buf_request_all_orig = vim.lsp.buf_request_all
+
+      -- HACK: If an the lsp returns empty contents instead of nil, return nil
+      -- instead to prevent multiple sources from showing up (looking at you
+      -- GraphQL)
+      -- Source: https://github.com/neovim/neovim/pull/33692#issuecomment-2849182972
+      --
+      ---@param bufnr integer Buffer handle
+      ---@param method vim.lsp.protocol.Method.ClientToServer.Request LSP method name
+      ---@param params? table | (fun(client: vim.lsp.Client, bufnr: integer): table?) Parameters to send to the server.
+      ---@param handler lsp.MultiHandler Result handler
+      ---@diagnostic disable-next-line: duplicate-set-field
+      function vim.lsp.buf_request_all(bufnr, method, params, handler)
+        if method == vim.lsp.protocol.Methods.textDocument_hover then
+          local handler_orig = handler
+          ---@type lsp.MultiHandler
+          function handler(results, context)
+            for _, resp in pairs(results) do
+              --- @type lsp.Hover?
+              local result = resp.result
+              if result ~= nil then
+                local contents = result.contents
+                if
+                  type(contents) ~= "string" and #vim.tbl_keys(contents) == 0
+                then
+                  resp.result = nil
+                end
+              end
+            end
+            return handler_orig(results, context)
+          end
+        end
+
+        return buf_request_all_orig(bufnr, method, params, handler)
+      end
     end,
   },
 }
