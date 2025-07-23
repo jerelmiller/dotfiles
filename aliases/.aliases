@@ -22,6 +22,7 @@ alias stash="git stash"
 alias fetch='git fetch'
 
 # Navigation
+alias vscode='/usr/local/bin/code'
 alias code='cd ~/code'
 alias dotfiles='cd ~/dotfiles'
 
