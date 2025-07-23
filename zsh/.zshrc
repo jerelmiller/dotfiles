@@ -12,6 +12,7 @@ source $HOME/.aliases
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH=$(brew --prefix rustup)/bin:$PATH
 
 export EDITOR='nvim'
 
@@ -27,4 +28,3 @@ bindkey "^H" backward-delete-word
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-. "$HOME/.cargo/env"
