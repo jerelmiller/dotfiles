@@ -21,6 +21,7 @@ brew_install ffmpeg
 brew_install lazygit
 brew_install rustup
 brew_install protobuf
+brew_install ast-grep
 
 # Ruby version manager
 brew_install rbenv
