@@ -19,6 +19,8 @@ export EDITOR='nvim'
 # Keep shell history in iex
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+export NODE_OPTIONS="--no-deprecation --disable-warning=ExperimentalWarning"
+
 eval "$(fnm env --use-on-cd)"
 eval "$(rbenv init - zsh)"
 
