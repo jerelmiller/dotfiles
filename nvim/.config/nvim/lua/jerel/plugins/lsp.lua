@@ -39,7 +39,10 @@ return {
             buffer = bufnr,
             callback = function()
               vim.lsp.buf.code_action({
-                context = { only = { "source.fixAll" } },
+                context = {
+                  diagnostics = { source = "eslint" },
+                  only = { "source.fixAll" },
+                },
                 apply = true,
               })
             end,
