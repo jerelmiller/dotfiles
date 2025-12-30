@@ -30,3 +30,6 @@ bindkey "^H" backward-delete-word
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# opencode
+export PATH=/Users/jerelmiller/.opencode/bin:$PATH
