@@ -37,6 +37,7 @@ return {
         "query",
         "regex",
         "ruby",
+        "rust",
         "scss",
         "sql",
         "toml",
