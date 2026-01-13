@@ -67,6 +67,7 @@ return {
           "lua_ls",
           "marksman",
           "mdx_analyzer",
+          "rust_analyzer",
           "stylelint_lsp",
           "tailwindcss",
           "taplo",
