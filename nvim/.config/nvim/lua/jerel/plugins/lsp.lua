@@ -31,6 +31,7 @@ return {
 
       vim.lsp.config("*", {
         capabilities = capabilities,
+        on_attach = on_attach,
       })
 
       vim.lsp.config("eslint", {
@@ -48,6 +49,15 @@ return {
             end,
           })
         end,
+      })
+
+      vim.lsp.config("tailwindcss", {
+        settings = {
+          tailwindCSS = {
+            validate = true,
+            classFunctions = { "cva", "cx", "clsx" },
+          },
+        },
       })
 
       require("mason").setup()
@@ -94,24 +104,6 @@ return {
                 },
               },
               handlers = handlers,
-            })
-          end,
-          ["tailwindcss"] = function()
-            lspconfig.tailwindcss.setup({
-              capabilities = capabilities,
-              handlers = handlers,
-              on_attach = on_attach,
-              settings = {
-                tailwindCSS = {
-                  validate = true,
-                  experimental = {
-                    classRegex = {
-                      { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
-                      { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
-                    },
-                  },
-                },
-              },
             })
           end,
         },
