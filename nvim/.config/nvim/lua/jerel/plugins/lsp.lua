@@ -60,12 +60,44 @@ return {
         },
       })
 
+      vim.lsp.enable("cspell_ls")
+      vim.lsp.config("cspell_ls", {
+        filetypes = {
+          "css",
+          "gitcommit",
+          "html",
+          "javascript",
+          "json",
+          "lua",
+          "markdown",
+          "mdx",
+          "typescript",
+          "typescriptreact",
+          "yaml",
+        },
+      })
+
+      vim.lsp.enable("lua")
+      vim.lsp.config("lua", {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = {
+          Lua = {
+            telemetry = {
+              enable = false,
+            },
+          },
+        },
+        handlers = handlers,
+      })
+
       require("mason").setup()
       require("mason-lspconfig").setup({
         automatic_enable = true,
         ensure_installed = {
           "astro",
           "bashls",
+          "cspell_ls",
           "cssls",
           "cssmodules_ls",
           "dockerls",
@@ -89,20 +121,6 @@ return {
             lspconfig[server_name].setup({
               on_attach = on_attach,
               capabilities = capabilities,
-              handlers = handlers,
-            })
-          end,
-          ["lua_ls"] = function()
-            lspconfig.lua_ls.setup({
-              on_attach = on_attach,
-              capabilities = capabilities,
-              settings = {
-                Lua = {
-                  telemetry = {
-                    enable = false,
-                  },
-                },
-              },
               handlers = handlers,
             })
           end,
