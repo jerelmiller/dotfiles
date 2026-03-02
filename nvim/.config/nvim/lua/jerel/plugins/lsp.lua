@@ -77,6 +77,18 @@ return {
         },
       })
 
+      vim.api.nvim_create_user_command("CSpellDisable", function()
+        vim.lsp.enable("cspell_ls", false)
+      end, {
+        desc = "Disable CSpell",
+      })
+
+      vim.api.nvim_create_user_command("CSpellEnable", function()
+        vim.lsp.enable("cspell_ls", true)
+      end, {
+        desc = "Enable CSpell",
+      })
+
       vim.lsp.enable("lua")
       vim.lsp.config("lua", {
         capabilities = capabilities,
