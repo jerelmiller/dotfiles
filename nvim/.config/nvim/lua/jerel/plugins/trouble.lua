@@ -6,7 +6,9 @@ return {
       local trouble = require("trouble")
 
       trouble.setup({
-        follow = false,
+        auto_preview = false,
+        auto_refresh = false,
+        focus = true,
       })
 
       vim.keymap.set("n", "<leader>xx", function()
