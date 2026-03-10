@@ -30,7 +30,17 @@ return {
       }
 
       vim.lsp.config("*", {
-        capabilities = capabilities,
+        capabilities = vim.tbl_extend("error", capabilities, {
+          workspace = {
+            fileOperations = {
+              didRename = true,
+              willRename = true,
+            },
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        }),
         on_attach = on_attach,
       })
 
