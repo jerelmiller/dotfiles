@@ -30,7 +30,7 @@ return {
       }
 
       vim.lsp.config("*", {
-        capabilities = vim.tbl_extend("error", capabilities, {
+        capabilities = vim.tbl_deep_extend("force", capabilities, {
           workspace = {
             fileOperations = {
               didRename = true,
