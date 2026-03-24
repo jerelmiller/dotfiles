@@ -12,6 +12,7 @@ return {
   config = function()
     local cmp = require("cmp")
     local lspkind = require("lspkind")
+    local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
     cmp.setup({
       ---@diagnostic disable-next-line: missing-fields
@@ -102,6 +103,8 @@ return {
         { name = "buffer" },
       }),
     })
+
+    cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
     require("cmp_git").setup()
     -- require("copilot_cmp").setup()
