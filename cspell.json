@@ -15,6 +15,9 @@
     "elixirls",
     "jsonls",
     "taplo",
-    "yamlls"
+    "yamlls",
+    "folke",
+    "keymap"
   ]
 }
+
