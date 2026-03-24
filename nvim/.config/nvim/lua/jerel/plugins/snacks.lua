@@ -6,6 +6,7 @@ return {
     gitbrowse = {},
     image = {},
     input = {},
+    scratch = {},
     words = {},
   },
   keys = {
@@ -22,6 +23,20 @@ return {
         Snacks.words.jump(1, true)
       end,
       desc = "[LSP] Jump next word reference",
+    },
+    {
+      "<leader>.",
+      function()
+        Snacks.scratch()
+      end,
+      desc = "Toggle scratch buffer",
+    },
+    {
+      "<leader>S",
+      function()
+        Snacks.scratch.select()
+      end,
+      desc = "Select scratch buffer",
     },
   },
 }
