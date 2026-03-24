@@ -18,6 +18,7 @@
     "yamlls",
     "folke",
     "keymap",
-    "claudecode"
+    "claudecode",
+    "gitbrowse"
   ]
 }
