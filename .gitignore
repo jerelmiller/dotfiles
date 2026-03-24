@@ -1,3 +1,5 @@
 .netrwhist
 .tern-port
 .DS_Store
+bin/.local/bin/claude
+bin/.local/bin/cursor-agent
