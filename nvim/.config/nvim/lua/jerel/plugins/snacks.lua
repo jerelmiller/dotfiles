@@ -3,6 +3,7 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+    gitbrowse = {},
     image = {},
     input = {},
     words = {},
@@ -11,14 +12,14 @@ return {
     {
       "[r",
       function()
-        require("snacks").words.jump(-1, true)
+        Snacks.words.jump(-1, true)
       end,
       desc = "[LSP] Jump prev word reference",
     },
     {
       "]r",
       function()
-        require("snacks").words.jump(1, true)
+        Snacks.words.jump(1, true)
       end,
       desc = "[LSP] Jump next word reference",
     },
