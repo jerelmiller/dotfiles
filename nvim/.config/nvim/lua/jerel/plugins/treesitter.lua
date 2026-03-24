@@ -84,6 +84,7 @@ return {
     })
 
     local select = require("nvim-treesitter-textobjects.select")
+    -- m == "method"
     vim.keymap.set({ "x", "o" }, "am", function()
       select.select_textobject("@function.outer", "textobjects")
     end)
@@ -91,6 +92,7 @@ return {
       select.select_textobject("@function.inner", "textobjects")
     end)
 
+    -- = == "assignment"
     vim.keymap.set({ "x", "o" }, "a=", function()
       select.select_textobject("@assignment.outer", "textobjects")
     end)
@@ -104,6 +106,7 @@ return {
       select.select_textobject("@assignment.rhs", "textobjects")
     end)
 
+    -- f == "function call"
     vim.keymap.set({ "x", "o" }, "af", function()
       select.select_textobject("@call.outer", "textobjects")
     end)
@@ -111,6 +114,7 @@ return {
       select.select_textobject("@call.inner", "textobjects")
     end)
 
+    -- c == "class"
     vim.keymap.set({ "x", "o" }, "ac", function()
       select.select_textobject("@class.outer", "textobjects")
     end)
@@ -118,6 +122,7 @@ return {
       select.select_textobject("@class.inner", "textobjects")
     end)
 
+    -- i == "if"
     vim.keymap.set({ "x", "o" }, "ai", function()
       select.select_textobject("@conditional.outer", "textobjects")
     end)
@@ -125,6 +130,7 @@ return {
       select.select_textobject("@conditional.inner", "textobjects")
     end)
 
+    -- a == "argument"
     vim.keymap.set({ "x", "o" }, "aa", function()
       select.select_textobject("@parameter.outer", "textobjects")
     end)
