@@ -5,7 +5,6 @@ return {
   opts = {
     gitbrowse = {},
     image = {},
-    input = {},
     scratch = {},
     words = {},
   },
