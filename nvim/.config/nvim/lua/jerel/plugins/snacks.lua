@@ -37,5 +37,13 @@ return {
       end,
       desc = "Select scratch buffer",
     },
+    {
+      "<leader>gb",
+      function()
+        Snacks.gitbrowse()
+      end,
+      desc = "Open GitHub links from code",
+      mode = { "n", "v" },
+    },
   },
 }
