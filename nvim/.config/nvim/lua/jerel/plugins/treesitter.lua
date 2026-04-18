@@ -1,78 +1,91 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "main",
   build = ":TSUpdate",
   dependencies = {
     { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
   },
   config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    require("nvim-treesitter.configs").setup({
-      ensure_installed = {
-        "astro",
-        "bash",
-        "c",
-        "css",
-        "diff",
-        "dockerfile",
-        "elixir",
-        "erlang",
-        "git_config",
-        "git_rebase",
-        "gitcommit",
-        "gitignore",
-        "graphql",
-        "heex",
-        "html",
-        "http",
-        "javascript",
-        "jsdoc",
-        "json",
-        "jsonc",
-        "jq",
-        "lua",
-        "luadoc",
-        "luap",
-        "markdown",
-        "markdown_inline",
-        "query",
-        "regex",
-        "ruby",
-        "rust",
-        "scss",
-        "sql",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "yaml",
-      },
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
-      },
-      -- textobjects = {
-      --   lsp_interop = {
-      --     enable = true,
-      --     border = "rounded",
-      --     peek_definition_code = {
-      --       ["<leader>df"] = "@function.outer",
-      --       ["<leader>dc"] = "@class.outer",
-      --     },
-      --   },
-      -- },
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function()
+        -- Enable treesitter highlighting and disable regex syntax
+        pcall(vim.treesitter.start)
+        -- Enable treesitter-based indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
     })
+
+    local ensure_installed = {
+      "astro",
+      "bash",
+      "c",
+      "css",
+      "diff",
+      "dockerfile",
+      "elixir",
+      "erlang",
+      "git_config",
+      "git_rebase",
+      "gitcommit",
+      "gitignore",
+      "graphql",
+      "heex",
+      "html",
+      "http",
+      "javascript",
+      "jsdoc",
+      "json",
+      -- "jsonc",
+      "jq",
+      "lua",
+      "luadoc",
+      "luap",
+      "markdown",
+      "markdown_inline",
+      "query",
+      "regex",
+      "ruby",
+      "rust",
+      "scss",
+      "sql",
+      "toml",
+      "tsx",
+      "typescript",
+      "vim",
+      "vimdoc",
+      "yaml",
+    }
+    local already_installed = require("nvim-treesitter.config").get_installed()
+    local parsers_to_install = vim
+      .iter(ensure_installed)
+      :filter(function(parser)
+        return not vim.tbl_contains(already_installed, parser)
+      end)
+      :totable()
+    require("nvim-treesitter").install(parsers_to_install)
+
+    ---@diagnostic disable-next-line: missing-fields
+    -- require("nvim-treesitter").setup({
+    --   incremental_selection = {
+    --     enable = true,
+    --     keymaps = {
+    --       init_selection = "<C-space>",
+    --       node_incremental = "<C-space>",
+    --       scope_incremental = false,
+    --       node_decremental = "<bs>",
+    --     },
+    --   },
+    --   -- textobjects = {
+    --   --   lsp_interop = {
+    --   --     enable = true,
+    --   --     border = "rounded",
+    --   --     peek_definition_code = {
+    --   --       ["<leader>df"] = "@function.outer",
+    --   --       ["<leader>dc"] = "@class.outer",
+    --   --     },
+    --   --   },
+    --   -- },
+    -- })
 
     require("nvim-treesitter-textobjects").setup({
       select = {

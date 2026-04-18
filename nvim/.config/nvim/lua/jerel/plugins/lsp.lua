@@ -18,17 +18,6 @@ return {
         end
       end
 
-      local handlers = {
-        ["textDocument/hover"] = vim.lsp.with(
-          vim.lsp.handlers.hover,
-          { border = "rounded" }
-        ),
-        ["textDocument/signatureHelp"] = vim.lsp.with(
-          vim.lsp.handlers.signature_help,
-          { border = "rounded" }
-        ),
-      }
-
       vim.lsp.config("*", {
         capabilities = vim.tbl_deep_extend("force", capabilities, {
           workspace = {
@@ -110,7 +99,16 @@ return {
             },
           },
         },
-        handlers = handlers,
+        -- handlers = {
+        --   ["textDocument/hover"] = vim.lsp.with(
+        --     vim.lsp.handlers.hover,
+        --     { border = "rounded" }
+        --   ),
+        --   ["textDocument/signatureHelp"] = vim.lsp.with(
+        --     vim.lsp.handlers.signature_help,
+        --     { border = "rounded" }
+        --   ),
+        -- },
       })
 
       require("mason").setup()
