@@ -10,7 +10,7 @@ return {
 
     require("lualine").setup({
       options = {
-        theme = "catppuccin",
+        theme = "auto",
         section_separators = { left = "", right = "" },
       },
       inactive_sections = {
