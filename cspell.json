@@ -20,6 +20,8 @@
     "keymap",
     "claudecode",
     "gitbrowse",
-    "oxlint"
+    "oxlint",
+    "autocmds",
+    "augroup"
   ]
 }
