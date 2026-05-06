@@ -17,6 +17,21 @@ return {
         end
       end
 
+      local function create_fix_on_save_autocmd(name, bufnr, command)
+        local group = vim.api.nvim_create_augroup(name, {})
+
+        vim.api.nvim_clear_autocmds({
+          group = group,
+          buffer = bufnr,
+        })
+
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          group = group,
+          buffer = bufnr,
+          command = command,
+        })
+      end
+
       vim.lsp.config("*", {
         capabilities = vim.tbl_deep_extend("force", capabilities, {
           workspace = {
@@ -32,24 +47,39 @@ return {
         on_attach = on_attach,
       })
 
+      local eslint_on_attach = vim.lsp.config.eslint.on_attach
       vim.lsp.config("eslint", {
-        on_attach = function(_, bufnr)
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            callback = function()
-              vim.lsp.buf.code_action({
-                context = {
-                  diagnostics = { source = "eslint" },
-                  only = { "source.fixAll" },
-                },
-                apply = true,
-              })
-            end,
-          })
+        on_attach = function(client, bufnr)
+          on_attach(client, bufnr)
+
+          if eslint_on_attach then
+            eslint_on_attach(client, bufnr)
+          end
+
+          create_fix_on_save_autocmd(
+            "JerelEslintFixOnSave",
+            bufnr,
+            "LspEslintFixAll"
+          )
         end,
       })
 
-      vim.lsp.enable("oxlint")
+      local oxlint_on_attach = vim.lsp.config.oxlint.on_attach
+      vim.lsp.config("oxlint", {
+        on_attach = function(client, bufnr)
+          on_attach(client, bufnr)
+
+          if oxlint_on_attach then
+            oxlint_on_attach(client, bufnr)
+          end
+
+          create_fix_on_save_autocmd(
+            "JerelOxlintFixOnSave",
+            bufnr,
+            "LspOxlintFixAll"
+          )
+        end,
+      })
 
       vim.lsp.config("tailwindcss", {
         settings = {
@@ -60,7 +90,6 @@ return {
         },
       })
 
-      vim.lsp.enable("cspell_ls")
       vim.lsp.config("cspell_ls", {
         filetypes = {
           "css",
@@ -89,10 +118,7 @@ return {
         desc = "Enable CSpell",
       })
 
-      vim.lsp.enable("lua")
-      vim.lsp.config("lua", {
-        capabilities = capabilities,
-        on_attach = on_attach,
+      vim.lsp.config("lua_ls", {
         settings = {
           Lua = {
             telemetry = {
@@ -137,15 +163,6 @@ return {
           "taplo",
           "ts_ls",
           "yamlls",
-        },
-        handlers = {
-          function(server_name)
-            lspconfig[server_name].setup({
-              on_attach = on_attach,
-              capabilities = capabilities,
-              handlers = handlers,
-            })
-          end,
         },
       })
 
