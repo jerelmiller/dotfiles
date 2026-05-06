@@ -73,11 +73,11 @@ return {
             oxlint_on_attach(client, bufnr)
           end
 
-          create_fix_on_save_autocmd(
-            "JerelOxlintFixOnSave",
-            bufnr,
-            "LspOxlintFixAll"
-          )
+          -- create_fix_on_save_autocmd(
+          --   "JerelOxlintFixOnSave",
+          --   bufnr,
+          --   "LspOxlintFixAll"
+          -- )
         end,
       })
 
