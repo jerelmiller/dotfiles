@@ -50,6 +50,8 @@ return {
         end,
       })
 
+      vim.lsp.enable("oxlint")
+
       vim.lsp.config("tailwindcss", {
         settings = {
           tailwindCSS = {
@@ -129,6 +131,7 @@ return {
           "lua_ls",
           "marksman",
           "mdx_analyzer",
+          "oxlint",
           "rust_analyzer",
           "stylelint_lsp",
           "tailwindcss",
