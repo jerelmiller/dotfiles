@@ -3,16 +3,17 @@ return {
   config = function()
     require("conform").setup({
       formatters_by_ft = {
-        css = { "prettierd", "prettier" },
+        css = { "prettierd", "prettier", "oxfmt" },
         elixir = { "mix" },
-        graphql = { "prettierd", "prettier" },
+        graphql = { "prettierd", "prettier", "oxfmt" },
         lua = { "stylua" },
-        javascript = { "prettierd", "prettier" },
-        javascriptreact = { "prettierd", "prettier" },
-        json = { "prettierd", "prettier" },
-        jsonc = { "prettierd", "prettier" },
-        typescript = { "prettierd", "prettier" },
-        typescriptreact = { "prettierd", "prettier" },
+        javascript = { "prettierd", "prettier", "oxfmt" },
+        javascriptreact = { "prettierd", "prettier", "oxfmt" },
+        json = { "prettierd", "prettier", "oxfmt" },
+        jsonc = { "prettierd", "prettier", "oxfmt" },
+        typescript = { "prettierd", "prettier", "oxfmt" },
+        typescriptreact = { "prettierd", "prettier", "oxfmt" },
+        yaml = { "oxfmt" },
       },
       default_format_opts = {
         stop_after_first = true,
