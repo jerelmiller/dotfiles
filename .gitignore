@@ -3,3 +3,6 @@
 .DS_Store
 bin/.local/bin/claude
 bin/.local/bin/cursor-agent
+bin/.local/bin/grok
+bin/.local/bin/mise
+bin/.local/bin/agent
