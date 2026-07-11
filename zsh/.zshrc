@@ -33,3 +33,5 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # opencode
 export PATH=/Users/jerelmiller/.opencode/bin:$PATH
+
+eval "$(mise activate zsh)"
