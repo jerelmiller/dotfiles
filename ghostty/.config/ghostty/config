@@ -6,3 +6,4 @@ cursor-style-blink = false
 cursor-invert-fg-bg = true
 shell-integration-features = no-cursor
 keybind = shift+enter=text:\n
+confirm-close-surface = false
