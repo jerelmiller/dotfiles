@@ -80,6 +80,7 @@ return {
           -- )
         end,
       })
+      vim.lsp.enable("oxlint")
 
       vim.lsp.config("tailwindcss", {
         settings = {
