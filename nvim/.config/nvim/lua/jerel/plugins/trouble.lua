@@ -7,7 +7,7 @@ return {
 
       trouble.setup({
         auto_preview = false,
-        auto_refresh = true,
+        auto_refresh = false,
         focus = true,
       })
 
