@@ -82,9 +82,6 @@ vim.o.sidescrolloff = 5
 -- Always show the sign column to avoid text shift
 vim.wo.signcolumn = "yes"
 
--- Override ignorecase if pattern contains uppercase characters
-vim.o.smartcase = true
-
 -- Make indenting smarter when starting a new line
 vim.o.smartindent = true
 
