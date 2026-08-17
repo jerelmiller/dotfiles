@@ -158,12 +158,6 @@ return {
     vim.keymap.set("n", "<leader>pa", function()
       swap.swap_previous("@parameter.inner")
     end)
-    vim.keymap.set("n", "<leader>nm", function()
-      swap.swap_next("@parameter.outer")
-    end)
-    vim.keymap.set("n", "<leader>pm", function()
-      swap.swap_previous("@parameter.outer")
-    end)
 
     local move = require("nvim-treesitter-textobjects.move")
     vim.keymap.set({ "n", "x", "o" }, "]a", function()
