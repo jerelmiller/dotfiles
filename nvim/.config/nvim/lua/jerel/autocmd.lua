@@ -7,7 +7,6 @@ autocmd("LspAttach", {
   group = JerelGroup,
   callback = function(e)
     local opts = { buffer = e.buf }
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
     vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, opts)
