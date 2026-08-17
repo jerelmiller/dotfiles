@@ -48,6 +48,24 @@ end)
 vim.keymap.set("n", "]g", function()
   vim.diagnostic.jump({ count = 1, severity = vim.diagnostic.severity.ERROR })
 end)
+vim.keymap.set("n", "[h", function()
+  vim.diagnostic.jump({
+    count = -1,
+    severity = {
+      min = vim.diagnostic.severity.HINT,
+      max = vim.diagnostic.severity.INFO,
+    },
+  })
+end)
+vim.keymap.set("n", "]h", function()
+  vim.diagnostic.jump({
+    count = 1,
+    severity = {
+      min = vim.diagnostic.severity.HINT,
+      max = vim.diagnostic.severity.INFO,
+    },
+  })
+end)
 vim.keymap.set("n", "[w", function()
   vim.diagnostic.jump({ count = -1, severity = vim.diagnostic.severity.WARN })
 end)
