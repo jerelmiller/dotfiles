@@ -131,7 +131,11 @@ return {
 
       require("mason").setup()
       require("mason-lspconfig").setup({
-        automatic_enable = true,
+        -- ts_ls stays installed; exclude so it does not attach next to vtsls.
+        -- To switch back: uncomment ts_ls, remove vtsls, drop the exclude.
+        automatic_enable = {
+          exclude = { "ts_ls" },
+        },
         ensure_installed = {
           "astro",
           "bashls",
@@ -152,7 +156,8 @@ return {
           "stylelint_lsp",
           "tailwindcss",
           "taplo",
-          "ts_ls",
+          -- "ts_ls",
+          "vtsls",
           "yamlls",
         },
       })
