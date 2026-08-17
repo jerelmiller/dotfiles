@@ -7,7 +7,6 @@ return {
     "hrsh7th/cmp-path",
     "saadparwaiz1/cmp_luasnip",
     "onsails/lspkind.nvim",
-    -- "zbirenbaum/copilot-cmp",
   },
   config = function()
     local cmp = require("cmp")
@@ -24,13 +23,11 @@ return {
           show_labelDetails = true,
           menu = {
             buffer = "[Buffer]",
-            copilot = "[Copilot]",
             nvim_lsp = "[LSP]",
             luasnip = "[LuaSnip]",
             nvim_lua = "[Lua]",
             latex_symbols = "[Latex]",
           },
-          symbol_map = { Copilot = "" },
         }),
       },
       experimental = {
@@ -69,31 +66,12 @@ return {
         documentation = cmp.config.window.bordered(),
       },
       sources = cmp.config.sources({
-        -- { name = "copilot" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
       }, {
         { name = "buffer", keyword_length = 3 },
       }),
-      -- sorting = {
-      --   priority_weight = 2,
-      --   comparators = {
-      --     require("copilot_cmp.comparators").prioritize,
-      --
-      --     -- Below is the default comparitor list and order for nvim-cmp
-      --     cmp.config.compare.offset,
-      --     -- cmp.config.compare.scopes, --this is commented in nvim-cmp too
-      --     cmp.config.compare.exact,
-      --     cmp.config.compare.score,
-      --     cmp.config.compare.recently_used,
-      --     cmp.config.compare.locality,
-      --     cmp.config.compare.kind,
-      --     cmp.config.compare.sort_text,
-      --     cmp.config.compare.length,
-      --     cmp.config.compare.order,
-      --   },
-      -- },
     })
 
     cmp.setup.filetype({ "gitcommit", "markdown" }, {
@@ -107,6 +85,5 @@ return {
     -- cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
     require("cmp_git").setup()
-    -- require("copilot_cmp").setup()
   end,
 }
