@@ -39,7 +39,7 @@ vim.o.expandtab = true
 vim.o.fileencoding = "utf-8"
 
 -- Don't insert current comment leader automatically when hitting 'o' or 'O' in normal mode
-vim.opt.formatoptions = "jtcrqln"
+vim.opt.formatoptions = "jcrqln"
 
 -- Don't add cursor styling
 vim.o.guicursor = ""
