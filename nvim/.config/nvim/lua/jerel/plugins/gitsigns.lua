@@ -10,7 +10,7 @@ return {
             return "]c"
           end
           vim.schedule(function()
-            gs.next_hunk()
+            gs.nav_hunk("next")
           end)
           return "<Ignore>"
         end, { expr = true })
@@ -20,7 +20,7 @@ return {
             return "[c"
           end
           vim.schedule(function()
-            gs.prev_hunk()
+            gs.nav_hunk("prev")
           end)
           return "<Ignore>"
         end, { expr = true })
@@ -34,7 +34,6 @@ return {
           gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
         end)
         vim.keymap.set("n", "<leader>hS", gs.stage_buffer)
-        vim.keymap.set("n", "<leader>hu", gs.undo_stage_hunk)
         vim.keymap.set("n", "<leader>hR", gs.reset_buffer)
         vim.keymap.set("n", "<leader>hp", gs.preview_hunk)
         vim.keymap.set("n", "<leader>hd", gs.diffthis)
