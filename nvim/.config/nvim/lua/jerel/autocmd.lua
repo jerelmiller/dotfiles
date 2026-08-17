@@ -8,7 +8,6 @@ autocmd("LspAttach", {
   callback = function(e)
     local opts = { buffer = e.buf }
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, opts)
     vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
     vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
     vim.keymap.set("n", "<leader>wl", function()
