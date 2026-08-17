@@ -112,8 +112,8 @@ vim.o.timeoutlen = 300
 -- Enable persistent undo
 vim.o.undofile = true
 
--- Faster completion
-vim.o.updatetime = 50
+-- Time before CursorHold (gitsigns, snacks.words, etc.)
+vim.o.updatetime = 250
 
 -- go to previous/next line with h,l when cursor reaches end/beginning of line
 vim.opt.whichwrap:append("hl")
