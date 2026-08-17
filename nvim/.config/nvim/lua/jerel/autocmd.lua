@@ -6,11 +6,6 @@ local JerelGroup = augroup("Jerel", {})
 autocmd("LspAttach", {
   group = JerelGroup,
   callback = function(e)
-    -- Enable completion triggered by <c-x><c-o>
-    vim.bo[e.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-
-    -- Buffer local mappings.
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = e.buf }
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
