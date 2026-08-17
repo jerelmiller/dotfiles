@@ -27,9 +27,3 @@ autocmd("LspAttach", {
     vim.keymap.set("n", "gR", vim.lsp.buf.references, opts)
   end,
 })
-
-autocmd({ "FileType" }, {
-  group = JerelGroup,
-  pattern = "*",
-  command = "setlocal formatoptions-=o",
-})
