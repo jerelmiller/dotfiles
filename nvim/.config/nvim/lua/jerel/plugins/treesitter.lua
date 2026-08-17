@@ -192,13 +192,6 @@ return {
       move.goto_previous_end("@function.outer", "textobjects")
     end)
 
-    vim.keymap.set({ "n", "x", "o" }, "]m", function()
-      move.goto_next_start("@function.outer", "textobjects")
-    end)
-    vim.keymap.set({ "n", "x", "o" }, "[m", function()
-      move.goto_previous_start("@function.outer", "textobjects")
-    end)
-
     vim.keymap.set({ "n", "x", "o" }, "]]", function()
       move.goto_next_start("@class.outer", "textobjects")
     end)
