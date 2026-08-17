@@ -180,10 +180,10 @@ return {
     end)
 
     vim.keymap.set({ "n", "x", "o" }, "]m", function()
-      move.goto_next_start("@function.outer", "textobjects")
+      move.goto_next_start("@function.inner", "textobjects")
     end)
     vim.keymap.set({ "n", "x", "o" }, "[m", function()
-      move.goto_previous_start("@function.outer", "textobjects")
+      move.goto_previous_start("@function.inner", "textobjects")
     end)
     vim.keymap.set({ "n", "x", "o" }, "]M", function()
       move.goto_next_end("@function.outer", "textobjects")
