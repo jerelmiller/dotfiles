@@ -46,6 +46,7 @@ return {
       },
       integrations = {
         aerial = true,
+        blink_cmp = true,
         fidget = true,
         harpoon = true,
         mason = true,
