@@ -28,6 +28,10 @@ return {
       end,
     })
 
+    vim.keymap.set({ "n", "v" }, "<leader>f", function()
+      require("conform").format({ async = true, lsp_format = "fallback" })
+    end)
+
     vim.api.nvim_create_user_command("FormatDisable", function(args)
       if args.bang then
         -- FormatDisable! will disable formatting just for this buffer
