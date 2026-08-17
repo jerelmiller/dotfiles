@@ -162,7 +162,7 @@ return {
       swap.swap_next("@parameter.outer")
     end)
     vim.keymap.set("n", "<leader>pm", function()
-      swap.swap_previous("@parameter.inner")
+      swap.swap_previous("@parameter.outer")
     end)
 
     local move = require("nvim-treesitter-textobjects.move")
