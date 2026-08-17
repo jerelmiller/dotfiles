@@ -3,12 +3,6 @@ local autocmd = vim.api.nvim_create_autocmd
 
 local JerelGroup = augroup("Jerel", {})
 
-autocmd({ "BufWritePre" }, {
-  group = JerelGroup,
-  pattern = "*",
-  command = [[%s/\s\+$//e]],
-})
-
 autocmd("LspAttach", {
   group = JerelGroup,
   callback = function(e)
