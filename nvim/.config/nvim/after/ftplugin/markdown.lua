@@ -1,8 +1,6 @@
-vim.o.wrap = true
-vim.o.linebreak = true
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.smarttab = true
-vim.o.shiftwidth = 2
-vim.o.shiftround = true
-vim.o.expandtab = true
+vim.opt_local.wrap = true
+vim.opt_local.linebreak = true
+vim.opt_local.tabstop = 2
+vim.opt_local.softtabstop = 2
+vim.opt_local.shiftwidth = 2
+vim.opt_local.expandtab = true
