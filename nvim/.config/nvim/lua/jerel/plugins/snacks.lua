@@ -5,6 +5,7 @@ return {
   opts = {
     gitbrowse = {},
     image = {},
+    lazygit = {},
     scratch = {},
     words = {},
   },
@@ -44,6 +45,13 @@ return {
       end,
       desc = "Open GitHub links from code",
       mode = { "n", "v" },
+    },
+    {
+      "<leader>gg",
+      function()
+        Snacks.lazygit()
+      end,
+      desc = "LazyGit",
     },
   },
 }
