@@ -63,29 +63,6 @@ return {
       :totable()
     require("nvim-treesitter").install(parsers_to_install)
 
-    ---@diagnostic disable-next-line: missing-fields
-    -- require("nvim-treesitter").setup({
-    --   incremental_selection = {
-    --     enable = true,
-    --     keymaps = {
-    --       init_selection = "<C-space>",
-    --       node_incremental = "<C-space>",
-    --       scope_incremental = false,
-    --       node_decremental = "<bs>",
-    --     },
-    --   },
-    --   -- textobjects = {
-    --   --   lsp_interop = {
-    --   --     enable = true,
-    --   --     border = "rounded",
-    --   --     peek_definition_code = {
-    --   --       ["<leader>df"] = "@function.outer",
-    --   --       ["<leader>dc"] = "@class.outer",
-    --   --     },
-    --   --   },
-    --   -- },
-    -- })
-
     require("nvim-treesitter-textobjects").setup({
       select = {
         lookahead = true,
