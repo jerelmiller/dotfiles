@@ -22,10 +22,10 @@ return {
     end, { desc = "Harpoon menu" })
 
     vim.keymap.set("n", "]f", function()
-      harpoon:list():next()
-    end)
+      harpoon:list():next({ ui_nav_wrap = true })
+    end, { desc = "Harpoon next" })
     vim.keymap.set("n", "[f", function()
-      harpoon:list():prev()
-    end)
+      harpoon:list():prev({ ui_nav_wrap = true })
+    end, { desc = "Harpoon prev" })
   end,
 }
