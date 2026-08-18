@@ -12,6 +12,9 @@ return {
       nerd_font_variant = "mono",
     },
     completion = {
+      accept = {
+        auto_brackets = { enabled = false },
+      },
       list = {
         selection = { preselect = true, auto_insert = false },
       },
