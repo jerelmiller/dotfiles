@@ -129,6 +129,21 @@ return {
         },
       })
 
+      vim.lsp.config("vtsls", {
+        settings = {
+          javascript = {
+            preferences = {
+              jsxAttributeCompletionStyle = "auto",
+            },
+          },
+          typescript = {
+            preferences = {
+              jsxAttributeCompletionStyle = "auto",
+            },
+          },
+        },
+      })
+
       require("mason").setup()
       require("mason-lspconfig").setup({
         -- ts_ls stays installed; exclude so it does not attach next to vtsls.
