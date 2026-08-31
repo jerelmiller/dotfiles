@@ -17,8 +17,9 @@ return {
         end
       end
 
-      local function create_fix_on_save_autocmd(name, bufnr, command)
-        local group = vim.api.nvim_create_augroup(name, {})
+      -- clear=false: a new buffer must not remove other buffers' save hooks.
+      local function create_fix_on_save_autocmd(name, bufnr, callback)
+        local group = vim.api.nvim_create_augroup(name, { clear = false })
 
         vim.api.nvim_clear_autocmds({
           group = group,
@@ -28,8 +29,30 @@ return {
         vim.api.nvim_create_autocmd("BufWritePre", {
           group = group,
           buffer = bufnr,
-          command = command,
+          callback = callback,
         })
+      end
+
+      local function eslint_fix_all(bufnr)
+        local eslint = vim.lsp.get_clients({ bufnr = bufnr, name = "eslint" })[1]
+        if not eslint then
+          return
+        end
+
+        -- LspEslintFixAll uses a 1s timeout and ignores failures.
+        local _, err = eslint:request_sync("workspace/executeCommand", {
+          command = "eslint.applyAllFixes",
+          arguments = {
+            {
+              uri = vim.uri_from_bufnr(bufnr),
+              version = vim.lsp.util.buf_versions[bufnr],
+            },
+          },
+        }, 5000, bufnr)
+
+        if err then
+          vim.notify("ESLint fix-on-save failed: " .. err, vim.log.levels.WARN)
+        end
       end
 
       vim.lsp.config("*", {
@@ -56,11 +79,9 @@ return {
             eslint_on_attach(client, bufnr)
           end
 
-          create_fix_on_save_autocmd(
-            "JerelEslintFixOnSave",
-            bufnr,
-            "LspEslintFixAll"
-          )
+          create_fix_on_save_autocmd("JerelEslintFixOnSave", bufnr, function()
+            eslint_fix_all(bufnr)
+          end)
         end,
       })
 
@@ -73,11 +94,9 @@ return {
             oxlint_on_attach(client, bufnr)
           end
 
-          -- create_fix_on_save_autocmd(
-          --   "JerelOxlintFixOnSave",
-          --   bufnr,
-          --   "LspOxlintFixAll"
-          -- )
+          -- create_fix_on_save_autocmd("JerelOxlintFixOnSave", bufnr, function()
+          --   vim.cmd("LspOxlintFixAll")
+          -- end)
         end,
       })
       vim.lsp.enable("oxlint")
