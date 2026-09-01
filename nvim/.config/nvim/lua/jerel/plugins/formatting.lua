@@ -11,6 +11,7 @@ return {
         javascriptreact = { "oxfmt", "prettierd", "prettier" },
         json = { "oxfmt", "prettierd", "prettier" },
         jsonc = { "oxfmt", "prettierd", "prettier" },
+        mdx = { "prettierd", "prettier" },
         rust = { "rustfmt" },
         typescript = { "oxfmt", "prettierd", "prettier" },
         typescriptreact = { "oxfmt", "prettierd", "prettier" },
