@@ -24,6 +24,10 @@
     "oxlint",
     "autocmds",
     "augroup",
-    "oxfmt"
+    "oxfmt",
+    "catppuccin",
+    "undercurl",
+    "octo",
+    "macchiato"
   ]
 }
