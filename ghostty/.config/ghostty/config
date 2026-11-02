@@ -1,5 +1,5 @@
 theme = Catppuccin Macchiato
-bold-is-bright = true
+bold-is-bright = false
 font-size = 13
 cursor-style = block
 cursor-style-blink = false
